@@ -11,7 +11,7 @@
 - [Découvrir les vues de l’application](#découvrir-lapplication)
 - [Menus, profils, événements, relations et Emmett](#les-menus-et-les-dossiers-personnels)
 - [Sources et références historiques](#references)
-- [Biblaridion et motifs de l’Apocalypse](#biblaridion)
+- [Biblaridion de l’Apocalypse](#biblaridion)
 - [Atlas historique](#atlas)
 - [Questions fréquentes](#faq)
 - [Données locales](#données-locales)
