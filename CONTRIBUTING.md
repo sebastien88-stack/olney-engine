@@ -13,7 +13,7 @@ examples; never attach a personal database, API key or unredacted chat history.
 ## Set up and create a branch
 
 1. Fork the repository on GitHub.
-2. Clone your fork and follow the Python 3.12/Tcl-Tk setup in [README](README.md#run-from-source).
+2. Clone your fork and follow the Python 3.12/Tcl-Tk setup in [English README](README.en.md#run-from-source).
 3. Install test dependencies with `python -m pip install -r requirements-dev.txt`.
 4. Add upstream and create a focused branch:
 
