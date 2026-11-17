@@ -1098,7 +1098,7 @@ def navigate_clock(level, direction):
         messagebox.showerror("Erreur", str(e))
 
 root = tk.Tk()
-root.title("Olney Engine V1.8.5 — Cycles du Biblaridion")
+root.title("Olney Engine V1.8.6 — Cycles du Biblaridion")
 
 
 def resource_path(*parts):
@@ -1441,7 +1441,7 @@ top_bar = ttk.Frame(main)
 top_bar.pack(fill="x")
 title_group = ttk.Frame(top_bar)
 title_group.pack(side="left", anchor="w")
-ttk.Label(title_group, text="OLNEY ENGINE V1.8.5", style="Title.TLabel").pack(anchor="w")
+ttk.Label(title_group, text="OLNEY ENGINE V1.8.6", style="Title.TLabel").pack(anchor="w")
 ttk.Label(
     title_group,
     text="Interface de calcul des cycles du Biblaridion.",
@@ -4853,7 +4853,7 @@ footer.pack(side="bottom", fill="x", pady=(8, 0))
 ttk.Label(footer, textvariable=status_var, font=("Segoe UI", 9)).pack(side="left")
 credit_label = ttk.Label(
     footer,
-    text="Olney Engine V1.8.5 — développé par Sébastien",
+    text="Olney Engine V1.8.6 — développé par Sébastien",
     font=("Segoe UI", 9),
 )
 credit_label.pack(side="right")

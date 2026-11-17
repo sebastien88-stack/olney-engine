@@ -1,4 +1,4 @@
-# Olney Engine — V1.8.5
+# Olney Engine — V1.8.6
 
 Olney Engine est une application Windows consacrée à l’exploration du système
 des 52 cartes : profils, cycles temporels, frise chronologique, événements,
@@ -7,13 +7,23 @@ relations et lectures structurées assistées par Emmett.
 ## Installer l’application
 
 Téléchargez l’installateur depuis la section **Releases** du dépôt GitHub, puis
-lancez `Olney_Engine_Setup_1.8.5.exe`. Python n’est pas nécessaire pour utiliser
+lancez `Olney_Engine_Setup_1.8.6.exe`. Python n’est pas nécessaire pour utiliser
 la version installée.
 
 Les profils, événements, relations et conversations sont conservés uniquement
 dans la base locale de l’utilisateur. Ils ne sont ni inclus dans le dépôt ni
 envoyés automatiquement vers un service externe. La clé OpenAI reste en mémoire
 pendant la session et n’est pas enregistrée par Olney Engine.
+
+## V1.8.6 — connexion OpenRouter
+
+Dans Emmett, ouvrir **Connexion**, choisir **OpenRouter**, saisir sa clé et
+l’identifiant exact du modèle OpenRouter. `openrouter/auto` permet le routage
+automatique. OpenAI reste disponible dans le même menu. Chaque service garde
+sa propre clé en mémoire pendant la session ; les clés ne sont pas enregistrées.
+Les variables `OPENROUTER_API_KEY` et `OLNEY_OPENROUTER_MODEL` sont également
+prises en charge. Les conversations et le contexte calculé utile sont transmis
+au service choisi, puis au fournisseur de modèle sélectionné par OpenRouter.
 
 ## V1.8.5 — identité visuelle et distribution GitHub
 

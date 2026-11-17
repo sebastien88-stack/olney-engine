@@ -18,6 +18,8 @@ from reading_service import ReadingService
 
 DEFAULT_MODEL = "gpt-5.6-terra"
 API_URL = "https://api.openai.com/v1/responses"
+OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
+OPENROUTER_MODEL = "openrouter/auto"
 ANGLE_OPTIONS = (
     "Automatique",
     "Vue d’ensemble",
@@ -626,9 +628,16 @@ class OlneyChatService:
 class OpenAIResponsesClient:
     def __init__(self, api_key=None, *, model=None, timeout=120,
                  max_output_tokens=3000, reasoning_effort="medium",
-                 verbosity="medium"):
-        self.api_key = str(api_key or os.environ.get("OPENAI_API_KEY") or "").strip()
-        self.model = str(model or os.environ.get("OLNEY_OPENAI_MODEL") or DEFAULT_MODEL).strip()
+                 verbosity="medium", provider="openai"):
+        self.provider = provider
+        if provider not in {"openai", "openrouter"}:
+            raise ValueError("Fournisseur inconnu.")
+        self._connections = {}
+        env_key = "OPENROUTER_API_KEY" if provider == "openrouter" else "OPENAI_API_KEY"
+        env_model = "OLNEY_OPENROUTER_MODEL" if provider == "openrouter" else "OLNEY_OPENAI_MODEL"
+        default_model = OPENROUTER_MODEL if provider == "openrouter" else DEFAULT_MODEL
+        self.api_key = str(api_key or os.environ.get(env_key) or "").strip()
+        self.model = str(model or os.environ.get(env_model) or default_model).strip()
         self.timeout = int(timeout)
         self.max_output_tokens = max(800, int(max_output_tokens))
         self.reasoning_effort = str(reasoning_effort or "medium").strip()
@@ -637,7 +646,28 @@ class OpenAIResponsesClient:
     def configured(self):
         return bool(self.api_key)
 
+    def configure_connection(self, provider, api_key="", model=""):
+        if provider not in {"openai", "openrouter"}:
+            raise ValueError("Fournisseur inconnu.")
+        self._connections[self.provider] = (self.api_key, self.model)
+        saved_key, saved_model = self._connections.get(provider, ("", ""))
+        env_key = "OPENROUTER_API_KEY" if provider == "openrouter" else "OPENAI_API_KEY"
+        default_model = OPENROUTER_MODEL if provider == "openrouter" else DEFAULT_MODEL
+        key = str(api_key or saved_key or os.environ.get(env_key) or "").strip()
+        if not key:
+            raise ValueError("Saisis une clé API pour ce fournisseur.")
+        self.provider, self.api_key = provider, key
+        self.model = str(model or saved_model or default_model).strip()
+
     def _payload(self, *, instructions, context, messages, max_output_tokens=None):
+        if self.provider == "openrouter":
+            return {
+                "model": self.model,
+                "messages": [{"role": "system", "content": instructions}]
+                + OlneyChatService.request_input(context, messages),
+                "max_tokens": int(max_output_tokens or self.max_output_tokens),
+                "stream": False,
+            }
         payload = {
             "model": self.model,
             "instructions": instructions,
@@ -652,7 +682,7 @@ class OpenAIResponsesClient:
 
     def _post(self, payload):
         request = Request(
-            API_URL,
+            OPENROUTER_URL if self.provider == "openrouter" else API_URL,
             data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
             headers={
                 "Authorization": f"Bearer {self.api_key}",
@@ -669,10 +699,28 @@ class OpenAIResponsesClient:
                 message = detail.get("error", {}).get("message") or str(error)
             except Exception:
                 message = str(error)
-            raise ValueError(f"OpenAI : {message}") from error
+            raise ValueError(f"{self.provider} : {message}") from error
         except URLError as error:
-            raise ValueError(f"Connexion OpenAI impossible : {error.reason}") from error
+            raise ValueError(f"Connexion {self.provider} impossible : {error.reason}") from error
 
+        if self.provider == "openrouter":
+            if result.get("error"):
+                raise ValueError(f'OpenRouter : {result["error"].get("message", "Erreur API")}')
+            choices = result.get("choices") or []
+            choice = choices[0] if choices else {}
+            content = (choice.get("message") or {}).get("content") or ""
+            if isinstance(content, list):
+                content = "\n".join(part.get("text", "") for part in content if part.get("type") == "text")
+            limited = choice.get("finish_reason") == "length"
+            usage = result.get("usage") or {}
+            result = {
+                "id": result.get("id"), "model": result.get("model"),
+                "output_text": content,
+                "status": "incomplete" if limited else "completed",
+                "incomplete_details": {"reason": "max_output_tokens"} if limited else {},
+                "usage": {"input_tokens": usage.get("prompt_tokens", 0),
+                          "output_tokens": usage.get("completion_tokens", 0)},
+            }
         return result
 
     @staticmethod
@@ -715,7 +763,7 @@ class OpenAIResponsesClient:
     def respond(self, *, instructions, context, messages):
         if not self.api_key:
             raise ValueError(
-                "Ajoute une clé API OpenAI dans Connexion, ou définis OPENAI_API_KEY."
+                "Ajoute la clé API de ton fournisseur dans Connexion."
             )
         payload = self._payload(
             instructions=instructions, context=context, messages=messages

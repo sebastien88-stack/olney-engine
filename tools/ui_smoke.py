@@ -118,7 +118,7 @@ def inspect_and_close(root, *args, **kwargs):
         assert abs(
             (block_y + block_height / 2.0) - profile_part.winfo_reqheight() / 2.0
         ) <= 1.0
-    assert app.credit_label.cget("text") == "Olney Engine V1.8.5 — développé par Sébastien"
+    assert app.credit_label.cget("text") == "Olney Engine V1.8.6 — développé par Sébastien"
     assert app.theme_button.cget("width") == 3
     assert app.theme_button_var.get() == "☀"
     assert app.profile_button_var.get() == "👤 Aucun profil"

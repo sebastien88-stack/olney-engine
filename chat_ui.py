@@ -8,7 +8,7 @@ import tkinter as tk
 from brand_theme import LIGHT
 from tkinter import messagebox, ttk
 
-from olney_chat import ANGLE_OPTIONS, DEFAULT_MODEL
+from olney_chat import ANGLE_OPTIONS, DEFAULT_MODEL, OPENROUTER_MODEL
 from wrapped_list import WrappedList
 
 
@@ -526,22 +526,28 @@ class OlneyChatView(ttk.Frame):
 
     def open_connection(self):
         dialog = tk.Toplevel(self)
-        dialog.title("Connexion OpenAI — session Emmett")
+        dialog.title("Connexion IA — session Emmett")
         dialog.transient(self.winfo_toplevel())
         dialog.resizable(False, False)
         shell = ttk.Frame(dialog, padding=18)
         shell.pack(fill="both", expand=True)
-        ttk.Label(shell, text="CONNEXION OPENAI", font=("Segoe UI", 14, "bold")).pack(
+        ttk.Label(shell, text="CONNEXION EMMETT", font=("Segoe UI", 14, "bold")).pack(
             anchor="w"
         )
         ttk.Label(
             shell,
             text=(
                 "La clé sert uniquement pendant cette session. Elle n’est ni "
-                "enregistrée dans la base locale ni envoyée ailleurs qu’à OpenAI."
+                "enregistrée dans la base locale. Les messages et le contexte utile "
+                "sont transmis au service choisi (et à son fournisseur de modèle via OpenRouter)."
             ),
             wraplength=470, justify="left",
         ).pack(anchor="w", pady=(5, 13))
+        ttk.Label(shell, text="SERVICE", style="InputLabel.TLabel").pack(anchor="w")
+        provider_var = tk.StringVar(value="OpenRouter" if self.client.provider == "openrouter" else "OpenAI")
+        provider_entry = ttk.Combobox(shell, textvariable=provider_var,
+                                      values=("OpenRouter", "OpenAI"), state="readonly")
+        provider_entry.pack(fill="x", pady=(4, 10))
         ttk.Label(shell, text="CLÉ API", style="InputLabel.TLabel").pack(anchor="w")
         key_var = tk.StringVar()
         key_entry = ttk.Entry(
@@ -557,24 +563,35 @@ class OlneyChatView(ttk.Frame):
         detected = (
             "Une clé est déjà active pour cette session."
             if self.client.configured() else
-            "Aucune clé active. Tu peux aussi utiliser la variable OPENAI_API_KEY."
+            "Clés possibles : OPENAI_API_KEY ou OPENROUTER_API_KEY."
         )
         ttk.Label(shell, text=detected, style="InputLabel.TLabel").pack(anchor="w")
+        ttk.Label(shell, text="OpenRouter : indique l’identifiant exact du modèle, ou openrouter/auto.",
+                  wraplength=470).pack(anchor="w", pady=(5, 0))
+
+        def change_provider(_event=None):
+            provider = provider_var.get().lower()
+            key_var.set("")
+            saved = self.client._connections.get(provider)
+            model_var.set(self.client.model if provider == self.client.provider else
+                          saved[1] if saved else
+                          OPENROUTER_MODEL if provider == "openrouter" else DEFAULT_MODEL)
+
+        provider_entry.bind("<<ComboboxSelected>>", change_provider)
 
         buttons = ttk.Frame(shell)
         buttons.pack(fill="x", pady=(14, 0))
 
         def apply_connection():
             key = key_var.get().strip()
-            model = model_var.get().strip() or DEFAULT_MODEL
-            if key:
-                self.client.api_key = key
-            if not self.client.configured():
+            model = model_var.get().strip()
+            try:
+                self.client.configure_connection(provider_var.get().lower(), key, model)
+            except ValueError as error:
                 messagebox.showerror(
-                    "Connexion OpenAI", "Saisis une clé API valide.", parent=dialog
+                    "Connexion Emmett", str(error), parent=dialog
                 )
                 return
-            self.client.model = model
             dialog.destroy()
             self._refresh_connection_label()
             self.status_var.set(f"Connexion prête · modèle {model}.")
@@ -595,9 +612,9 @@ class OlneyChatView(ttk.Frame):
         if self.waiting:
             self.connection_var.set("◐ RÉPONSE EN COURS")
         elif self.client.configured():
-            self.connection_var.set(f"● OPENAI · {self.client.model}")
+            self.connection_var.set(f"● {self.client.provider.upper()} · {self.client.model}")
         else:
-            self.connection_var.set("○ OPENAI NON CONNECTÉ")
+            self.connection_var.set("○ IA NON CONNECTÉE")
 
     def apply_theme(self):
         dark = bool(self.dark_mode_getter())

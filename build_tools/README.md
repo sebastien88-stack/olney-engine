@@ -10,6 +10,6 @@ Les données propres au moteur (`data.json`, `places.json`, `interpretation` et
 
 - `build_portable.bat` produit le dossier autonome `dist\Olney Engine`.
 - `build_installer.bat` reconstruit ce dossier puis génère
-  `release\Olney_Engine_Setup_1.8.5.exe` avec Inno Setup.
+  `release\Olney_Engine_Setup_1.8.6.exe` avec Inno Setup.
 
 La clé OpenAI n’est jamais intégrée à la distribution.

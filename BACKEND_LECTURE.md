@@ -1,4 +1,4 @@
-# Backend de lecture — V1.8.5
+# Backend de lecture — V1.8.6
 
 ## Conversation Emmett
 

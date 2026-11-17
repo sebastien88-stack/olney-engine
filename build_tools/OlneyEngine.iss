@@ -1,5 +1,5 @@
 #define MyAppName "Olney Engine"
-#define MyAppVersion "1.8.5"
+#define MyAppVersion "1.8.6"
 #define MyAppExeName "Olney Engine.exe"
 
 [Setup]
@@ -23,7 +23,7 @@ WizardSmallImageFile=..\assets\installer_star_small.bmp
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 UninstallDisplayIcon={app}\{#MyAppExeName}
-VersionInfoVersion=1.8.5.0
+VersionInfoVersion=1.8.6.0
 VersionInfoProductName={#MyAppName}
 VersionInfoProductVersion={#MyAppVersion}
 
