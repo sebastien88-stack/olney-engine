@@ -11,7 +11,7 @@
 - [Découvrir les vues de l’application](#découvrir-lapplication)
 - [Menus, profils, événements, relations et Emmett](#les-menus-et-les-dossiers-personnels)
 - [Sources et références historiques](#references)
-- [Biblaridion et motifs de l’Apocalypse](#biblaridion)
+- [Biblaridion de l’Apocalypse](#biblaridion)
 - [Atlas historique](#atlas)
 - [Questions fréquentes](#faq)
 - [Données locales](#données-locales)
@@ -216,10 +216,9 @@ Les conventions propres à l’application et les sources de son corpus sont
 identifiées dans [la provenance des interprétations](interpretation/provenance.json).
 
 <a id="biblaridion"></a>
-### Biblaridion et motifs de l’Apocalypse
+### Biblaridion de l’Apocalypse
 
-Dans l’Apocalypse de saint Jean, le petit livre — [*biblaridion*, « petit rouleau »](https://biblehub.com/greek/974.htm) —
-et les **Sept Tonnerres**, dont les paroles ne doivent pas être écrites,
+Dans l’Apocalypse, saint Jean reçoit un livre qui tient la paume de sa main : le petit livre — [*biblaridion*, « petit rouleau »](https://biblehub.com/greek/974.htm) — et les **Sept Tonnerres**, dont les paroles ne doivent pas être écrites,
 apparaissent en [Ap 10, 2–10](https://www.aelf.org/bible/Ap/10).
 Le rouleau aux **Sept Sceaux** figure en [Ap 5, 1](https://www.aelf.org/bible/Ap/5),
 et le **Livre de Vie** notamment en [Ap 20, 12–15](https://www.aelf.org/bible/Ap/20).
