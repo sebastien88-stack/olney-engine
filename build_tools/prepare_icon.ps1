@@ -1,4 +1,4 @@
-# Rebuild Windows icons from the original white-on-black spade without redrawing it.
+# Keep the black spade body and white ornaments; remove only the outer background.
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
 $assetDir = Join-Path $PSScriptRoot '..\assets'
@@ -7,13 +7,18 @@ $original = [System.Drawing.Bitmap]::FromFile($sourcePath)
 $source = New-Object System.Drawing.Bitmap($original.Width, $original.Height, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
 try {
     for ($y = 0; $y -lt $original.Height; $y++) {
+        $first = $original.Width
+        $last = -1
         for ($x = 0; $x -lt $original.Width; $x++) {
             $pixel = $original.GetPixel($x, $y)
-            $alpha = [Math]::Max($pixel.R, [Math]::Max($pixel.G, $pixel.B))
-            # Discard faint compression noise in the black background, retaining
-            # smooth antialiasing on the original bright strokes.
-            $alpha = if ($alpha -le 64) { 0 } else { [int](255 * ($alpha - 64) / 191) }
-            $source.SetPixel($x, $y, [System.Drawing.Color]::FromArgb($alpha, 255, 255, 255))
+            if ([Math]::Max($pixel.R, [Math]::Max($pixel.G, $pixel.B)) -gt 96) {
+                $first = [Math]::Min($first, $x)
+                $last = $x
+            }
+        }
+        for ($x = $first; $x -le $last; $x++) {
+            $pixel = $original.GetPixel($x, $y)
+            $source.SetPixel($x, $y, [System.Drawing.Color]::FromArgb(255, $pixel.R, $pixel.G, $pixel.B))
         }
     }
 } finally { $original.Dispose() }
@@ -44,9 +49,8 @@ try {
             for ($row = $size - 1; $row -ge 0; $row--) {
                 for ($column = 0; $column -lt $size; $column++) {
                     $color = $bitmap.GetPixel($column, $row)
-                    $channel = if ($color.A -eq 0) { 0 } else { 255 }
-                    $dib.Write([Byte]$channel); $dib.Write([Byte]$channel)
-                    $dib.Write([Byte]$channel); $dib.Write([Byte]$color.A)
+                    $dib.Write([Byte]$color.B); $dib.Write([Byte]$color.G)
+                    $dib.Write([Byte]$color.R); $dib.Write([Byte]$color.A)
                 }
             }
             for ($row = $size - 1; $row -ge 0; $row--) {
@@ -63,6 +67,14 @@ try {
             $images.Add($buffer.ToArray())
             if ($size -eq 256) {
                 $bitmap.Save((Join-Path $assetDir 'olney_icon.png'), [System.Drawing.Imaging.ImageFormat]::Png)
+                $header = New-Object System.Drawing.Bitmap(40, 40)
+                $headerGraphics = [System.Drawing.Graphics]::FromImage($header)
+                try {
+                    $headerGraphics.Clear([System.Drawing.Color]::Transparent)
+                    $headerGraphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+                    $headerGraphics.DrawImage($source, 0, 0, 40, 40)
+                    $header.Save((Join-Path $assetDir 'olney_header.png'), [System.Drawing.Imaging.ImageFormat]::Png)
+                } finally { $headerGraphics.Dispose(); $header.Dispose() }
                 if ($bitmap.GetPixel(0, 0).A -ne 0) { throw 'Icon corner must be transparent' }
             }
         } finally { $buffer.Dispose(); $bitmap.Dispose() }
@@ -83,5 +95,5 @@ try {
     }
     foreach ($bytes in $images) { $writer.Write($bytes) }
 } finally { $writer.Dispose(); $stream.Dispose() }
-Copy-Item -LiteralPath (Join-Path $assetDir 'olney_icon.ico') -Destination (Join-Path $assetDir 'olney_windows_v2.ico') -Force
+Copy-Item -LiteralPath (Join-Path $assetDir 'olney_icon.ico') -Destination (Join-Path $assetDir 'olney_windows_v3.ico') -Force
 Write-Output 'Transparent spade: original strokes preserved; 9 ICO sizes written.'

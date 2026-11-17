@@ -1099,7 +1099,7 @@ def navigate_clock(level, direction):
         messagebox.showerror("Erreur", str(e))
 
 root = tk.Tk()
-root.title("Olney Engine V1.8.8 — Cycles du Biblaridion")
+root.title("Olney Engine V1.8.9 — Cycles du Biblaridion")
 
 
 def resource_path(*parts):
@@ -1109,7 +1109,7 @@ def resource_path(*parts):
 
 
 try:
-    root.iconbitmap(resource_path("assets", "olney_windows_v2.ico"))
+    root.iconbitmap(resource_path("assets", "olney_windows_v3.ico"))
 except tk.TclError:
     pass
 
@@ -1449,7 +1449,11 @@ top_bar = ttk.Frame(main)
 top_bar.pack(fill="x")
 title_group = ttk.Frame(top_bar)
 title_group.pack(side="left", anchor="w")
-ttk.Label(title_group, text="OLNEY ENGINE V1.8.8", style="Title.TLabel").pack(anchor="w")
+title_row = ttk.Frame(title_group)
+title_row.pack(anchor="w")
+header_logo = tk.PhotoImage(file=resource_path("assets", "olney_header.png"))
+ttk.Label(title_row, image=header_logo).pack(side="left", padx=(0, 8))
+ttk.Label(title_row, text="OLNEY ENGINE V1.8.9", style="Title.TLabel").pack(side="left")
 ttk.Label(
     title_group,
     text="Interface de calcul des cycles du Biblaridion",
@@ -1481,10 +1485,10 @@ settings_menu = tk.Menu(root, tearoff=False)
 settings_menu.add_command(label="Clé API / connexion Emmett…", command=open_api_settings)
 settings_menu.add_separator()
 settings_menu.add_command(label="Vérifier les mises à jour…",
-                          command=lambda: check_update(root, "1.8.8"))
+                          command=lambda: check_update(root, "1.8.9"))
 settings_button = ttk.Menubutton(top_bar, text="⚙", width=3,
                                 menu=settings_menu, style="Profile.TMenubutton")
-settings_button.pack(side="right", padx=(7, 8), pady=(3, 0))
+settings_button.pack(side="right", anchor="ne", padx=(0, 8), pady=(3, 0))
 olney_button = ttk.Button(
     top_bar,
     text="✦ EMMETT",
@@ -4875,7 +4879,7 @@ footer.pack(side="bottom", fill="x", pady=(8, 0))
 ttk.Label(footer, textvariable=status_var, font=("Segoe UI", 9)).pack(side="left")
 credit_label = ttk.Label(
     footer,
-    text="Olney Engine V1.8.8 — développé par Sébastien",
+    text="Olney Engine V1.8.9 — développé par Sébastien",
     font=("Segoe UI", 9),
 )
 credit_label.pack(side="right")
