@@ -881,7 +881,7 @@ class OlneyEngine:
 
         if birth.card_number == 0:
             return {
-                "engine_version": "1.8.6",
+                "engine_version": "1.8.7",
                 "birth_date": b.isoformat(),
                 "target_date": t.isoformat(),
                 "birth_card_override": birth_card_number is not None,
@@ -902,7 +902,7 @@ class OlneyEngine:
             }
 
         return {
-            "engine_version": "1.8.6",
+            "engine_version": "1.8.7",
             "birth_date": b.isoformat(),
             "target_date": t.isoformat(),
             "birth_card_override": birth_card_number is not None,

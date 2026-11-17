@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import os
 import sys
 from brand_theme import LIGHT
+from update_ui import check_update
 from olney_engine import OlneyEngine
 from interpretation_runtime import InterpretationContextBuilder, InterpretationKnowledge
 from interpretation_ui import CycleInterpretationView, GlobalInterpretationView
@@ -1098,7 +1099,7 @@ def navigate_clock(level, direction):
         messagebox.showerror("Erreur", str(e))
 
 root = tk.Tk()
-root.title("Olney Engine V1.8.6 — Cycles du Biblaridion")
+root.title("Olney Engine V1.8.7 — Cycles du Biblaridion")
 
 
 def resource_path(*parts):
@@ -1441,10 +1442,10 @@ top_bar = ttk.Frame(main)
 top_bar.pack(fill="x")
 title_group = ttk.Frame(top_bar)
 title_group.pack(side="left", anchor="w")
-ttk.Label(title_group, text="OLNEY ENGINE V1.8.6", style="Title.TLabel").pack(anchor="w")
+ttk.Label(title_group, text="OLNEY ENGINE V1.8.7", style="Title.TLabel").pack(anchor="w")
 ttk.Label(
     title_group,
-    text="Interface de calcul des cycles du Biblaridion.",
+    text="Interface de calcul des cycles du Biblaridion",
     font=("Segoe UI", 10)
 ).pack(anchor="w")
 navigation_controls = ttk.Frame(top_bar)
@@ -1463,6 +1464,8 @@ theme_button = ttk.Button(
     style="Theme.TButton",
 )
 theme_button.pack(side="right", anchor="ne", pady=(3, 0))
+ttk.Button(top_bar, text="Mise à jour", style="Profile.TMenubutton",
+           command=lambda: check_update(root, "1.8.7")).pack(side="right", padx=(7, 0), pady=(3, 0))
 olney_button = ttk.Button(
     top_bar,
     text="✦ EMMETT",
@@ -4853,7 +4856,7 @@ footer.pack(side="bottom", fill="x", pady=(8, 0))
 ttk.Label(footer, textvariable=status_var, font=("Segoe UI", 9)).pack(side="left")
 credit_label = ttk.Label(
     footer,
-    text="Olney Engine V1.8.6 — développé par Sébastien",
+    text="Olney Engine V1.8.7 — développé par Sébastien",
     font=("Segoe UI", 9),
 )
 credit_label.pack(side="right")
