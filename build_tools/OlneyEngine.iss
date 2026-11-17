@@ -1,5 +1,5 @@
 #define MyAppName "Olney Engine"
-#define MyAppVersion "1.8.6"
+#define MyAppVersion "1.8.9"
 #define MyAppExeName "Olney Engine.exe"
 
 [Setup]
@@ -17,13 +17,13 @@ OutputBaseFilename=Olney_Engine_Setup_{#MyAppVersion}
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
-SetupIconFile=..\assets\olney_icon.ico
+SetupIconFile=..\assets\olney_windows_v3.ico
 WizardImageFile=..\assets\installer_star_large.bmp
 WizardSmallImageFile=..\assets\installer_star_small.bmp
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
-UninstallDisplayIcon={app}\{#MyAppExeName}
-VersionInfoVersion=1.8.6.0
+UninstallDisplayIcon={app}\_internal\assets\olney_windows_v3.ico
+VersionInfoVersion=1.8.9.0
 VersionInfoProductName={#MyAppName}
 VersionInfoProductVersion={#MyAppVersion}
 
@@ -37,8 +37,8 @@ Name: "desktopicon"; Description: "Créer un raccourci sur le Bureau"; GroupDesc
 Source: "..\dist\Olney Engine\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
-Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
-Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
+Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\_internal\assets\olney_windows_v3.ico"; IconIndex: 0
+Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\_internal\assets\olney_windows_v3.ico"; IconIndex: 0; Tasks: desktopicon
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "Lancer {#MyAppName}"; Flags: nowait postinstall skipifsilent

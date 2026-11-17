@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import os
 import sys
 from brand_theme import LIGHT
+from update_ui import check_update
 from olney_engine import OlneyEngine
 from interpretation_runtime import InterpretationContextBuilder, InterpretationKnowledge
 from interpretation_ui import CycleInterpretationView, GlobalInterpretationView
@@ -1098,7 +1099,7 @@ def navigate_clock(level, direction):
         messagebox.showerror("Erreur", str(e))
 
 root = tk.Tk()
-root.title("Olney Engine V1.8.6 — Cycles du Biblaridion")
+root.title("Olney Engine V1.8.9 — Cycles du Biblaridion")
 
 
 def resource_path(*parts):
@@ -1108,7 +1109,7 @@ def resource_path(*parts):
 
 
 try:
-    root.iconbitmap(resource_path("assets", "olney_icon.ico"))
+    root.iconbitmap(resource_path("assets", "olney_windows_v3.ico"))
 except tk.TclError:
     pass
 
@@ -1412,6 +1413,13 @@ def apply_theme():
         _refresh_event_menu()
     if "relationship_menu" in globals():
         _refresh_relationship_menu()
+    if "settings_menu" in globals():
+        settings_menu.configure(
+            background="#151F29" if dark_mode else LIGHT["panel"],
+            foreground="#E7EEF5" if dark_mode else LIGHT["text"],
+            activebackground="#29465E" if dark_mode else LIGHT["selected"],
+            activeforeground="#E7EEF5" if dark_mode else LIGHT["text"],
+        )
     if "notebook" in globals():
         update_clock_tab_highlight()
     page_theme = globals().get("profiles_page_apply_theme")
@@ -1441,10 +1449,14 @@ top_bar = ttk.Frame(main)
 top_bar.pack(fill="x")
 title_group = ttk.Frame(top_bar)
 title_group.pack(side="left", anchor="w")
-ttk.Label(title_group, text="OLNEY ENGINE V1.8.6", style="Title.TLabel").pack(anchor="w")
+title_row = ttk.Frame(title_group)
+title_row.pack(anchor="w")
+header_logo = tk.PhotoImage(file=resource_path("assets", "olney_header.png"))
+ttk.Label(title_row, image=header_logo).pack(side="left", padx=(0, 8))
+ttk.Label(title_row, text="OLNEY ENGINE V1.8.9", style="Title.TLabel").pack(side="left")
 ttk.Label(
     title_group,
-    text="Interface de calcul des cycles du Biblaridion.",
+    text="Interface de calcul des cycles du Biblaridion",
     font=("Segoe UI", 10)
 ).pack(anchor="w")
 navigation_controls = ttk.Frame(top_bar)
@@ -1463,6 +1475,20 @@ theme_button = ttk.Button(
     style="Theme.TButton",
 )
 theme_button.pack(side="right", anchor="ne", pady=(3, 0))
+def open_api_settings():
+    if chat_page is None or not chat_page.winfo_exists():
+        manage_chat()
+    chat_page.open_connection()
+
+
+settings_menu = tk.Menu(root, tearoff=False)
+settings_menu.add_command(label="Clé API / connexion Emmett…", command=open_api_settings)
+settings_menu.add_separator()
+settings_menu.add_command(label="Vérifier les mises à jour…",
+                          command=lambda: check_update(root, "1.8.9"))
+settings_button = ttk.Menubutton(top_bar, text="⚙", width=3,
+                                menu=settings_menu, style="Profile.TMenubutton")
+settings_button.pack(side="right", anchor="ne", padx=(0, 8), pady=(3, 0))
 olney_button = ttk.Button(
     top_bar,
     text="✦ EMMETT",
@@ -4853,7 +4879,7 @@ footer.pack(side="bottom", fill="x", pady=(8, 0))
 ttk.Label(footer, textvariable=status_var, font=("Segoe UI", 9)).pack(side="left")
 credit_label = ttk.Label(
     footer,
-    text="Olney Engine V1.8.6 — développé par Sébastien",
+    text="Olney Engine V1.8.9 — développé par Sébastien",
     font=("Segoe UI", 9),
 )
 credit_label.pack(side="right")
