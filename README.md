@@ -1,6 +1,6 @@
 # Olney Engine — V1.8.6
 
-(docs/screenshots/OlneyEngineLOGO.png)
+![Logo Olney Engine](docs/screenshots/OlneyEngineLOGO.png)
 
 ## Aux origines d'Olney Engine
 
@@ -8,8 +8,7 @@
 
 Richmond affirme être l'héritier d'une tradition ésotérique millénaire, issue notamment des atlantes. Au cœur de son enseignement se trouve **la Religion des Étoiles**, une conception mystique de l'univers dans laquelle les cycles célestes, les nombres et les 52 cartes à jouer participent d'un même langage symbolique.
 
-(docs/screenshots/OrdreMageEtoile.png)
-
+![L'étoile des mages](docs/screenshots/OrdreMageEtoile.png)
 
 Selon Richmond, le jeu de cartes constitue un véritable calendrier cosmique, permettant d'explorer les correspondances entre les mouvements des astres et les événements de l'existence.
 
