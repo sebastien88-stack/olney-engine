@@ -2,6 +2,23 @@
 
 [Français](README.md) · [Contributing](CONTRIBUTING.md) · [License scope](LICENSING.md)
 
+## Contents
+
+- [The origins of Olney Engine](#the-origins-of-olney-engine)
+- [Download and installation](#installation)
+- [Why Olney Engine?](#why)
+- [Explore the application](#explore-the-application)
+- [Menus, profiles, events and relationships](#menus-profiles-events-and-relationships)
+- [Emmett](#emmett)
+- [Historical sources and references](#references)
+- [Biblaridion and Revelation](#biblaridion)
+- [Historical Atlas](#atlas)
+- [Frequently asked questions](#faq)
+- [Run from source](#run-from-source)
+- [Tests and checks](#tests-and-checks)
+- [How the engine fits together](#how-the-engine-fits-together)
+- [License and project governance](#license-and-project-governance)
+
 <p align="center">
   <img src="docs/screenshots/OlneyEngineLOGO.png" alt="Logo Olney Engine" width="220">
 </p>
@@ -33,14 +50,19 @@ and Richmond's 52-card system. Olney combines deterministic card calculations,
 interactive timelines, structured interpretations, profiles, events and relationships.
 **Emmett** is its optional conversational interface, using OpenAI or OpenRouter.
 
+<a id="installation"></a>
+
 **[Download Windows installer 1.8.6](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Setup_1.8.6.exe)** · [Portable ZIP](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Portable_1.8.6.zip) · [Releases](https://github.com/sebastien88-stack/olney-engine/releases)
 
 The published 1.8.6 binaries predate this community/licensing preparation and
-retain their original licensing notices. This branch does not publish new binaries.
+retain their original licensing notices. These documentation changes do not publish new binaries.
 
-## Purpose and approach
+<a id="why"></a>
+## Why Olney Engine?
 
-The project helps people explore how symbolic themes develop across different
+Olney brings card calculations, time exploration and lived experience into one
+workspace, from detailed tables to global readings and individual periods or
+relationships. The project helps people explore how symbolic themes develop across different
 time scales. Cards describe energies with many possible expressions, rather
 than a fixed sequence of real-world events. The calculation engine determines
 cards and periods; interpretation remains a separate, contextual layer.
@@ -56,49 +78,63 @@ Enter birth details and an analysis date to inspect life-path, annual, 52-day,
 daily and hourly cards. Navigation keeps the clock and analysis date synchronized.
 Light parchment and dark themes are available.
 
-![Light dashboard and natural-order table](docs/screenshots/accueil-clair.png)
+<p align="center">
+  <img src="docs/screenshots/accueil-clair.png" alt="Light dashboard and natural-order table" width="960">
+</p>
 
 ### Life path and sequence results
 
 Result views show cards, planetary roles and periods, alongside the Moon, Sun,
 Challenge and Result. Each of the seven main life-path cards spans thirteen years.
 
-![Life-path cards and planetary roles](docs/screenshots/chemin-de-vie.png)
+<p align="center">
+  <img src="docs/screenshots/chemin-de-vie.png" alt="Life-path cards and planetary roles" width="960">
+</p>
 
 ### Active-card interpretation
 
 Explore a card's energy, element, sequence role and table position, including
 constructive and difficult expressions and examples of possible manifestations.
 
-![Active-card interpretation in dark mode](docs/screenshots/interpretation.png)
+<p align="center">
+  <img src="docs/screenshots/interpretation.png" alt="Active-card interpretation in dark mode" width="960">
+</p>
 
 ### Full-cycle reading
 
 Read the movement of a complete sequence, its seven steps, Moon, Challenge and
 Result. A fixed header retains the consulted step and distinguishes it from today.
 
-![Annual cycle reading](docs/screenshots/lecture-du-cycle.png)
+<p align="center">
+  <img src="docs/screenshots/lecture-du-cycle.png" alt="Annual cycle reading" width="960">
+</p>
 
 ### Tables and position exchanges
 
 Tables expose planetary axes, the Crown, fixed and semi-fixed cards, the active
 card and the cards involved in its position exchange.
 
-![Weekly table and position exchanges](docs/screenshots/tableau-semaine.png)
+<p align="center">
+  <img src="docs/screenshots/tableau-semaine.png" alt="Weekly table and position exchanges" width="960">
+</p>
 
 ### Interactive timeline
 
 Zoom and move through layered periods, synchronized with the clock. Markers
 highlight Crown passages, double planetary positions and convergences.
 
-![Interactive timeline](docs/screenshots/frise-chronologique.png)
+<p align="center">
+  <img src="docs/screenshots/frise-chronologique.png" alt="Interactive timeline" width="960">
+</p>
 
 ### Global reading
 
 Combine the essential profile, active cards and their resonances, then open a
 card for a closer reading.
 
-![Global interpretation](docs/screenshots/lecture-globale.png)
+<p align="center">
+  <img src="docs/screenshots/lecture-globale.png" alt="Global interpretation" width="960">
+</p>
 
 ### Menus, profiles, events and relationships
 
@@ -123,6 +159,71 @@ The UI is currently French. Keys remain in session memory. Messages and useful
 context are sent to the chosen service and, with OpenRouter, the routed model
 provider. Online generation may incur charges. Offline calculations and built-in
 readings do not require an API key.
+
+<a id="references"></a>
+## Historical sources and references
+
+These sources document Olney H. Richmond's writings and their historical context:
+
+| Work | Documentary reference |
+| --- | --- |
+| *Temple Lectures of the Order of the Magi* (1892) | Lectures on the Order's teachings; [digitized edition, IAPSOP (PDF)](https://iapsop.com/ssoc/1892__richmond___temple_lectures_of_the_order_of_the_magi.pdf). |
+| *The Mystic Test Book; or, The Magic of the Cards* (1893) | A central work on cards and their correspondences; [1893 copy, Library of Congress](https://www.loc.gov/resource/gdcmassbookdig.mystictestbook01rich/?st=gallery). |
+| *Mystic Test Book Supplement* (1896) | Additional instructions on layouts and time cards; [digitized edition, IAPSOP (PDF)](https://iapsop.com/ssoc/1896__richmond___mystic_test_book_supplement.pdf). |
+| *Religion of the Stars* | A collection revisiting and expanding the lectures; [contemporary advertisement, *The Progressive Thinker*, June 19, 1897 (PDF, IAPSOP)](https://iapsop.com/archive/materials/progressive_thinker/progressive_thinker_v16_n395_jun_19_1897.pdf). |
+
+These documents record Richmond's teachings and claims. Accounts of Atlantean
+origins belong to that esoteric tradition. Editions, editorial additions and
+modern resources may carry distinct rights: consultation links do not grant
+redistribution permission. Application conventions and corpus sources are
+identified in [interpretation provenance](interpretation/provenance.json).
+
+<a id="biblaridion"></a>
+### Biblaridion and Revelation
+
+In Revelation, the small scroll — [*biblaridion*](https://biblehub.com/greek/974.htm) —
+and the **Seven Thunders**, whose words must not be written down, appear in
+[Revelation 10:2–10](https://www.aelf.org/bible/Ap/10).
+The scroll with **Seven Seals** appears in [5:1](https://www.aelf.org/bible/Ap/5),
+and the **Book of Life** notably in [20:12–15](https://www.aelf.org/bible/Ap/20)
+(links to the French biblical text; [English chapter 10](https://bible.usccb.org/bible/revelation/10)).
+Connecting these motifs with the 52 cards is an esoteric interpretation;
+the biblical text does not set out this cartomancy system.
+
+<a id="atlas"></a>
+## Historical Atlas
+
+The **Historical Atlas** is an independent project under construction: a
+database intended to gather hundreds of historical figures and dates for
+future exploration. Sources, dates, precision and reuse rights still require
+verification. The Atlas is not included in the downloadable application or this
+repository's datasets. Integration will be handled separately; see [DATA_POLICY.md](DATA_POLICY.md).
+
+<a id="faq"></a>
+## Frequently asked questions
+
+**Do I need Python?**
+
+Not for the Windows installer: download the `.exe` above and follow the wizard.
+Extract the full portable ZIP before launching it. Python with Tcl/Tk is only
+needed to run the source code.
+
+**Is the application free?**
+
+Current downloads are free of charge. Emmett may incur charges from OpenAI or
+OpenRouter, depending on the model and account. Code and resource licensing
+terms are documented in [LICENSING.md](LICENSING.md).
+
+**What works offline?**
+
+Calculations, tables, the timeline, built-in readings and local dossiers work
+offline. Emmett's response generation requires an Internet connection.
+
+**Is Emmett required?**
+
+No. Connect this optional AI interface through **Emmett → Connexion**.
+It uses context prepared by the engine; calculations remain accessible without
+an API key. The application does not persist the key.
 
 ## Run from source
 
@@ -219,8 +320,8 @@ receives that prepared context and does not recalculate card positions.
 | `tests/`, `tools/` | Regression tests, checks and utilities |
 | `build_tools/` | Windows packaging |
 
-The future **Historical Atlas** is external to this task. No Atlas dataset or
-schema migration is introduced. [DATA_POLICY.md](DATA_POLICY.md) defines the boundary.
+The [Historical Atlas](#atlas) is a separate project under construction;
+its data and any future schema changes are outside the current application.
 
 ## License and project governance
 

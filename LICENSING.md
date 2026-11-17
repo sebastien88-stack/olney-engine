@@ -58,3 +58,18 @@ packaged output as well. No new binary is built or released by this PR.
 The GPL text was obtained from the SPDX license-list-data mirror of
 GPL-3.0-only, preserving the complete license and application appendix:
 https://github.com/spdx/license-list-data/blob/main/text/GPL-3.0-only.txt
+
+## Documentation review — 2026-11-17
+
+The bilingual README now links to historical editions and biblical texts.
+These are documentary references, not new grants or imported book content.
+Rechecking this file has not established new permissions for the workbook-derived
+series, book-derived corpus or recreated artwork: their status remains pending.
+The Historical Atlas is a separate database being assembled; its historical
+figures, dates, source precision and reuse rights must be reviewed before any
+integration or publication. No Atlas data are added here.
+
+Before the next Windows release, resolve or exclude the pending resources,
+record any original-content license decisions, preserve runtime notices and
+provide corresponding source matching the distributed binary. No new Windows
+release or change of license scope is made by this documentation update.
