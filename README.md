@@ -1,12 +1,16 @@
 # Olney Engine — V1.8.6
 
+**[Télécharger Olney Engine 1.8.6 pour Windows (.exe)](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Setup_1.8.6.exe)**
+
+[Version portable (.zip)](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Portable_1.8.6.zip) · [Toutes les versions](https://github.com/sebastien88-stack/olney-engine/releases)
+
 Olney Engine est une application Windows consacrée à l’exploration du système
 des 52 cartes : profils, cycles temporels, frise chronologique, événements,
 relations et lectures structurées assistées par Emmett.
 
 ## Installer l’application
 
-Téléchargez l’installateur depuis la section **Releases** du dépôt GitHub, puis
+Téléchargez l’installateur avec le lien ci-dessus ou depuis la section [Releases](https://github.com/sebastien88-stack/olney-engine/releases), puis
 lancez `Olney_Engine_Setup_1.8.6.exe`. Python n’est pas nécessaire pour utiliser
 la version installée.
 
