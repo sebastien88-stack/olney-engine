@@ -1,0 +1,13 @@
+{
+  "example_only": true,
+  "description": "Synthetic documentation example, not a real person or an import file.",
+  "profile": {
+    "name": "Demo",
+    "last_name": "Example",
+    "profile_type": "Humain",
+    "birth_date": "1990-01-15",
+    "birth_time": "12:00",
+    "birth_place": "Paris, FR"
+  },
+  "analysis_date": "2026-01-15"
+}

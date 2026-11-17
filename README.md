@@ -1,165 +1,213 @@
-# Olney Engine — V1.8.6
+# Olney Engine
 
-### La cartomancie des anciens mages, à explorer dans le temps
+[Français](README.fr.md) · [Contributing](CONTRIBUTING.md) · [License scope](LICENSING.md)
 
-Olney Engine est une application Windows consacrée au système des 52 cartes.
-Elle réunit les cartes de naissance, les cycles temporels, une frise interactive,
-les événements, les relations et Emmett, un interlocuteur IA qui s’appuie sur
-les calculs et les règles du moteur pour accompagner la lecture.
+A Windows desktop application exploring the **Cartomancy of the Ancient Magi**
+and Richmond's 52-card system. Olney combines deterministic card calculations,
+interactive timelines, structured interpretations, profiles, events and relationships.
+**Emmett** is its optional conversational interface, using OpenAI or OpenRouter.
 
-**[Télécharger Olney Engine 1.8.6 pour Windows (.exe)](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Setup_1.8.6.exe)**
+**[Download Windows installer 1.8.6](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Setup_1.8.6.exe)** · [Portable ZIP](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Portable_1.8.6.zip) · [Releases](https://github.com/sebastien88-stack/olney-engine/releases)
 
-[Version portable (.zip)](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Portable_1.8.6.zip) · [Toutes les versions](https://github.com/sebastien88-stack/olney-engine/releases)
+The published 1.8.6 binaries predate this community/licensing preparation and
+retain their original licensing notices. This branch does not publish new binaries.
 
-Python n’est pas nécessaire pour utiliser l’application installée. La version
-portable doit être entièrement extraite avant de lancer `Olney Engine.exe`.
+## Purpose and approach
 
-## Découvrir l’application
+The project helps people explore how symbolic themes develop across different
+time scales. Cards describe energies with many possible expressions, rather
+than a fixed sequence of real-world events. The calculation engine determines
+cards and periods; interpretation remains a separate, contextual layer.
 
-### Une horloge pour se situer
+Development is open to contributions. The maintainer defines the direction and
+reviews changes through pull requests. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-La date de naissance, l’heure et le lieu servent de point de départ à l’analyse.
-L’horloge affiche les cartes actives du chemin de vie, de l’année, des 52 jours,
-du jour et de l’heure. Ses flèches permettent d’explorer d’autres périodes ;
-la date analysée et les vues se mettent à jour ensemble. Le bouton Aujourd’hui
-ramène à la date et à l’heure présentes.
+## Explore the application
 
-![Accueil en thème clair avec l’horloge et le tableau de l’ordre naturel](docs/screenshots/accueil-clair.png)
+### Dashboard and cycle clock
 
-*Le thème clair reprend une palette parchemin. Le bouton soleil/lune permet
-de passer au thème sombre, visible dans les captures suivantes.*
+Enter birth details and an analysis date to inspect life-path, annual, 52-day,
+daily and hourly cards. Navigation keeps the clock and analysis date synchronized.
+Light parchment and dark themes are available.
 
-### Le chemin de vie et les séquences de cartes
+![Light dashboard and natural-order table](docs/screenshots/accueil-clair.png)
 
-La vue **Résultat** rassemble les cartes d’une séquence, leurs fonctions
-planétaires et leurs périodes, avec la Lune, le Soleil, le Défi et le Résultat.
-Sur le chemin de vie, les sept étapes de Mercure à Neptune couvrent chacune
-treize ans. Un clic sur une carte permet d’approfondir l’étape correspondante.
+### Life path and sequence results
 
-![Résultat du chemin de vie : cartes, planètes et tranches d’âge](docs/screenshots/chemin-de-vie.png)
+Result views show cards, planetary roles and periods, alongside the Moon, Sun,
+Challenge and Result. Each of the seven main life-path cards spans thirteen years.
 
-### Comprendre la carte active
+![Life-path cards and planetary roles](docs/screenshots/chemin-de-vie.png)
 
-La vue **Interprétation** développe l’énergie de la carte consultée : son
-essentiel, son élément, sa fonction dans la séquence et son emplacement dans
-le tableau. Elle présente des expressions constructives et difficiles ainsi
-que différentes formes possibles dans la vie concrète.
+### Active-card interpretation
 
-![Interprétation de la carte active en thème sombre](docs/screenshots/interpretation.png)
+Explore a card's energy, element, sequence role and table position, including
+constructive and difficult expressions and examples of possible manifestations.
 
-*Les cartes sont lues comme des énergies que l’on traverse et incarne, dont
-les manifestations dépendent de la personne, de son contexte et de ses choix.*
+![Active-card interpretation in dark mode](docs/screenshots/interpretation.png)
 
-### Lire un cycle dans son ensemble
+### Full-cycle reading
 
-La **Lecture du cycle** replace chaque étape dans le mouvement de la séquence.
-Elle articule les sept cartes, la Lune du cycle, le Défi et le Résultat. Un
-bandeau fixe conserve les repères de l’étape consultée pendant le défilement,
-en distinguant la date explorée de la période réellement en cours aujourd’hui.
+Read the movement of a complete sequence, its seven steps, Moon, Challenge and
+Result. A fixed header retains the consulted step and distinguishes it from today.
 
-![Lecture du cycle annuel avec les blocs Lune, Défi et Résultat](docs/screenshots/lecture-du-cycle.png)
+![Annual cycle reading](docs/screenshots/lecture-du-cycle.png)
 
-### Explorer les tableaux et les échanges de place
+### Tables and position exchanges
 
-Les vues **Tableau** montrent la position des 52 cartes, les axes planétaires,
-la Couronne et les cartes fixes ou semi-fixes. La carte active est encadrée ;
-le panneau d’échange permet de repérer la carte déplacée et celle qui occupe
-sa place d’origine à l’échelle consultée.
+Tables expose planetary axes, the Crown, fixed and semi-fixed cards, the active
+card and the cards involved in its position exchange.
 
-![Tableau de la semaine et panneau des échanges de place](docs/screenshots/tableau-semaine.png)
+![Weekly table and position exchanges](docs/screenshots/tableau-semaine.png)
 
-### Parcourir la frise chronologique
+### Interactive timeline
 
-La frise superpose les cartes du chemin de vie, de l’année, des 52 jours,
-du jour et de l’heure. Le zoom révèle progressivement les périodes fines.
-La navigation temporelle est synchronisée avec l’horloge ; des repères signalent
-notamment les passages en Couronne, les cases doubles et les convergences.
+Zoom and move through layered periods, synchronized with the clock. Markers
+highlight Crown passages, double planetary positions and convergences.
 
-![Frise chronologique et couches temporelles superposées](docs/screenshots/frise-chronologique.png)
+![Interactive timeline](docs/screenshots/frise-chronologique.png)
 
-### Relier les différentes échelles
+### Global reading
 
-La **Lecture globale** réunit le profil essentiel et les cartes actives pour
-faire ressortir le fil rouge du moment, la cascade des cycles et leurs résonances.
-Elle permet de passer d’une vue d’ensemble à l’interprétation d’une carte.
+Combine the essential profile, active cards and their resonances, then open a
+card for a closer reading.
 
-![Lecture globale avec profil essentiel et horloge interprétative](docs/screenshots/lecture-globale.png)
+![Global interpretation](docs/screenshots/lecture-globale.png)
 
-## Les menus et les dossiers personnels
+### Menus, profiles, events and relationships
 
-Les menus en haut de l’application donnent accès aux **profils**, aux
-**événements**, aux **relations** et à **Emmett**. Les listes récentes permettent
-de retrouver rapidement un dossier ; les boutons Retour et Suivant facilitent
-la navigation entre les consultations.
+Top menus offer recent dossiers, full lists and creation actions. Profiles include
+birth details, signs, ascendants, secondary cards, today's clock and life-path
+cards. Search, column sorting and favorites help browse them.
 
-### Profils
+Events associate dates, categories, notes and participants with profiles; their
+grid displays cycle configurations at the event date. Relationship dossiers
+compare birth cards, secondary cards, permanent correspondences and synchronized
+clocks, and include a relationship card and its life path.
 
-Enregistrez un prénom, un nom, un type de sujet, une date de naissance, une heure
-et un lieu. La page des profils rassemble le signe, l’ascendant, les cartes de
-naissance et secondaires, l’horloge d’aujourd’hui et les cartes du chemin de vie,
-jusqu’au Défi et au Résultat. Recherche, tri par colonne et favoris facilitent
-la consultation. Les noms restent visibles pendant le défilement horizontal.
+### Emmett
 
-### Événements
+Chat about a profile, event, relationship or the method. The engine prepares
+calculated context; the model uses it to formulate a reading. Conversations are
+saved locally, and a Context panel exposes the prepared reference data.
 
-Créez un événement à partir de la date analysée, attribuez-le à un profil et
-associez des participants enregistrés ou des personnes mentionnées librement.
-Les catégories, dates et notes permettent de retrouver les moments importants.
-La grille affiche la configuration des cycles à la date de chaque événement,
-pour mettre le vécu et les périodes en perspective.
+Open **Emmett → Connexion**, choose OpenAI or OpenRouter, enter your API key and
+model identifier. OpenRouter accepts its exact model IDs or `openrouter/auto`.
+The UI is currently French. Keys remain in session memory. Messages and useful
+context are sent to the chosen service and, with OpenRouter, the routed model
+provider. Online generation may incur charges. Offline calculations and built-in
+readings do not require an API key.
 
-### Relations
+## Run from source
 
-Un dossier de relation rapproche deux profils autour de leur lien : cartes de
-naissance et secondaires, carte de la relation, chemin de vie du lien,
-correspondances entre les cartes et horloges synchronisées à une date commune.
-La lecture distingue les correspondances de fond des activations temporelles.
-La date de rencontre reste un événement de l’histoire du lien.
-
-### Emmett, l’interlocuteur d’Olney Engine
-
-Emmett permet de discuter d’un profil, d’un événement, d’une relation ou de la
-méthode. Le moteur prépare les cartes, les cycles et les règles utiles ; le
-modèle les utilise pour formuler une lecture en langage naturel. Les discussions
-sont enregistrées localement et peuvent être reprises. Le panneau Contexte
-permet de consulter les données préparées pour le modèle.
-
-Pour commencer : **Emmett → Connexion → OpenRouter ou OpenAI**, puis saisir
-une clé API et le modèle souhaité. Sur OpenRouter, utiliser l’identifiant exact
-du modèle, ou `openrouter/auto` pour le routage automatique.
-
-La clé reste en mémoire pendant la session. Les messages et le contexte utile
-sont transmis au service choisi et, avec OpenRouter, au fournisseur du modèle.
-L’utilisation du modèle nécessite une connexion Internet et peut être facturée
-par le service. Les calculs et les lectures intégrées restent accessibles sans IA.
-
-## Données locales
-
-Les profils, événements, relations et conversations sont conservés dans une
-base SQLite locale, créée automatiquement au premier lancement dans
-`%LOCALAPPDATA%\Olney Engine\olney_profiles.db`. La base personnelle n’est
-incluse ni dans ce dépôt ni dans les fichiers distribués.
-
-## Développement et documentation
-
-Les sources Python et l’application Windows publiée correspondent à la
-version **1.8.6**. Pour lancer les sources, utiliser Python avec Tkinter :
+Python **3.12** is the tested baseline. Install Python with **Tcl/Tk** and Git.
+Windows is the supported desktop target. The runtime uses the Python standard
+library plus bundled timezone data; no OpenAI SDK or web server is required.
 
 ```bash
+git clone https://github.com/sebastien88-stack/olney-engine.git
+cd olney-engine
+python -m venv .venv
+```
+
+Activate the environment in PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Or in Git Bash:
+
+```bash
+source .venv/Scripts/activate
+```
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -c "import tkinter; print(tkinter.TkVersion)"
 python app.py
 ```
 
-- [Construction de l’application Windows](build_tools/README.md)
-- [Architecture du backend et préparation des lectures](BACKEND_LECTURE.md)
-- [Corpus et règles d’interprétation](interpretation/README.md)
-- [Nouveautés de la version 1.8.6](RELEASE_NOTES_1.8.6.md)
-- [Historique détaillé et documentation des versions précédentes](docs/HISTORY.md)
-- [Confidentialité et signalement de problèmes](SECURITY.md)
+The runtime requirements file is intentionally empty. Development requirements
+install the test runner. For release builds, follow [build instructions](build_tools/README.md).
 
-## Crédits et licence
+### Configuration
 
-Développé par Sébastien. Olney Engine explore la cartomancie des anciens mages,
-avec des règles et des lectures documentées dans son corpus d’interprétation.
+All configuration is optional. Keys can also be entered in Emmett's connection dialog.
 
-[Licence propriétaire — tous droits réservés](LICENSE.txt).
-Les composants tiers sont documentés dans [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+| Variable | Purpose |
+| --- | --- |
+| `OPENAI_API_KEY` | OpenAI session key |
+| `OLNEY_OPENAI_MODEL` | OpenAI model identifier |
+| `OPENROUTER_API_KEY` | OpenRouter session key |
+| `OLNEY_OPENROUTER_MODEL` | OpenRouter model identifier |
+| `OLNEY_PROFILE_DB` | Override the local SQLite database path, useful for testing |
+
+Environment variables are read directly from the process environment. `.env`
+files are **not automatically loaded**. [.env.example](.env.example) documents
+names only; do not commit real keys or personal databases.
+
+With no `OLNEY_PROFILE_DB` override, the app creates an empty database at
+`%LOCALAPPDATA%\Olney Engine\olney_profiles.db`. Existing personal data is not
+bundled. A synthetic input example is supplied in [examples/demo_profile.json](examples/demo_profile.json);
+it documents input values and is not an automatic profile importer.
+
+## Tests and checks
+
+Run from the repository root, without API keys:
+
+```bash
+python -m pytest tests -q
+python tools/check_python.py
+python tools/validate_interpretation.py
+python tools/audit_public_repository.py
+```
+
+On a Windows machine with working Tcl/Tk, also run:
+
+```bash
+python tools/ui_startup_smoke.py
+```
+
+Tests use synthetic inputs and temporary databases. API requests are mocked.
+CI runs tests, syntax compilation, corpus validation and isolated UI startup on
+Windows/Python 3.12; it does not publish a release or use private API keys.
+
+## How the engine fits together
+
+`OlneyEngine.full_state()` calculates card states for a birth date and analysis
+date using the 90 canonical series in `data.json`. Calendar and hourly helpers
+resolve periods and local/solar-time information. The interpretation layer adds
+card descriptions, planetary roles and hierarchical cycle context. Emmett
+receives that prepared context and does not recalculate card positions.
+
+| Location | Responsibility |
+| --- | --- |
+| `app.py`, `*_ui.py`, `brand_theme.py` | Tkinter/ttk desktop interface |
+| `olney_engine.py`, `hour_card.py`, `astro_engine.py` | Deterministic calculations |
+| `timeline_runtime.py`, `cycle_reading.py` | Time exploration and cycle readings |
+| `interpretation/`, `interpretation_runtime.py` | Structured corpus and interpretation context |
+| `relationship_runtime.py`, `reading_service.py` | Relationship and subject dossiers |
+| `*_store.py` | SQLite persistence |
+| `olney_chat.py`, `chat_ui.py` | Emmett and provider connections |
+| `tests/`, `tools/` | Regression tests, checks and utilities |
+| `build_tools/` | Windows packaging |
+
+The future **Historical Atlas** is external to this task. No Atlas dataset or
+schema migration is introduced. [DATA_POLICY.md](DATA_POLICY.md) defines the boundary.
+
+## License and project governance
+
+Original project code is proposed under **GNU GPL v3.0 only**; see [LICENSE](LICENSE)
+and [LICENSING.md](LICENSING.md) for the exact scope. GPL-compatible commercial use
+is permitted subject to the license obligations. Third-party data retain their
+own licenses. Workbook-derived series, book-derived content and selected artwork
+have outstanding provenance checks; **this is not a claim that every bundled
+resource is cleared for open-source redistribution**.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md),
+[SECURITY.md](SECURITY.md), [third-party notices](THIRD_PARTY_NOTICES.md),
+[audit report](docs/OPEN_SOURCE_AUDIT.md) and [maintainer setup](docs/GITHUB_SETUP.md).
+
+Developed by Sébastien. [Backend documentation](BACKEND_LECTURE.md) ·
+[Version history](docs/HISTORY.md) · [Release notes](RELEASE_NOTES_1.8.6.md).
