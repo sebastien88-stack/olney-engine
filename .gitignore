@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environnements et constructions locales
+.buildenv/
+.venv/
+venv/
+build/
+dist/
+release/
+build_tools/downloads/
+
+# Données et secrets locaux
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.log
+.env
+.env.*
+!.env.example
+
+# Archives générées
+Olney_Engine_*.rar
+Olney_Engine_*.zip
+Olney_Engine_Setup_*.exe
+
+# Éditeurs et système
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

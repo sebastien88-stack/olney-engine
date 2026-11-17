@@ -1,0 +1,98 @@
+{
+  "database": "Olney Interpretation Base",
+  "version": "0.7.4",
+  "language": "fr",
+  "status": "active_energy_profiles",
+  "integrated_in_app": true,
+  "source": {
+    "type": "photographies_de_livre_fournies_par_utilisateur",
+    "title_visible": "La Cartomancie des anciens Mages",
+    "pages": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      158,
+      162,
+      163,
+      164,
+      165,
+      166
+    ]
+  },
+  "files": {
+    "suits": "suits.json",
+    "ranks": "ranks.json",
+    "planets": "planets.json",
+    "cards": "cards.json",
+    "card_polarities": "card_polarities.json",
+    "rules": "rules/*.json",
+    "relationship_rules": "rules/relationships.json",
+    "context_schema": "schemas/context.schema.json",
+    "relationship_context_schema": "schemas/relationship_context.schema.json",
+    "llm_output_schema": "schemas/llm_output.schema.json",
+    "llm_instructions": "llm/INSTRUCTIONS.md",
+    "provenance": "provenance.json",
+    "editorial": "editorial.json",
+    "card_profiles": "card_profiles.json",
+    "card_profiles_review": "FICHES_CARTES.md"
+  },
+  "priority": [
+    "active_card",
+    "lived_polarity",
+    "sequence_planet",
+    "position_owner_and_support",
+    "position_planets",
+    "special_position",
+    "cycle_context"
+  ],
+  "editorial_policy": {
+    "no_certain_prediction": true,
+    "no_medical_diagnosis": true,
+    "sensitive_terms_are_symbolic_or_vigilance_themes": true,
+    "preserve_source_specific_correspondences": true,
+    "active_card_remains_primary": true,
+    "owner_card_remains_secondary": true,
+    "present_both_polarities_when_unknown": true
+  },
+  "context_schema_version": "0.5.0",
+  "llm_loading": {
+    "entrypoint": "llm/INSTRUCTIONS.md",
+    "current_manifest": "manifest.json",
+    "exclude": [
+      "REVIEW_V0.1.md",
+      "REVIEW_RULES_V0.2.md",
+      "drafts/*"
+    ],
+    "policy": "Utiliser les fiches actives de card_profiles.json, fournies une seule fois par carte utile dans knowledge_bundle.card_profiles. Les archives drafts et revues anciennes restent exclues."
+  },
+  "energy_profiles": {
+    "count": 52,
+    "user_validated_pilots": 5,
+    "editorial_extensions": 47
+  },
+  "cycle_reading": {
+    "status": "active",
+    "scope": "seven_ordered_steps",
+    "default_loading": "on_demand",
+    "api": "reading_mode=cycle with a cycle reading_focus"
+  },
+  "relationship_reading": {
+    "status": "active",
+    "scope": "two_saved_profiles_at_a_common_date",
+    "api": "ReadingService.relationship_context",
+    "relationship_life_path": "mercure_through_result",
+    "temporary_clock_activation": false,
+    "manifested_structure": true,
+    "natural_order_comparison": true,
+    "annual_bidirectional_roles": true,
+    "compatibility_score": false
+  }
+}

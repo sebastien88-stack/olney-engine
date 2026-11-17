@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "status": "validated",
+  "roles": {
+    "sun": {
+      "label": "Soleil / carte de naissance",
+      "rule": "Identité consciente, volonté, direction personnelle et influence principale. La carte solaire génère les séquences des cycles correspondants."
+    },
+    "moon": {
+      "label": "Lune du cycle",
+      "rule": "La Lune de chaque séquence renseigne sur le vécu intérieur et les appuis ou tensions qui accompagnent le cycle en cours. Cette fonction s’applique à toutes les échelles ; « ombre intérieure » et « soutien » ne sont pas des définitions exhaustives.",
+      "applies_to": "all_table_sequences",
+      "wording_status": "neutral_label_pending_finer_definition"
+    },
+    "challenge": {
+      "label": "Défi / Pluton",
+      "rule": "Ce qui doit être rencontré, compris, transformé ou traversé. Une carte favorable en Défi désigne une qualité qu’il faut apprendre à exprimer."
+    },
+    "result": {
+      "label": "Résultat",
+      "rule": "Aboutissement conditionnel de la séquence, dépendant de la manière dont le Défi et les périodes précédentes ont été vécus. Il n’est ni une récompense automatique ni une conclusion certaine."
+    },
+    "secondary_card": {
+      "label": "Carte secondaire",
+      "rule": "Centre personnel complémentaire comparable fonctionnellement à un ascendant. Elle n’efface pas la carte solaire et pourra être étudiée ultérieurement selon la même logique complète.",
+      "not_astrological_ascendant": true
+    },
+    "court_card": {
+      "label": "Figures",
+      "rule": "Une figure décrit d’abord la personne étudiée, sa capacité ou sa fonction incarnée. Une personne extérieure est possible si le contexte l’étaye, jamais déduite automatiquement du sexe, de l’âge ou du métier cité dans le livre."
+    }
+  },
+  "rule_id": "rule:roles",
+  "source_refs": [
+    "olney_user_2026_08",
+    "olney_user_2026_08_31"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "version": "0.4.0",
+  "status": "validated",
+  "interpretive_formula": [
+    "active_card",
+    "lived_polarity",
+    "sequence_planet",
+    "position_owner",
+    "position_planets",
+    "special_position",
+    "parent_cycle",
+    "challenge_result",
+    "life_path_direction"
+  ],
+  "components": {
+    "active_card": {
+      "question": "quoi",
+      "priority": 1,
+      "rule": "La carte active est le phénomène, le sujet ou l’énergie fondamentale incarnée pendant la période étudiée. Elle reste l’élément principal de la lecture."
+    },
+    "lived_polarity": {
+      "question": "comment_la_personne_le_vit",
+      "priority": 2,
+      "rule": "Les vécus constructif et difficile sont deux expressions d’une même carte, jamais deux significations concurrentes. Constructif ne signifie pas événement heureux et difficile n’inverse pas le sens fondamental."
+    },
+    "sequence_planet": {
+      "question": "comment_la_carte_agit",
+      "priority": 3,
+      "rule": "La planète de séquence imprègne temporairement la carte et décrit sa modalité d’expression. Elle ne remplace jamais l’identité de la carte."
+    },
+    "position_owner": {
+      "question": "chez_qui",
+      "priority": 4,
+      "rule": "La carte propriétaire de la position définit les règles secondaires du territoire. Elle reste un arrière-plan et ne doit jamais prendre le dessus sur la carte active."
+    },
+    "position_planets": {
+      "question": "dans_quel_contexte",
+      "priority": 5,
+      "rule": "Les planètes de ligne et de colonne forment ensemble le contexte énergétique de la case, sans distinction de fonction entre les deux."
+    },
+    "cycle": {
+      "question": "a_quelle_echelle",
+      "priority": 6,
+      "rule": "La durée et la nature du cycle déterminent la portée structurelle ou circonstancielle de la carte."
+    }
+  },
+  "non_fusion_rule": "Ne jamais réduire la planète de séquence et les deux planètes de la case à une simple combinaison astrologique à trois planètes. La première décrit comment la carte agit ; les deux autres décrivent son environnement.",
+  "active_cards_rule": "Les règles de position ne concernent pas uniquement la carte de naissance. Chaque carte incarnée à un moment d’un cycle devient la carte active de cette période et reçoit la même analyse complète.",
+  "birth_card_rule": "La carte de naissance reste le référentiel solaire permanent et l’origine des séquences, même lorsqu’une autre carte devient temporairement active.",
+  "rule_id": "rule:core",
+  "source_refs": [
+    "olney_user_2026_08",
+    "olney_user_2026_08_31"
+  ],
+  "suit_element_rule": "L’enseigne et son élément appartiennent à la nature de la carte : Cœur–Feu, Trèfle–Air, Carreau–Eau, Pique–Terre. Ils précisent son mouvement dans la lecture individuelle et les relations entre cycles. Ne pas leur substituer les correspondances d’un autre tarot. Ils ne sont ni une planète de séquence ni le contexte planétaire d’une case."
+}

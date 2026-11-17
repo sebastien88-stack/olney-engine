@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "status": "validated",
+  "fixed_cards": {
+    "cards": [
+      "JH",
+      "8C",
+      "KS"
+    ],
+    "engine_labels": [
+      "V♥",
+      "8♣",
+      "R♠"
+    ],
+    "rule": "Une carte fixe ne quitte jamais sa position. Elle décrit une structure fortement ancrée et possède un pouvoir particulier de repère."
+  },
+  "semi_fixed_pairs": [
+    {
+      "cards": [
+        "AC",
+        "2H"
+      ],
+      "engine_labels": [
+        "A♣",
+        "2♥"
+      ]
+    },
+    {
+      "cards": [
+        "7D",
+        "9H"
+      ],
+      "engine_labels": [
+        "7♦",
+        "9♥"
+      ]
+    }
+  ],
+  "semi_fixed_rule": "Une carte semi-fixe échange uniquement avec sa partenaire. Cette oscillation représente une ambivalence structurelle vécue tout au long de la vie.",
+  "interpretive_weight": "major_identity_pattern",
+  "rule_id": "rule:mobility",
+  "source_refs": [
+    "olney_user_2026_08",
+    "olney_user_2026_08_31"
+  ],
+  "active_semi_fixed_rule": "La nature duale participe à toute activation d’une semi-fixe. Ne rappeler sa partenaire que si elle éclaire la question ; une activation courte ne suffit pas à définir toute la personnalité."
+}

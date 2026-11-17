@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "status": "partially_validated",
+  "king_of_spades": {
+    "card": "KS",
+    "engine_label": "R♠",
+    "rule": "Le Roi de pique est la carte la plus puissante et la plus dense du jeu.",
+    "status": "validated"
+  },
+  "joker": {
+    "card": "JOKER",
+    "value": 0,
+    "birth_date": "12-31",
+    "keywords": [
+      "rien",
+      "tout",
+      "énergie sans frontière",
+      "hors système",
+      "toutes les familles",
+      "toutes les saisons"
+    ],
+    "crown_relation": "Le Joker appartient symboliquement à la Ligne de la Couronne tout en échappant à l’organisation ordinaire du tableau.",
+    "rule": "Le Joker est partout et nulle part à la fois. Il ne doit pas être interprété par la mécanique ordinaire des cycles manifestés.",
+    "pending_decision": "Décider ultérieurement si les natifs du Joker restent visibles en tableaux 0 et 0.1, ou si la lecture suit strictement la source : Ordre naturel uniquement avec possibilité d’opérer comme R♠ ou A♥.",
+    "status": "pending_user_decision"
+  },
+  "rule_id": "rule:special_cards",
+  "source_refs": [
+    "olney_user_2026_08",
+    "olney_user_2026_08_31"
+  ]
+}

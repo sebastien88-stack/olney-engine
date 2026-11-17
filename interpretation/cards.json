@@ -1,0 +1,1575 @@
+{
+  "version": "0.2.0",
+  "status": "editorial_reference_source_distinctions_recorded",
+  "cards": {
+    "AH": {
+      "label": "As de cœur",
+      "rank": "A",
+      "suit": "hearts",
+      "keywords": [
+        "désir d’amour",
+        "nouvel amour",
+        "nouvelle amitié",
+        "naissance",
+        "introspection",
+        "aide"
+      ],
+      "constructive": [
+        "ouverture affective",
+        "commencement relationnel",
+        "entraide"
+      ],
+      "tensions": [
+        "besoin d’être aidé",
+        "attente affective"
+      ],
+      "domains": [
+        "amour",
+        "relations",
+        "famille"
+      ],
+      "source_pages": [
+        162
+      ]
+    },
+    "AC": {
+      "label": "As de trèfle",
+      "rank": "A",
+      "suit": "clubs",
+      "keywords": [
+        "désir d’apprendre",
+        "curiosité",
+        "nouvelles études",
+        "questionnement",
+        "nouvelle information"
+      ],
+      "constructive": [
+        "éveil intellectuel",
+        "apprentissage",
+        "découverte"
+      ],
+      "tensions": [
+        "dispersion des questions",
+        "impatience mentale"
+      ],
+      "domains": [
+        "études",
+        "mental",
+        "communication"
+      ],
+      "source_pages": [
+        162
+      ]
+    },
+    "AD": {
+      "label": "As de carreau",
+      "rank": "A",
+      "suit": "diamonds",
+      "keywords": [
+        "désir d’argent",
+        "nouvelles valeurs",
+        "nouvelle manière de gagner",
+        "aspiration au succès"
+      ],
+      "constructive": [
+        "initiative matérielle",
+        "prospérité nouvelle",
+        "renouvellement des valeurs"
+      ],
+      "tensions": [
+        "focalisation sur l’argent",
+        "impatience matérielle"
+      ],
+      "domains": [
+        "argent",
+        "valeurs",
+        "travail",
+        "succès"
+      ],
+      "source_pages": [
+        162
+      ]
+    },
+    "AS": {
+      "label": "As de pique",
+      "rank": "A",
+      "suit": "spades",
+      "keywords": [
+        "désir de connaissance",
+        "secret",
+        "nouvelle vie",
+        "société secrète",
+        "transformation",
+        "mort symbolique"
+      ],
+      "constructive": [
+        "initiation",
+        "renaissance",
+        "quête de connaissance"
+      ],
+      "tensions": [
+        "secret",
+        "rupture profonde",
+        "fin nécessaire"
+      ],
+      "domains": [
+        "spiritualité",
+        "transformation",
+        "connaissance"
+      ],
+      "source_pages": [
+        162
+      ]
+    },
+    "2H": {
+      "label": "Deux de cœur",
+      "rank": "2",
+      "suit": "hearts",
+      "keywords": [
+        "réunion",
+        "ami",
+        "amant",
+        "passion",
+        "mariage",
+        "partenariat"
+      ],
+      "constructive": [
+        "union affective",
+        "rencontre",
+        "engagement"
+      ],
+      "tensions": [
+        "dépendance relationnelle",
+        "peur de la solitude"
+      ],
+      "domains": [
+        "amour",
+        "relations",
+        "mariage"
+      ],
+      "source_pages": [
+        162
+      ]
+    },
+    "2C": {
+      "label": "Deux de trèfle",
+      "rank": "2",
+      "suit": "clubs",
+      "keywords": [
+        "conversation",
+        "communication",
+        "dispute",
+        "réunion",
+        "rencontre",
+        "étude à deux",
+        "entretien",
+        "marchandage"
+      ],
+      "constructive": [
+        "échange",
+        "collaboration intellectuelle",
+        "entretien"
+      ],
+      "tensions": [
+        "dispute",
+        "négociation tendue"
+      ],
+      "domains": [
+        "communication",
+        "études",
+        "relations"
+      ],
+      "source_pages": [
+        162
+      ]
+    },
+    "2D": {
+      "label": "Deux de carreau",
+      "rank": "2",
+      "suit": "diamonds",
+      "keywords": [
+        "partenariat professionnel",
+        "transaction",
+        "contrat de travail",
+        "entretien d’embauche",
+        "réunion de travail"
+      ],
+      "constructive": [
+        "accord professionnel",
+        "coopération matérielle",
+        "contrat"
+      ],
+      "tensions": [
+        "désaccord contractuel",
+        "dépendance professionnelle"
+      ],
+      "domains": [
+        "travail",
+        "argent",
+        "contrat"
+      ],
+      "source_pages": [
+        162
+      ]
+    },
+    "2S": {
+      "label": "Deux de pique",
+      "rank": "2",
+      "suit": "spades",
+      "keywords": [
+        "activité avec un partenaire",
+        "engagement",
+        "accord",
+        "consultation médicale",
+        "travail à deux"
+      ],
+      "constructive": [
+        "coopération dans l’action",
+        "accord",
+        "accompagnement"
+      ],
+      "tensions": [
+        "opposition",
+        "question de santé à examiner"
+      ],
+      "domains": [
+        "travail",
+        "santé",
+        "engagement"
+      ],
+      "source_pages": [
+        162
+      ]
+    },
+    "3H": {
+      "label": "Trois de cœur",
+      "rank": "3",
+      "suit": "hearts",
+      "keywords": [
+        "incertitude amoureuse",
+        "deux relations",
+        "indécision affective",
+        "préférence",
+        "créativité artistique"
+      ],
+      "constructive": [
+        "expression artistique",
+        "exploration des sentiments"
+      ],
+      "tensions": [
+        "triangle relationnel",
+        "hésitation",
+        "confusion affective"
+      ],
+      "domains": [
+        "amour",
+        "relations",
+        "art"
+      ],
+      "source_pages": [
+        162
+      ]
+    },
+    "3C": {
+      "label": "Trois de trèfle",
+      "rank": "3",
+      "suit": "clubs",
+      "keywords": [
+        "confusion mentale",
+        "indécision dans les études",
+        "doute sur une proposition",
+        "créativité intellectuelle"
+      ],
+      "constructive": [
+        "créativité mentale",
+        "pluralité des idées"
+      ],
+      "tensions": [
+        "confusion",
+        "doute",
+        "indécision"
+      ],
+      "domains": [
+        "mental",
+        "études",
+        "projets"
+      ],
+      "source_pages": [
+        162
+      ]
+    },
+    "3D": {
+      "label": "Trois de carreau",
+      "rank": "3",
+      "suit": "diamonds",
+      "keywords": [
+        "insécurité financière",
+        "doute sur une transaction",
+        "créativité financière"
+      ],
+      "constructive": [
+        "solution financière créative",
+        "nouvelles options matérielles"
+      ],
+      "tensions": [
+        "incertitude financière",
+        "hésitation dans une transaction"
+      ],
+      "domains": [
+        "argent",
+        "travail",
+        "transaction"
+      ],
+      "source_pages": [
+        162
+      ]
+    },
+    "3S": {
+      "label": "Trois de pique",
+      "rank": "3",
+      "suit": "spades",
+      "keywords": [
+        "choix de vie",
+        "indécision",
+        "préoccupation de santé",
+        "activités multiples"
+      ],
+      "constructive": [
+        "réorientation",
+        "capacité à explorer plusieurs voies"
+      ],
+      "tensions": [
+        "dispersion",
+        "inquiétude de santé",
+        "choix difficile"
+      ],
+      "domains": [
+        "vie",
+        "santé",
+        "travail"
+      ],
+      "source_pages": [
+        162
+      ]
+    },
+    "4H": {
+      "label": "Quatre de cœur",
+      "rank": "4",
+      "suit": "hearts",
+      "keywords": [
+        "mariage",
+        "contentement du cœur",
+        "réussite amoureuse",
+        "bonheur",
+        "satisfaction"
+      ],
+      "constructive": [
+        "stabilité affective",
+        "engagement heureux",
+        "sécurité émotionnelle"
+      ],
+      "tensions": [
+        "confort figé",
+        "routine affective"
+      ],
+      "domains": [
+        "amour",
+        "mariage",
+        "famille"
+      ],
+      "source_pages": [
+        163
+      ]
+    },
+    "4C": {
+      "label": "Quatre de trèfle",
+      "rank": "4",
+      "suit": "clubs",
+      "keywords": [
+        "clarté mentale",
+        "attitude positive",
+        "confort mental",
+        "bonnes nouvelles",
+        "contentement"
+      ],
+      "constructive": [
+        "stabilité mentale",
+        "compréhension",
+        "information rassurante"
+      ],
+      "tensions": [
+        "certitudes rigides",
+        "routine intellectuelle"
+      ],
+      "domains": [
+        "mental",
+        "communication",
+        "nouvelles"
+      ],
+      "source_pages": [
+        163
+      ]
+    },
+    "4D": {
+      "label": "Quatre de carreau",
+      "rank": "4",
+      "suit": "diamonds",
+      "keywords": [
+        "satisfaction",
+        "stabilité",
+        "sécurité financière",
+        "fin heureuse de difficultés",
+        "bonnes affaires",
+        "prospérité"
+      ],
+      "constructive": [
+        "fondation matérielle",
+        "sécurité",
+        "prospérité stable"
+      ],
+      "tensions": [
+        "attachement à la sécurité",
+        "immobilisme financier"
+      ],
+      "domains": [
+        "argent",
+        "travail",
+        "prospérité"
+      ],
+      "source_pages": [
+        163
+      ]
+    },
+    "4S": {
+      "label": "Quatre de pique",
+      "rank": "4",
+      "suit": "spades",
+      "keywords": [
+        "bonne santé",
+        "réussite professionnelle",
+        "achat d’une maison"
+      ],
+      "constructive": [
+        "stabilité physique",
+        "fondation professionnelle",
+        "ancrage"
+      ],
+      "tensions": [
+        "routine de travail",
+        "rigidité"
+      ],
+      "domains": [
+        "santé",
+        "travail",
+        "immobilier"
+      ],
+      "source_pages": [
+        163
+      ]
+    },
+    "5H": {
+      "label": "Cinq de cœur",
+      "rank": "5",
+      "suit": "hearts",
+      "keywords": [
+        "divorce",
+        "séparation",
+        "changement amoureux",
+        "voyage",
+        "changement de vie",
+        "visite d’amis"
+      ],
+      "constructive": [
+        "renouveau affectif",
+        "mouvement relationnel",
+        "nouveau décor"
+      ],
+      "tensions": [
+        "séparation",
+        "instabilité affective"
+      ],
+      "domains": [
+        "amour",
+        "relations",
+        "voyage"
+      ],
+      "source_pages": [
+        163
+      ]
+    },
+    "5C": {
+      "label": "Cinq de trèfle",
+      "rank": "5",
+      "suit": "clubs",
+      "keywords": [
+        "insatisfaction mentale",
+        "changement de projet",
+        "voyage incertain",
+        "malentendu",
+        "changement de circonstances"
+      ],
+      "constructive": [
+        "révision d’un projet",
+        "adaptation mentale",
+        "nouvelle direction"
+      ],
+      "tensions": [
+        "malentendu",
+        "incertitude",
+        "insatisfaction"
+      ],
+      "domains": [
+        "mental",
+        "projets",
+        "voyage"
+      ],
+      "source_pages": [
+        163
+      ]
+    },
+    "5D": {
+      "label": "Cinq de carreau",
+      "rank": "5",
+      "suit": "diamonds",
+      "keywords": [
+        "changement de travail",
+        "changement de gestion",
+        "changement financier",
+        "déménagement",
+        "voyage d’affaires"
+      ],
+      "constructive": [
+        "mobilité professionnelle",
+        "réorganisation financière",
+        "opportunité d’affaires"
+      ],
+      "tensions": [
+        "instabilité matérielle",
+        "changement subi"
+      ],
+      "domains": [
+        "travail",
+        "argent",
+        "déménagement",
+        "voyage"
+      ],
+      "source_pages": [
+        163
+      ]
+    },
+    "5S": {
+      "label": "Cinq de pique",
+      "rank": "5",
+      "suit": "spades",
+      "keywords": [
+        "voyage lié au travail",
+        "changement de vie",
+        "changement professionnel",
+        "nouvelle méthode de travail"
+      ],
+      "constructive": [
+        "évolution professionnelle",
+        "adaptation",
+        "nouvelle méthode"
+      ],
+      "tensions": [
+        "instabilité",
+        "rupture de rythme",
+        "conflit avec l’autorité"
+      ],
+      "domains": [
+        "travail",
+        "voyage",
+        "transformation"
+      ],
+      "source_pages": [
+        163
+      ]
+    },
+    "6H": {
+      "label": "Six de cœur",
+      "rank": "6",
+      "suit": "hearts",
+      "keywords": [
+        "harmonie",
+        "sérénité",
+        "stabilité amoureuse",
+        "long engagement",
+        "monotonie",
+        "dettes sentimentales"
+      ],
+      "constructive": [
+        "paix affective",
+        "fidélité",
+        "équilibre relationnel"
+      ],
+      "tensions": [
+        "monotonie",
+        "stagnation",
+        "obligation affective"
+      ],
+      "domains": [
+        "amour",
+        "relations",
+        "engagement"
+      ],
+      "source_pages": [
+        163
+      ]
+    },
+    "6C": {
+      "label": "Six de trèfle",
+      "rank": "6",
+      "suit": "clubs",
+      "keywords": [
+        "intuition",
+        "compromis",
+        "absence de nouvelles",
+        "stabilité",
+        "résultat de paroles passées"
+      ],
+      "constructive": [
+        "intuition juste",
+        "conciliation",
+        "intégration"
+      ],
+      "tensions": [
+        "silence",
+        "attente",
+        "immobilité mentale"
+      ],
+      "domains": [
+        "mental",
+        "communication",
+        "intuition"
+      ],
+      "source_pages": [
+        163
+      ]
+    },
+    "6D": {
+      "label": "Six de carreau",
+      "rank": "6",
+      "suit": "diamonds",
+      "keywords": [
+        "paiement de dettes",
+        "argent reçu",
+        "absence de voyage d’affaires",
+        "stabilité financière"
+      ],
+      "constructive": [
+        "équilibre des comptes",
+        "règlement",
+        "retour financier"
+      ],
+      "tensions": [
+        "dette",
+        "blocage d’un déplacement",
+        "stagnation"
+      ],
+      "domains": [
+        "argent",
+        "dette",
+        "travail"
+      ],
+      "source_pages": [
+        163
+      ]
+    },
+    "6S": {
+      "label": "Six de pique",
+      "rank": "6",
+      "suit": "spades",
+      "keywords": [
+        "inspiration spirituelle",
+        "absence de voyage",
+        "dettes liées à la santé"
+      ],
+      "constructive": [
+        "guidance intérieure",
+        "équilibre spirituel",
+        "prise de responsabilité"
+      ],
+      "tensions": [
+        "obligation de santé",
+        "immobilisation",
+        "dette"
+      ],
+      "domains": [
+        "spiritualité",
+        "santé",
+        "voyage"
+      ],
+      "source_pages": [
+        163
+      ]
+    },
+    "7H": {
+      "label": "Sept de cœur",
+      "rank": "7",
+      "suit": "hearts",
+      "keywords": [
+        "jalousie",
+        "trahison amoureuse",
+        "problème relationnel",
+        "proche malade",
+        "apprentissage de l’amour inconditionnel"
+      ],
+      "constructive": [
+        "prise de conscience affective",
+        "dépassement d’un obstacle relationnel"
+      ],
+      "tensions": [
+        "jalousie",
+        "trahison",
+        "conditionnement affectif",
+        "inquiétude pour un proche"
+      ],
+      "domains": [
+        "amour",
+        "relations",
+        "santé"
+      ],
+      "source_pages": [
+        164
+      ]
+    },
+    "7C": {
+      "label": "Sept de trèfle",
+      "rank": "7",
+      "suit": "clubs",
+      "keywords": [
+        "négativité mentale",
+        "difficulté d’étude",
+        "inquiétude avant une nouvelle",
+        "antagonisme",
+        "scandale",
+        "chantage"
+      ],
+      "constructive": [
+        "nécessité de cultiver l’optimisme",
+        "dépassement d’une épreuve mentale"
+      ],
+      "tensions": [
+        "anxiété",
+        "opposition",
+        "pression",
+        "mauvaise nouvelle"
+      ],
+      "domains": [
+        "mental",
+        "études",
+        "communication"
+      ],
+      "source_pages": [
+        164
+      ]
+    },
+    "7D": {
+      "label": "Sept de carreau",
+      "rank": "7",
+      "suit": "diamonds",
+      "keywords": [
+        "peur du manque",
+        "difficulté financière",
+        "grosse dépense",
+        "perte d’argent",
+        "besoin de cultiver l’abondance"
+      ],
+      "constructive": [
+        "révision de la relation à l’abondance",
+        "prudence financière"
+      ],
+      "tensions": [
+        "peur financière",
+        "dépense",
+        "perte"
+      ],
+      "domains": [
+        "argent",
+        "valeurs",
+        "sécurité"
+      ],
+      "source_pages": [
+        164
+      ]
+    },
+    "7S": {
+      "label": "Sept de pique",
+      "rank": "7",
+      "suit": "spades",
+      "keywords": [
+        "difficulté de santé ou de travail",
+        "obstacle à surmonter",
+        "accident",
+        "ouverture spirituelle"
+      ],
+      "constructive": [
+        "ouverture spirituelle",
+        "croissance par l’épreuve",
+        "dépassement d’un obstacle"
+      ],
+      "tensions": [
+        "obstacle",
+        "accident",
+        "problème de santé ou de travail"
+      ],
+      "domains": [
+        "santé",
+        "travail",
+        "spiritualité",
+        "transformation"
+      ],
+      "source_pages": [
+        164
+      ]
+    },
+    "8H": {
+      "label": "Huit de cœur",
+      "rank": "8",
+      "suit": "hearts",
+      "keywords": [
+        "charme",
+        "séduction",
+        "pouvoir relationnel",
+        "pouvoir spirituel",
+        "guérison",
+        "réunion d’amis"
+      ],
+      "constructive": [
+        "rayonnement affectif",
+        "capacité de guérison",
+        "influence positive",
+        "sociabilité"
+      ],
+      "tensions": [
+        "séduction intéressée",
+        "contrôle affectif",
+        "rapport de force"
+      ],
+      "domains": [
+        "amour",
+        "relations",
+        "spiritualité",
+        "guérison"
+      ],
+      "source_pages": [
+        164
+      ]
+    },
+    "8C": {
+      "label": "Huit de trèfle",
+      "rank": "8",
+      "suit": "clubs",
+      "keywords": [
+        "concentration",
+        "pouvoir de la pensée",
+        "courage",
+        "acquisition de connaissances",
+        "réunion",
+        "bonne nouvelle"
+      ],
+      "constructive": [
+        "maîtrise mentale",
+        "apprentissage puissant",
+        "communication efficace"
+      ],
+      "tensions": [
+        "contrôle mental",
+        "rigidité intellectuelle"
+      ],
+      "domains": [
+        "mental",
+        "connaissance",
+        "communication"
+      ],
+      "source_pages": [
+        164
+      ]
+    },
+    "8D": {
+      "label": "Huit de carreau",
+      "rank": "8",
+      "suit": "diamonds",
+      "keywords": [
+        "pouvoir financier",
+        "organisation",
+        "manifestation",
+        "succès",
+        "union d’affaires",
+        "grosse somme",
+        "transaction importante"
+      ],
+      "constructive": [
+        "maîtrise matérielle",
+        "réussite",
+        "prospérité",
+        "organisation"
+      ],
+      "tensions": [
+        "contrôle par l’argent",
+        "rapport de force financier"
+      ],
+      "domains": [
+        "argent",
+        "travail",
+        "succès",
+        "transaction"
+      ],
+      "source_pages": [
+        164
+      ]
+    },
+    "8S": {
+      "label": "Huit de pique",
+      "rank": "8",
+      "suit": "spades",
+      "keywords": [
+        "pouvoir professionnel",
+        "pouvoir sur la santé",
+        "dépassement d’obstacle",
+        "organisation puissante",
+        "dépassement de soi"
+      ],
+      "constructive": [
+        "maîtrise",
+        "endurance",
+        "guérison",
+        "transcendance"
+      ],
+      "tensions": [
+        "surcontrôle",
+        "lutte de pouvoir",
+        "épuisement"
+      ],
+      "domains": [
+        "travail",
+        "santé",
+        "pouvoir",
+        "transformation"
+      ],
+      "source_pages": [
+        164
+      ]
+    },
+    "9H": {
+      "label": "Neuf de cœur",
+      "rank": "9",
+      "suit": "hearts",
+      "keywords": [
+        "fin d’un amour",
+        "fin d’une recherche affective",
+        "déception amoureuse",
+        "malentendu",
+        "divorce"
+      ],
+      "constructive": [
+        "achèvement affectif",
+        "lâcher-prise",
+        "ouverture à une nouvelle étape"
+      ],
+      "tensions": [
+        "séparation",
+        "déception",
+        "deuil relationnel"
+      ],
+      "domains": [
+        "amour",
+        "relations",
+        "séparation"
+      ],
+      "source_pages": [
+        165
+      ]
+    },
+    "9C": {
+      "label": "Neuf de trèfle",
+      "rank": "9",
+      "suit": "clubs",
+      "keywords": [
+        "fin",
+        "accomplissement",
+        "abandon de projet",
+        "déception intellectuelle",
+        "mauvaise nouvelle",
+        "désapprobation",
+        "malentendu",
+        "frustration"
+      ],
+      "constructive": [
+        "achèvement intellectuel",
+        "abandon de ce qui est dépassé",
+        "synthèse"
+      ],
+      "tensions": [
+        "frustration",
+        "mauvaise nouvelle",
+        "fin de projet"
+      ],
+      "domains": [
+        "mental",
+        "projets",
+        "communication"
+      ],
+      "source_pages": [
+        165
+      ]
+    },
+    "9D": {
+      "label": "Neuf de carreau",
+      "rank": "9",
+      "suit": "diamonds",
+      "keywords": [
+        "perte d’argent",
+        "grosse dépense",
+        "déception liée à l’argent",
+        "perte d’emploi",
+        "fin d’un système de valeurs"
+      ],
+      "constructive": [
+        "révision des valeurs",
+        "détachement matériel",
+        "fin d’un cycle financier"
+      ],
+      "tensions": [
+        "perte",
+        "dépense",
+        "déception financière"
+      ],
+      "domains": [
+        "argent",
+        "travail",
+        "valeurs"
+      ],
+      "source_pages": [
+        165
+      ]
+    },
+    "9S": {
+      "label": "Neuf de pique",
+      "rank": "9",
+      "suit": "spades",
+      "keywords": [
+        "fin d’une époque",
+        "défi de santé",
+        "perte de travail",
+        "maladie",
+        "déception professionnelle",
+        "accident",
+        "mauvaise nouvelle",
+        "mort symbolique"
+      ],
+      "constructive": [
+        "clôture d’une épreuve",
+        "transformation",
+        "renoncement nécessaire"
+      ],
+      "tensions": [
+        "fin difficile",
+        "santé fragile",
+        "perte professionnelle",
+        "accident"
+      ],
+      "domains": [
+        "santé",
+        "travail",
+        "transformation"
+      ],
+      "source_pages": [
+        165
+      ]
+    },
+    "10H": {
+      "label": "Dix de cœur",
+      "rank": "10",
+      "suit": "hearts",
+      "keywords": [
+        "succès public",
+        "fête",
+        "succès amoureux",
+        "réunion d’amis",
+        "triomphe",
+        "pouvoir"
+      ],
+      "constructive": [
+        "accomplissement affectif",
+        "reconnaissance",
+        "joie partagée"
+      ],
+      "tensions": [
+        "dépendance à l’approbation",
+        "excès de célébration"
+      ],
+      "domains": [
+        "amour",
+        "relations",
+        "public",
+        "succès"
+      ],
+      "source_pages": [
+        165
+      ]
+    },
+    "10C": {
+      "label": "Dix de trèfle",
+      "rank": "10",
+      "suit": "clubs",
+      "keywords": [
+        "succès",
+        "pouvoir d’enseignement",
+        "bonne nouvelle",
+        "expansion des connaissances",
+        "contentement"
+      ],
+      "constructive": [
+        "maîtrise intellectuelle",
+        "transmission",
+        "réussite d’un projet"
+      ],
+      "tensions": [
+        "certitude excessive",
+        "obsession de la réussite mentale"
+      ],
+      "domains": [
+        "connaissance",
+        "enseignement",
+        "communication",
+        "succès"
+      ],
+      "source_pages": [
+        165
+      ]
+    },
+    "10D": {
+      "label": "Dix de carreau",
+      "rank": "10",
+      "suit": "diamonds",
+      "keywords": [
+        "succès financier",
+        "grosse somme d’argent",
+        "héritage",
+        "chance"
+      ],
+      "constructive": [
+        "accomplissement matériel",
+        "abondance",
+        "héritage"
+      ],
+      "tensions": [
+        "obsession de l’argent",
+        "excès matériel"
+      ],
+      "domains": [
+        "argent",
+        "héritage",
+        "succès"
+      ],
+      "source_pages": [
+        165
+      ]
+    },
+    "10S": {
+      "label": "Dix de pique",
+      "rank": "10",
+      "suit": "spades",
+      "keywords": [
+        "succès professionnel",
+        "grande charge de travail",
+        "succès médical",
+        "dépassement des obstacles"
+      ],
+      "constructive": [
+        "accomplissement professionnel",
+        "guérison",
+        "victoire sur une épreuve"
+      ],
+      "tensions": [
+        "surcharge",
+        "épuisement",
+        "obsession du travail"
+      ],
+      "domains": [
+        "travail",
+        "santé",
+        "succès"
+      ],
+      "source_pages": [
+        165
+      ]
+    },
+    "JH": {
+      "label": "Valet de cœur",
+      "rank": "J",
+      "suit": "hearts",
+      "keywords": [
+        "jeune homme bon",
+        "ami",
+        "amant immature",
+        "sacrifice par amour"
+      ],
+      "constructive": [
+        "amitié",
+        "sensibilité",
+        "élan amoureux"
+      ],
+      "tensions": [
+        "immaturité affective",
+        "sacrifice excessif"
+      ],
+      "domains": [
+        "amour",
+        "relations",
+        "jeunesse"
+      ],
+      "source_pages": [
+        166
+      ]
+    },
+    "JC": {
+      "label": "Valet de trèfle",
+      "rank": "J",
+      "suit": "clubs",
+      "keywords": [
+        "talent intellectuel",
+        "jeune personne intelligente",
+        "irresponsabilité",
+        "mensonge"
+      ],
+      "constructive": [
+        "vivacité mentale",
+        "talent",
+        "créativité"
+      ],
+      "tensions": [
+        "irresponsabilité",
+        "mensonge",
+        "immaturité"
+      ],
+      "domains": [
+        "mental",
+        "études",
+        "jeunesse"
+      ],
+      "source_pages": [
+        166
+      ]
+    },
+    "JD": {
+      "label": "Valet de carreau",
+      "rank": "J",
+      "suit": "diamonds",
+      "keywords": [
+        "financier",
+        "marchand",
+        "jeune homme d’affaires",
+        "malhonnêteté",
+        "initiation à de nouvelles valeurs"
+      ],
+      "constructive": [
+        "sens des affaires",
+        "apprentissage matériel",
+        "nouvelle valeur"
+      ],
+      "tensions": [
+        "malhonnêteté",
+        "opportunisme",
+        "immaturité financière"
+      ],
+      "domains": [
+        "argent",
+        "affaires",
+        "valeurs",
+        "jeunesse"
+      ],
+      "source_pages": [
+        166
+      ]
+    },
+    "JS": {
+      "label": "Valet de pique",
+      "rank": "J",
+      "suit": "spades",
+      "keywords": [
+        "initié spirituel",
+        "médecin",
+        "travailleur",
+        "homme en blanc",
+        "acteur",
+        "voleur"
+      ],
+      "constructive": [
+        "apprentissage spirituel",
+        "service",
+        "travail",
+        "soin"
+      ],
+      "tensions": [
+        "vol",
+        "double jeu",
+        "immaturité dans l’action"
+      ],
+      "domains": [
+        "spiritualité",
+        "santé",
+        "travail"
+      ],
+      "source_pages": [
+        166
+      ]
+    },
+    "QH": {
+      "label": "Dame de cœur",
+      "rank": "Q",
+      "suit": "hearts",
+      "keywords": [
+        "femme au grand cœur",
+        "femme aimée",
+        "séduction",
+        "mariage",
+        "sensualité"
+      ],
+      "constructive": [
+        "générosité affective",
+        "amour",
+        "réceptivité",
+        "sensualité"
+      ],
+      "tensions": [
+        "séduction dominatrice",
+        "dépendance affective"
+      ],
+      "domains": [
+        "amour",
+        "mariage",
+        "féminin"
+      ],
+      "source_pages": [
+        166
+      ]
+    },
+    "QC": {
+      "label": "Dame de trèfle",
+      "rank": "Q",
+      "suit": "clubs",
+      "keywords": [
+        "femme intelligente",
+        "esprit vif",
+        "culture",
+        "connaissance",
+        "intuition",
+        "sensibilité intellectuelle"
+      ],
+      "constructive": [
+        "intelligence réceptive",
+        "culture",
+        "intuition mentale"
+      ],
+      "tensions": [
+        "supériorité intellectuelle",
+        "domination mentale"
+      ],
+      "domains": [
+        "mental",
+        "connaissance",
+        "féminin"
+      ],
+      "source_pages": [
+        166
+      ]
+    },
+    "QD": {
+      "label": "Dame de carreau",
+      "rank": "Q",
+      "suit": "diamonds",
+      "keywords": [
+        "femme d’affaires",
+        "femme riche",
+        "autorité",
+        "goût des belles choses",
+        "extravagance"
+      ],
+      "constructive": [
+        "maîtrise matérielle",
+        "autorité",
+        "sens esthétique"
+      ],
+      "tensions": [
+        "extravagance",
+        "matérialisme",
+        "domination"
+      ],
+      "domains": [
+        "argent",
+        "affaires",
+        "autorité",
+        "féminin"
+      ],
+      "source_pages": [
+        166
+      ]
+    },
+    "QS": {
+      "label": "Dame de pique",
+      "rank": "Q",
+      "suit": "spades",
+      "keywords": [
+        "femme travailleuse",
+        "mère attentive",
+        "médecin",
+        "femme sage",
+        "autorité",
+        "maîtrise de soi"
+      ],
+      "constructive": [
+        "sagesse",
+        "discipline",
+        "soin",
+        "maîtrise intérieure"
+      ],
+      "tensions": [
+        "autoritarisme",
+        "dureté",
+        "surmenage"
+      ],
+      "domains": [
+        "travail",
+        "santé",
+        "sagesse",
+        "féminin"
+      ],
+      "source_pages": [
+        166
+      ]
+    },
+    "KH": {
+      "label": "Roi de cœur",
+      "rank": "K",
+      "suit": "hearts",
+      "keywords": [
+        "homme bon",
+        "protecteur",
+        "charisme",
+        "ami loyal",
+        "artiste",
+        "figure paternelle"
+      ],
+      "constructive": [
+        "protection",
+        "loyauté",
+        "autorité bienveillante",
+        "créativité"
+      ],
+      "tensions": [
+        "paternalisme",
+        "domination affective"
+      ],
+      "domains": [
+        "relations",
+        "famille",
+        "art",
+        "autorité"
+      ],
+      "source_pages": [
+        166
+      ]
+    },
+    "KC": {
+      "label": "Roi de trèfle",
+      "rank": "K",
+      "suit": "clubs",
+      "keywords": [
+        "homme intelligent",
+        "érudit",
+        "éditeur",
+        "professeur",
+        "homme intègre",
+        "compréhension"
+      ],
+      "constructive": [
+        "maîtrise intellectuelle",
+        "enseignement",
+        "intégrité",
+        "compréhension"
+      ],
+      "tensions": [
+        "autorité intellectuelle rigide",
+        "dogmatisme"
+      ],
+      "domains": [
+        "mental",
+        "enseignement",
+        "connaissance",
+        "autorité"
+      ],
+      "source_pages": [
+        166
+      ]
+    },
+    "KD": {
+      "label": "Roi de carreau",
+      "rank": "K",
+      "suit": "diamonds",
+      "keywords": [
+        "chef d’entreprise",
+        "homme d’affaires",
+        "homme riche",
+        "comptable",
+        "sens des affaires"
+      ],
+      "constructive": [
+        "maîtrise financière",
+        "leadership matériel",
+        "gestion"
+      ],
+      "tensions": [
+        "pouvoir par l’argent",
+        "matérialisme",
+        "domination"
+      ],
+      "domains": [
+        "argent",
+        "affaires",
+        "gestion",
+        "autorité"
+      ],
+      "source_pages": [
+        166
+      ]
+    },
+    "KS": {
+      "label": "Roi de pique",
+      "rank": "K",
+      "suit": "spades",
+      "keywords": [
+        "travailleur",
+        "homme influent",
+        "juge",
+        "avocat",
+        "médecin",
+        "pouvoir de guérison",
+        "sagesse"
+      ],
+      "constructive": [
+        "autorité juste",
+        "guérison",
+        "sagesse",
+        "maîtrise professionnelle"
+      ],
+      "tensions": [
+        "autoritarisme",
+        "jugement sévère",
+        "abus de pouvoir"
+      ],
+      "domains": [
+        "travail",
+        "justice",
+        "santé",
+        "sagesse",
+        "autorité"
+      ],
+      "source_pages": [
+        166
+      ]
+    }
+  }
+}

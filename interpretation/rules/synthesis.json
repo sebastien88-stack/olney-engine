@@ -1,0 +1,85 @@
+{
+  "version": "0.4.0",
+  "status": "validated",
+  "reading_order": [
+    "identity_anchor",
+    "current_cycle_hierarchy",
+    "active_card",
+    "two_lived_polarities",
+    "sequence_planet",
+    "position_owner",
+    "position_support_card",
+    "position_context",
+    "special_flags",
+    "challenge",
+    "local_result",
+    "parent_cycle_relation",
+    "life_path_result_direction",
+    "optional_user_question"
+  ],
+  "density": {
+    "order": [
+      "hearts",
+      "clubs",
+      "diamonds",
+      "spades"
+    ],
+    "elements": {
+      "hearts": "fire",
+      "clubs": "air",
+      "diamonds": "water",
+      "spades": "earth"
+    },
+    "rule": "La densité nuance subtilement le poids d’une carte face aux autres. Elle ne constitue ni un jugement moral ni une inversion automatique de priorité."
+  },
+  "unknown_lived_polarity": {
+    "present_both_branches": true,
+    "make_cautious_hypothesis": true,
+    "ask_optional_question": true,
+    "rule": "Sans information personnelle, présenter les deux vécus et formuler au besoin une hypothèse prudente. Poser une question courte uniquement si elle aide à préciser l’expérience, sans question automatique.",
+    "no_blame": "Difficulté subie et manière d’y répondre sont distinctes. Une réponse constructive peut être douloureuse ; ne pas culpabiliser."
+  },
+  "known_lived_polarity": {
+    "use_profile_history": true,
+    "rule": "Quand le profil contient des retours explicites, s’appuyer sur eux sans supprimer totalement la nuance ni transformer une tendance passée en certitude future.",
+    "matching": "Rattacher un retour déclaré par l’utilisateur au profil et à l’occurrence exacte. Sans ce rattachement, conserver la note comme historique, pas comme polarité actuelle.",
+    "mixed": "Des retours contradictoires sur la même occurrence donnent mixed, sans effacer les deux témoignages."
+  },
+  "safety": {
+    "forbid_certain_prediction": true,
+    "forbid_medical_diagnosis": true,
+    "forbid_inevitable_fate": true,
+    "sensitive_topics": [
+      "mort",
+      "maladie",
+      "accident",
+      "dette",
+      "perte",
+      "tromperie"
+    ],
+    "rule": "Présenter les notions sensibles comme symboles, thèmes, dynamiques ou points de vigilance, jamais comme diagnostics ou événements certains."
+  },
+  "rule_id": "rule:synthesis",
+  "source_refs": [
+    "olney_user_2026_08",
+    "olney_user_2026_08_31"
+  ],
+  "internal_order_not_output_template": true,
+  "presentation": {
+    "default": "Synthèse naturelle, cartes principales brièvement citées.",
+    "details": "Données, positions et règles disponibles à la demande.",
+    "questions": "Au besoin seulement ; aucune question automatique imposée aux vues locales."
+  },
+  "resonances": {
+    "separate_roles": true,
+    "no_duplicate_display_votes": true,
+    "no_statistical_independence_claim": true,
+    "rule": "Distinguer répétition entre périodes, réactivation natale, carte secondaire, soutien et Résultat. Ne pas compter un même fait affiché deux fois comme deux confirmations."
+  },
+  "elements": {
+    "individual": "Lire l’élément comme une qualité de l’énergie propre à la carte ; garder le mouvement de la valeur au premier plan.",
+    "general": "Mettre en regard les éléments des cartes actives, en nommant les périodes concernées. La tranche longue reste un fond et les périodes courtes en précisent l’incarnation ; le focus demandé peut inverser l’ordre de présentation, pas supprimer le contexte.",
+    "counting": "Le relevé concerne uniquement les cartes actives de l’horloge, heure incluse si calculée. La naissance et la palette permanente restent des références distinctes. Chaque occurrence active compte une fois ; enseigne et élément sont un même signal sous deux noms, pas deux confirmations.",
+    "limits": "Ces comptes décrivent une configuration, pas une domination pondérée ni un manque psychologique. Ne pas inventer d’incompatibilité, de neutralisation ou de score entre éléments."
+  }
+}

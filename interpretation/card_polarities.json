@@ -1,0 +1,215 @@
+{
+  "version": "0.2.0",
+  "status": "validated_user_rule",
+  "principle": "Chaque carte conserve une énergie fondamentale. Les deux polarités décrivent deux manières de vivre cette même énergie ; constructif ne signifie pas événement heureux et difficile ne signifie pas inversion du sens de la carte. Une difficulté subie ne signifie pas que la personne a mal vécu sa carte ; ne pas attribuer de faute.",
+  "cards": {
+    "AH": {
+      "constructive": "S’ouvrir à l’amour, accueillir un nouveau lien, vivre une introspection féconde et savoir donner comme recevoir de l’aide.",
+      "difficult": "Dépendance affective, besoin excessif d’être aimé ou sauvé, idéalisation d’un nouveau lien."
+    },
+    "2H": {
+      "constructive": "Union, passion partagée, partenariat équilibré, engagement ou mariage vécu dans la réciprocité.",
+      "difficult": "Fusion, passion possessive, dépendance au couple ou engagement sans discernement."
+    },
+    "3H": {
+      "constructive": "Explorer ses sentiments, assumer une période d’incertitude et transformer l’hésitation en créativité affective ou artistique.",
+      "difficult": "Triangle amoureux, indécision, incapacité à choisir ou instabilité sentimentale."
+    },
+    "4H": {
+      "constructive": "Stabilité affective, contentement, mariage heureux, gratitude et satisfaction dans la relation.",
+      "difficult": "S’installer dans le confort, prendre l’autre pour acquis ou tomber dans l’immobilisme affectif."
+    },
+    "5H": {
+      "constructive": "Accepter qu’une relation change, savoir se séparer ou évoluer, bouger et rencontrer de nouvelles personnes.",
+      "difficult": "Vivre le changement comme un abandon, une rupture chaotique, une instabilité ou une fuite affective."
+    },
+    "6H": {
+      "constructive": "Harmonie, sérénité, engagement durable, fidélité et approfondissement du lien.",
+      "difficult": "Monotonie, stagnation, maintien par habitude ou peur du changement, dette sentimentale non résolue."
+    },
+    "7H": {
+      "constructive": "Reconnaître jalousie et blessures, apprendre l’amour inconditionnel et transformer une crise relationnelle en apprentissage.",
+      "difficult": "Jalousie, trahison, rivalité, possessivité ou souffrance relationnelle, sans présumer qui en est à l’origine."
+    },
+    "8H": {
+      "constructive": "Charisme, séduction consciente, capacité à réunir, influence positive sur un groupe et puissance du lien.",
+      "difficult": "Manipulation affective, séduction utilisée comme pouvoir, domination du groupe ou du partenaire."
+    },
+    "9H": {
+      "constructive": "Accepter une fin, faire le deuil d’une relation ou d’une recherche affective et tirer une leçon d’une déception.",
+      "difficult": "Refus de la séparation, rancœur, sentiment d’infortune ou enfermement dans la déception."
+    },
+    "10H": {
+      "constructive": "Rayonnement social et affectif, succès avec le public, célébration, amitiés et amour épanouis.",
+      "difficult": "Besoin de reconnaissance, recherche de popularité, superficialité ou dépendance au regard des autres."
+    },
+    "JH": {
+      "constructive": "Cœur sincère, affection, amitié, amour spontané et capacité de sacrifice choisie.",
+      "difficult": "Immaturité affective, sacrifice excessif, naïveté ou dépendance amoureuse."
+    },
+    "QH": {
+      "constructive": "Générosité, sensualité assumée, amour maternel ou amoureux et capacité à exprimer ses sentiments.",
+      "difficult": "Séduction manipulatrice, possessivité, excès émotionnel ou utilisation de la sensualité pour contrôler."
+    },
+    "KH": {
+      "constructive": "Protection, générosité, charisme, maturité affective, paternité ou amour solide.",
+      "difficult": "Paternalisme, besoin d’être admiré, domination affective ou séduction égocentrique."
+    },
+    "AC": {
+      "constructive": "Curiosité, désir d’apprendre, nouvelles études, capacité à questionner et à recevoir une information nouvelle.",
+      "difficult": "Curiosité dispersée, questionnement incessant ou accumulation d’informations sans intégration."
+    },
+    "2C": {
+      "constructive": "Dialogue, rencontre intellectuelle, étude à deux, communication et négociation.",
+      "difficult": "Dispute, marchandage permanent, paroles conflictuelles ou communication stérile."
+    },
+    "3C": {
+      "constructive": "Transformer le doute en recherche, développer la créativité intellectuelle et examiner plusieurs possibilités.",
+      "difficult": "Confusion mentale, indécision ou difficulté à choisir quoi apprendre ou croire."
+    },
+    "4C": {
+      "constructive": "Clarté mentale, attitude positive, bonnes nouvelles, stabilité et confort intellectuels.",
+      "difficult": "Certitude excessive, rigidité intellectuelle ou confort mental empêchant de remettre ses idées en question."
+    },
+    "5C": {
+      "constructive": "Changer de projet ou de perspective, voyager et s’adapter à de nouvelles circonstances.",
+      "difficult": "Insatisfaction chronique, malentendus, dispersion ou changement constant d’avis ou de projet."
+    },
+    "6C": {
+      "constructive": "Intuition, compromis, acceptation d’une période calme et récolte du résultat de paroles ou décisions passées.",
+      "difficult": "Silence subi, absence de nouvelles, stagnation intellectuelle ou enfermement dans des paroles passées."
+    },
+    "7C": {
+      "constructive": "Développer l’optimisme malgré les difficultés, persévérer dans l’étude et apprendre d’une mauvaise nouvelle ou d’un conflit.",
+      "difficult": "Négativité, inquiétude, antagonisme, scandale, chantage ou découragement."
+    },
+    "8C": {
+      "constructive": "Concentration, puissance de pensée, courage intellectuel, acquisition de connaissances et capacité à réunir autour d’idées.",
+      "difficult": "Contrôle mental, obsession, rigidité intellectuelle ou volonté d’imposer ses idées."
+    },
+    "9C": {
+      "constructive": "Savoir terminer ou abandonner un projet, reconnaître une erreur intellectuelle, accepter la désapprobation et repartir autrement.",
+      "difficult": "Découragement, frustration, mauvaise nouvelle vécue comme un échec définitif ou abandon amer."
+    },
+    "10C": {
+      "constructive": "Réussite intellectuelle, enseignement, transmission, expansion des connaissances et bonnes nouvelles.",
+      "difficult": "Ego intellectuel, posture de sachant, besoin d’avoir raison ou d’imposer son savoir."
+    },
+    "JC": {
+      "constructive": "Intelligence vive, talent intellectuel, curiosité et capacité d’apprentissage.",
+      "difficult": "Mensonge, irresponsabilité, immaturité intellectuelle ou intelligence utilisée pour tromper."
+    },
+    "QC": {
+      "constructive": "Intelligence, intuition, sensibilité intellectuelle, connaissance et discernement.",
+      "difficult": "Suranalyse, intellectualisation des émotions, froideur ou sentiment de supériorité intellectuelle."
+    },
+    "KC": {
+      "constructive": "Érudition, intégrité, enseignement, compréhension profonde et transmission du savoir.",
+      "difficult": "Dogmatisme, arrogance intellectuelle ou autorité du savoir utilisée pour dominer."
+    },
+    "AD": {
+      "constructive": "Construire de nouvelles valeurs, développer une ambition financière saine et trouver de nouvelles sources de revenus.",
+      "difficult": "Obsession de l’argent ou mesure de sa valeur personnelle à travers sa réussite financière."
+    },
+    "2D": {
+      "constructive": "Partenariat professionnel équilibré, contrat, transaction, entretien ou collaboration productive.",
+      "difficult": "Relation purement intéressée, mauvais accord ou dépendance financière à un partenaire."
+    },
+    "3D": {
+      "constructive": "Créativité financière, examen prudent d’une transaction et apprentissage de la gestion de l’incertitude matérielle.",
+      "difficult": "Insécurité financière, doute permanent, peur du manque ou décisions financières hésitantes."
+    },
+    "4D": {
+      "constructive": "Stabilité financière, prospérité, satisfaction matérielle et bonnes affaires.",
+      "difficult": "Attachement excessif à la sécurité, matérialisme ou peur de perdre ce qui est acquis."
+    },
+    "5D": {
+      "constructive": "Accepter une évolution professionnelle ou financière, déménager ou voyager pour saisir une opportunité.",
+      "difficult": "Instabilité financière, changements subis ou fuite en avant professionnelle."
+    },
+    "6D": {
+      "constructive": "Régler ses dettes, accepter ce qui est dû et consolider une situation financière stable.",
+      "difficult": "Blocage financier, dette pesante, peur du changement ou sentiment d’être prisonnier de ses obligations."
+    },
+    "7D": {
+      "constructive": "Cultiver consciemment l’abondance, apprendre à gérer une période difficile et revoir son rapport à l’argent.",
+      "difficult": "Peur du manque, dépenses lourdes, pertes ou anxiété financière."
+    },
+    "8D": {
+      "constructive": "Organisation, manifestation concrète, pouvoir financier maîtrisé et transactions importantes bien conduites.",
+      "difficult": "Cupidité, contrôle par l’argent ou recherche excessive de pouvoir matériel."
+    },
+    "9D": {
+      "constructive": "Accepter une perte ou la fin d’un système de valeurs et réorganiser ses priorités matérielles.",
+      "difficult": "Se définir par ses pertes, ressentiment financier ou peur de perdre son statut ou son argent."
+    },
+    "10D": {
+      "constructive": "Succès financier, abondance, héritage ou chance utilisés intelligemment.",
+      "difficult": "Avidité, conviction que l’argent résout tout ou excès de confiance lié à la réussite."
+    },
+    "JD": {
+      "constructive": "Talent pour les affaires, commerce et apprentissage de nouvelles valeurs.",
+      "difficult": "Malhonnêteté, opportunisme ou tromperie financière."
+    },
+    "QD": {
+      "constructive": "Autorité professionnelle, richesse, goût, sens des affaires et indépendance matérielle.",
+      "difficult": "Extravagance, matérialisme, besoin d’afficher son statut ou de contrôler par l’argent."
+    },
+    "KD": {
+      "constructive": "Leadership économique, autonomie, richesse, sens des affaires et capacité à entreprendre.",
+      "difficult": "Domination par l’argent, cupidité ou statut social érigé en identité."
+    },
+    "AS": {
+      "constructive": "Chercher la connaissance profonde, accepter une transformation, commencer une nouvelle vie et explorer ce qui est caché.",
+      "difficult": "Obsession du secret, peur de la transformation ou expérience d’une fin comme un anéantissement."
+    },
+    "2S": {
+      "constructive": "Coopérer, s’engager, conclure un accord, demander conseil ou travailler efficacement à deux.",
+      "difficult": "Dépendance au partenaire, engagement contraignant ou difficulté à agir seul."
+    },
+    "3S": {
+      "constructive": "Prendre le temps de choisir son orientation, gérer plusieurs activités consciemment et écouter les signaux du corps.",
+      "difficult": "Indécision existentielle, dispersion, surcharge ou inquiétude excessive."
+    },
+    "4S": {
+      "constructive": "Stabilité, bonne gestion du travail et de la santé, construction concrète et réussite par la régularité.",
+      "difficult": "Routine, immobilisme ou identité définie uniquement par le travail ou le confort."
+    },
+    "5S": {
+      "constructive": "Accepter un changement de vie, de métier ou de méthode et utiliser le mouvement comme évolution.",
+      "difficult": "Instabilité professionnelle, changements subis, fuite ou incapacité à construire dans la durée."
+    },
+    "6S": {
+      "constructive": "Approfondissement spirituel, stabilité, acceptation d’une période sans changement et prise de responsabilités.",
+      "difficult": "Stagnation, dette ou inquiétude liée à la santé et refus d’évoluer."
+    },
+    "7S": {
+      "constructive": "Surmonter un obstacle, développer une ouverture spirituelle et apprendre d’une difficulté.",
+      "difficult": "Se sentir victime des obstacles, peur de la maladie ou de l’accident et découragement."
+    },
+    "8S": {
+      "constructive": "Puissance de travail, discipline, organisation, dépassement de soi et capacité à franchir les obstacles.",
+      "difficult": "Surmenage, contrôle excessif, obsession de la performance ou domination professionnelle."
+    },
+    "9S": {
+      "constructive": "Accepter la fin d’une époque, d’un emploi ou d’une ancienne manière de vivre et transformer profondément son existence.",
+      "difficult": "Désespoir face à la perte, peur de la maladie ou de la mort et sentiment que tout s’effondre."
+    },
+    "10S": {
+      "constructive": "Réussite professionnelle, grande capacité de travail, dépassement des obstacles et maîtrise.",
+      "difficult": "Dépendance au travail, épuisement ou identité entièrement fondée sur le travail ou la performance."
+    },
+    "JS": {
+      "constructive": "Habileté, travail, initiation, apprentissage par l’expérience et utilisation concrète de ses talents.",
+      "difficult": "Ruse, vol, manipulation ou utilisation de son habileté sans intégrité."
+    },
+    "QS": {
+      "constructive": "Travail, sagesse, autorité, maîtrise de soi et capacité à prendre soin et conseiller.",
+      "difficult": "Autoritarisme, contrôle, dureté ou répression émotionnelle."
+    },
+    "KS": {
+      "constructive": "Influence, justice, sagesse, guérison symbolique et autorité exercée avec discernement.",
+      "difficult": "Domination, jugement, abus d’autorité ou conviction de savoir ce qui est bon pour les autres."
+    }
+  }
+}

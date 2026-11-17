@@ -1,0 +1,256 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "olney://interpretation/llm-output/0.4.0",
+  "title": "Olney LLM interpretation output",
+  "type": "object",
+  "required": [
+    "title",
+    "reading_focus",
+    "global_synthesis",
+    "claims",
+    "questions",
+    "cautions",
+    "knowledge_version",
+    "rule_ids_used"
+  ],
+  "properties": {
+    "reading_angle": {"enum": ["temporal", "behavioral", "developmental", "existential"]},
+    "learning_synthesis": {
+      "type": "object", "required": ["resources", "contribution", "challenge", "possible_direction", "evidence"],
+      "properties": {"resources": {"type": "string"}, "contribution": {"type": "string"}, "challenge": {"type": "string"},
+        "possible_direction": {"type": "string"}, "evidence": {"type": "array", "items": {"type": "string"}, "minItems": 1}}, "additionalProperties": false
+    },
+    "theme_hypotheses": {
+      "type": "array", "maxItems": 5,
+      "items": {"type": "object", "required": ["text", "status", "evidence", "counterevidence", "rule_refs"],
+        "properties": {"text": {"type": "string"}, "status": {"const": "proposed"},
+          "evidence": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "counterevidence": {"type": "array", "items": {"type": "string"}},
+          "rule_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1}}, "additionalProperties": false}
+    },
+    "practice_suggestions": {
+      "type": "array", "maxItems": 3,
+      "items": {"type": "object", "required": ["text", "kind", "evidence"],
+        "properties": {"text": {"type": "string"}, "kind": {"enum": ["observe", "reflect", "experiment"]},
+          "evidence": {"type": "array", "items": {"type": "string"}, "minItems": 1}}, "additionalProperties": false}
+    },
+    "title": {
+      "type": "string"
+    },
+    "identity": {
+      "type": "object",
+      "required": [
+        "summary",
+        "evidence"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "current_cycles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "cycle_id",
+          "summary",
+          "constructive_branch",
+          "difficult_branch",
+          "evidence"
+        ],
+        "properties": {
+          "cycle_id": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "constructive_branch": {
+            "type": "string"
+          },
+          "difficult_branch": {
+            "type": "string"
+          },
+          "relation_to_parent": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "challenge_result": {
+      "type": "object",
+      "required": [
+        "summary",
+        "conditionality",
+        "evidence"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "conditionality": {
+          "type": "string"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "global_synthesis": {
+      "type": "string"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 1
+    },
+    "cautions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "knowledge_version": {
+      "type": "string"
+    },
+    "rule_ids_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reading_focus": {
+      "enum": [
+        "general",
+        "natal",
+        "life_path",
+        "year",
+        "fifty_two_days",
+        "week",
+        "day",
+        "hour"
+      ]
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "text",
+          "kind",
+          "evidence",
+          "rule_refs"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "calculated_fact",
+              "user_report",
+              "symbolic_interpretation",
+              "illustrative_scenario",
+              "missing_information"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rule_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "description": "Références présentes dans le contexte reçu ; justification par des données, pas de chaîne de raisonnement privée."
+    },
+    "reading_mode": {
+      "enum": [
+        "current",
+        "cycle"
+      ]
+    },
+    "cycle_reading": {
+      "type": "object",
+      "required": [
+        "cycle_id",
+        "summary",
+        "evidence",
+        "steps"
+      ],
+      "properties": {
+        "cycle_id": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "steps": {
+          "type": "array",
+          "minItems": 7,
+          "maxItems": 7,
+          "items": {
+            "type": "object",
+            "required": [
+              "step_index",
+              "card_id",
+              "summary",
+              "evidence"
+            ],
+            "properties": {
+              "step_index": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 6
+              },
+              "card_id": {
+                "type": "string"
+              },
+              "summary": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

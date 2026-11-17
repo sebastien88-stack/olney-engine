@@ -1,0 +1,103 @@
+{
+  "version": "1.5.0",
+  "status": "validated",
+  "rule_id": "rule:relationships",
+  "source_refs": [
+    "morera_relations_151_155",
+    "olney_relationships_2026_09"
+  ],
+  "subjects": {
+    "separation": "Conserver deux sujets, deux profils, deux mémoires et deux horloges. Une relation ajoute un dossier commun sans fusionner les identités.",
+    "scope": "La lecture peut concerner amour, amitié, famille, travail, création ou toute autre relation enregistrée.",
+    "unknown_other": "Les cartes ne donnent pas accès aux intentions privées d’une personne. Les hypothèses sur un tiers restent reliées aux faits et récits disponibles."
+  },
+  "reference_cards": {
+    "primary": "Les deux cartes de naissance portent la comparaison relationnelle principale. La carte de relation rejoint uniquement le comparatif séparé en ordre naturel.",
+    "secondary": "Les cartes secondaires astrologiques restent des références natales pour les activations temporelles, sans multiplier les correspondances permanentes.",
+    "associated": "Les cartes déplacées ou de soutien ne sont ni affichées ni utilisées pour calculer les correspondances entre les deux personnes.",
+    "permanent_geometry_scope": "Ordre manifesté : carte de naissance de A face à celle de B. Ordre naturel : ces deux cartes entre elles, puis chacune face à la carte de relation."
+  },
+  "geometry": {
+    "tables": [
+      "ordre_manifeste",
+      "ordre_naturel"
+    ],
+    "scope": "L’ordre manifesté reste la structure relationnelle principale entre les deux cartes de naissance. L’ordre naturel est présenté dans un bloc distinct comme comparatif des cartes de naissance et de la carte de relation ; ne jamais fusionner les deux niveaux de preuve.",
+    "natural_order_scope": "Comparer A naissance ↔ B naissance, A naissance ↔ carte de relation et B naissance ↔ carte de relation. Ne pas introduire les cartes secondaires, les cartes déplacées, le Défi ou le Résultat dans ce comparatif.",
+    "axes": [
+      "horizontal",
+      "vertical",
+      "diagonale_6",
+      "diagonale_8"
+    ],
+    "distance_roles": {
+      "1": "lune_soleil",
+      "2": "vénus",
+      "3": "mars",
+      "4": "jupiter",
+      "5": "saturne",
+      "6": "uranus",
+      "7": "neptune",
+      "8": "pluton",
+      "9": "résultat"
+    },
+    "horizontal_vertical": "Relations directionnelles : la carte située devant représente la fonction planétaire pour la carte située derrière.",
+    "diagonal": "Les relations diagonales sont réciproques à toutes les distances.",
+    "lune_soleil": "Présenter l’adjacence comme une relation Lune–Soleil : soutien/nourriture et direction/guide. Ne pas la dupliquer artificiellement en deux preuves indépendantes.",
+    "multiple_routes": "Une même paire peut être reliée par plusieurs routes dans un même tableau. Fusionner les routes qui produisent exactement la même fonction relationnelle afin de ne jamais répéter deux fois la même définition ; conserver deux directions réellement différentes ; ne pas les transformer en score.",
+    "role_depth": "Pour chaque fonction, fournir l’essence du lien, sa ressource constructive et sa tension possible. La forme vécue reste ouverte et dépend de l’histoire des personnes."
+  },
+  "relationship_card": {
+    "formula": "Additionner les valeurs solaires des deux cartes de naissance ; si le total dépasse 52, retrancher 52.",
+    "range": "1..52",
+    "joker_excluded": true,
+    "role": "Énergie centrale créée par la relation ; elle ne remplace aucun des deux profils.",
+    "reading": "Développer explicitement la carte comme énergie du lien : dynamique commune, ressource possible, tension possible et formes d’incarnation dans l’histoire partagée. Ne pas recopier une fiche individuelle comme si la carte décrivait une seule personne.",
+    "no_score": true,
+    "clock_activation": "Ne pas créer d’horloge artificielle pour la carte de relation : la date de rencontre décrit l’origine historique du lien mais ne devient pas automatiquement une date de naissance symbolique produisant cette carte."
+  },
+  "life_paths": {
+    "compare": "Afficher les deux palettes manifestées de sept cartes comme arrière-plan propre à chaque personne.",
+    "subjects_challenge_result": "Ne pas présenter ni comparer les cartes Défi et Résultat personnels dans les encadrés propres aux deux sujets.",
+    "relationship_path": "La carte de relation génère son propre chemin de vie manifesté : Mercure, Vénus, Mars, Jupiter, Saturne, Uranus, Neptune, Défi et Résultat. Cette séquence décrit les ressources, tensions et direction du lien lui-même ; elle n’est pas une comparaison entre les Défis/Résultats personnels.",
+    "ownership": "Toutes les cartes du chemin de vie de la relation appartiennent au lien. Une répétition avec la carte personnelle d’un participant crée une résonance, jamais une appropriation de l’étape par cette personne.",
+    "priority": "Après les deux cartes de naissance, leur correspondance directe et la carte de relation."
+  },
+  "current_cycles": {
+    "common_date": "Calculer les deux horloges à la même date analysée.",
+    "role": "Les cycles montrent comment la relation peut être activée ou vécue à cette date ; ils ne remplacent pas la structure permanente.",
+    "annual_source": "Le livre indique explicitement que l’apparition annuelle des cartes de certaines personnes sur le chemin de notre carte qualifie la relation de l’année.",
+    "annual_bidirectionality": "Calculer séparément où la carte de naissance ou une carte secondaire de B apparaît dans le chemin annuel de A, puis où celles de A apparaissent dans le chemin annuel de B. La position donne la fonction de la personne pour l’autre durant cette année.",
+    "annual_role_output": "Exprimer la direction, la fonction planétaire, son apport possible et sa tension possible. L’absence de correspondance annuelle explicite n’annule pas la relation.",
+    "fractal_extension": "L’extension de cette recherche aux autres échelles de l’horloge est une convention Olney validée, fondée sur la logique fractale ; la nommer comme telle lorsqu’elle est structurante.",
+    "activation_filter": "Ne commenter une activation que si la carte active rejoint la carte de naissance, une carte secondaire ou l’une des sept cartes de la palette manifestée de l’autre sujet. Une simple égalité entre deux cartes actives ne suffit plus."
+  },
+  "events": {
+    "common_history": "Les événements communs et vécus rapportés peuvent montrer comment les énergies prennent forme pour ces personnes.",
+    "no_generic_proof": "Une ressemblance entre cycles ne prouve ni causalité, ni sentiment, ni événement.",
+    "perspectives": "Un même événement peut recevoir deux vécus différents ; les conserver séparément."
+  },
+  "interpretation_order": [
+    "cartes_de_naissance",
+    "carte_de_relation",
+    "chemin_de_vie_de_la_relation",
+    "correspondances_dans_ordre_manifeste",
+    "comparatif_dans_ordre_naturel",
+    "rôles_annuels_réciproques",
+    "palettes_manifestees_des_chemins_de_vie",
+    "horloges_actuelles",
+    "événements_et_vécus"
+  ],
+  "output_policy": {
+    "no_compatibility_score": true,
+    "no_verdict": true,
+    "cards_are_energies": true,
+    "answer_the_relationship_question_first": true,
+    "cite_calculated_links": true,
+    "ask_one_lived_question_only_if_useful": true,
+    "directional_roles_name_both_subjects": true,
+    "current_climate_names_card_cycle_and_direction": true,
+    "hide_internal_positions_unless_calculation_is_requested": true,
+    "free_text_notes_are_not_psychological_evidence": true
+  }
+}

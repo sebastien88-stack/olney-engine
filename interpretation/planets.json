@@ -1,0 +1,359 @@
+{
+  "version": "0.2.0",
+  "planets": {
+    "moon": {
+      "name": "Lune",
+      "symbol": "☾",
+      "status": "validated_user_rule",
+      "keywords": [
+        "vécu intérieur",
+        "besoins",
+        "réactions",
+        "sensibilité",
+        "appuis",
+        "habitudes"
+      ],
+      "function": "La Lune de chaque séquence renseigne sur le vécu intérieur et les appuis ou tensions qui accompagnent le cycle en cours. Cette fonction s’applique à toutes les échelles ; « ombre intérieure » et « soutien » ne sont pas des définitions exhaustives.",
+      "constructive": [
+        "écoute intérieure",
+        "sécurité émotionnelle",
+        "intuition",
+        "mémoire intégrée",
+        "soutien"
+      ],
+      "tensions": [
+        "réaction automatique",
+        "insécurité",
+        "habitude limitante"
+      ],
+      "domains": [
+        "émotions",
+        "intimité",
+        "besoins",
+        "réactions"
+      ],
+      "source_pages": [
+        25
+      ]
+    },
+    "sun": {
+      "name": "Soleil",
+      "symbol": "☉",
+      "status": "validated_user_rule",
+      "keywords": [
+        "identité",
+        "volonté",
+        "expression consciente",
+        "direction personnelle",
+        "affirmation",
+        "réalisation"
+      ],
+      "function": "Correspond à la carte de naissance : centre conscient et influence personnelle principale, à l’origine des séquences de chaque cycle.",
+      "constructive": [
+        "affirmation juste",
+        "cohérence",
+        "rayonnement",
+        "réalisation"
+      ],
+      "tensions": [
+        "suridentification",
+        "volonté rigide",
+        "besoin de reconnaissance"
+      ],
+      "domains": [
+        "identité",
+        "volonté",
+        "expression",
+        "réalisation"
+      ],
+      "source_pages": []
+    },
+    "mercury": {
+      "name": "Mercure",
+      "symbol": "☿",
+      "status": "documented",
+      "keywords": [
+        "intellect",
+        "mental",
+        "communication",
+        "éducation",
+        "idées",
+        "rapidité"
+      ],
+      "function": "Décrit la pensée, les échanges, les apprentissages et les événements rapides ; dans le tableau de naissance, l’enfance.",
+      "constructive": [
+        "compréhension",
+        "expression",
+        "apprentissage",
+        "mobilité mentale"
+      ],
+      "tensions": [
+        "dispersion",
+        "précipitation",
+        "nervosité"
+      ],
+      "domains": [
+        "mental",
+        "communication",
+        "études",
+        "enfance"
+      ],
+      "source_pages": [
+        26,
+        28
+      ]
+    },
+    "venus": {
+      "name": "Vénus",
+      "symbol": "♀",
+      "status": "documented",
+      "keywords": [
+        "amour",
+        "art",
+        "plaisir",
+        "famille",
+        "féminin",
+        "sentiments",
+        "amis"
+      ],
+      "function": "Décrit les relations, l’intimité, la beauté et ce qui coule naturellement.",
+      "constructive": [
+        "harmonie",
+        "affection",
+        "plaisir",
+        "créativité"
+      ],
+      "tensions": [
+        "complaisance",
+        "dépendance affective",
+        "séduction"
+      ],
+      "domains": [
+        "amour",
+        "relations",
+        "famille",
+        "art"
+      ],
+      "source_pages": [
+        26,
+        28
+      ]
+    },
+    "mars": {
+      "name": "Mars",
+      "symbol": "♂",
+      "status": "documented",
+      "keywords": [
+        "action",
+        "initiative",
+        "vitalité",
+        "masculin",
+        "conflit",
+        "débat"
+      ],
+      "function": "Décrit l’énergie physique, l’affirmation, la passion, la loi et les confrontations.",
+      "constructive": [
+        "courage",
+        "initiative",
+        "dynamisme",
+        "passion"
+      ],
+      "tensions": [
+        "dispute",
+        "agressivité",
+        "procès",
+        "guerre"
+      ],
+      "domains": [
+        "action",
+        "vitalité",
+        "conflit",
+        "relations passionnelles"
+      ],
+      "source_pages": [
+        26,
+        28
+      ]
+    },
+    "jupiter": {
+      "name": "Jupiter",
+      "symbol": "♃",
+      "status": "documented",
+      "keywords": [
+        "abondance",
+        "succès",
+        "argent",
+        "travail",
+        "chance",
+        "bienfait"
+      ],
+      "function": "Décrit l’expansion, le résultat du travail et les possessions matérielles ou spirituelles.",
+      "constructive": [
+        "réussite",
+        "protection",
+        "croissance",
+        "générosité"
+      ],
+      "tensions": [
+        "excès",
+        "surestimation",
+        "dispersion"
+      ],
+      "domains": [
+        "succès",
+        "argent",
+        "travail",
+        "spiritualité"
+      ],
+      "source_pages": [
+        26,
+        28
+      ]
+    },
+    "saturn": {
+      "name": "Saturne",
+      "symbol": "♄",
+      "status": "documented",
+      "keywords": [
+        "responsabilité",
+        "conséquence",
+        "dette",
+        "travail",
+        "contrainte",
+        "enseignement"
+      ],
+      "function": "Met en présence des causes et de leurs effets, des obligations et d’une expérience à intégrer.",
+      "constructive": [
+        "discipline",
+        "maturité",
+        "apprentissage",
+        "endurance"
+      ],
+      "tensions": [
+        "obstacle",
+        "restriction",
+        "problème financier",
+        "problème de santé",
+        "méfiance"
+      ],
+      "domains": [
+        "responsabilité",
+        "travail",
+        "finance",
+        "santé",
+        "apprentissage"
+      ],
+      "source_pages": [
+        26,
+        27,
+        28
+      ]
+    },
+    "uranus": {
+      "name": "Uranus",
+      "symbol": "♅",
+      "status": "documented",
+      "keywords": [
+        "invention",
+        "originalité",
+        "imprévu",
+        "intuition",
+        "progrès",
+        "technologie"
+      ],
+      "function": "Décrit la nouveauté, les groupes, la propriété et une connaissance intuitive directe.",
+      "constructive": [
+        "innovation",
+        "libération",
+        "intuition",
+        "progrès"
+      ],
+      "tensions": [
+        "rupture",
+        "instabilité",
+        "événement imprévisible"
+      ],
+      "domains": [
+        "innovation",
+        "groupes",
+        "travail",
+        "propriété",
+        "sciences occultes"
+      ],
+      "source_pages": [
+        27,
+        28
+      ]
+    },
+    "neptune": {
+      "name": "Neptune",
+      "symbol": "♆",
+      "status": "documented",
+      "keywords": [
+        "voyage",
+        "idéal",
+        "rêve",
+        "mysticisme",
+        "inspiration",
+        "psychisme"
+      ],
+      "function": "Décrit les mondes lointains, l’imaginaire, les idéaux et, dans le tableau de naissance, le dernier âge de la vie.",
+      "constructive": [
+        "inspiration",
+        "médiumnité",
+        "idéal",
+        "ouverture spirituelle"
+      ],
+      "tensions": [
+        "illusion",
+        "fuite du réel",
+        "idéalisation"
+      ],
+      "domains": [
+        "voyage",
+        "rêve",
+        "spiritualité",
+        "relations idéalisées"
+      ],
+      "source_pages": [
+        27,
+        28
+      ]
+    },
+    "pluto": {
+      "name": "Pluton",
+      "symbol": "♇",
+      "status": "validated_user_rule",
+      "keywords": [
+        "transformation profonde",
+        "crise",
+        "destruction",
+        "reconstruction",
+        "révélation",
+        "défi"
+      ],
+      "function": "Met en lumière ce qui oblige à évoluer en profondeur. Il correspond à la fonction Défi et doit être interprété avec la carte Résultat.",
+      "constructive": [
+        "métamorphose",
+        "révélation",
+        "reconstruction",
+        "libération d’un ancien fonctionnement"
+      ],
+      "tensions": [
+        "crise",
+        "perte de contrôle",
+        "résistance à la transformation",
+        "destruction"
+      ],
+      "domains": [
+        "défi",
+        "crise",
+        "transformation",
+        "reconstruction"
+      ],
+      "source_pages": [
+        25
+      ]
+    }
+  }
+}

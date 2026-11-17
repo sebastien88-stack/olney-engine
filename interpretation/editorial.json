@@ -1,0 +1,69 @@
+{
+  "version": "0.4.0",
+  "kind": "editorial_paraphrase",
+  "source_refs": [
+    "morera_photos",
+    "olney_user_2026_08",
+    "olney_user_2026_08_31"
+  ],
+  "policy": "Les 52 fiches actives décrivent des énergies incarnées. Les thèmes et formulations communs complètent ces noyaux sans les remplacer.",
+  "rank_movements": {
+    "2": "La dynamique se construit dans l’échange, la coopération ou la confrontation entre deux pôles.",
+    "3": "Plusieurs possibilités sollicitent l’expression et la créativité, avec un choix parfois difficile à poser.",
+    "4": "Il s’agit d’établir des fondations et une stabilité, sans enfermer cette sécurité dans la rigidité.",
+    "5": "Le mouvement demande d’explorer ou de changer de direction, sans faire du changement une fin en soi.",
+    "6": "La continuité, l’équilibre et les responsabilités prennent de la place ; la stabilité peut soutenir ou retenir.",
+    "7": "La rencontre d’un obstacle ouvre un mouvement de recul, de recherche et d’approfondissement de la compréhension.",
+    "8": "La puissance et la maîtrise posent la question de l’usage de ses capacités, plutôt que du contrôle des autres.",
+    "9": "Un mouvement arrive à son terme : accueillir l’achèvement, intégrer l’expérience et laisser se desserrer ce qui s’achève.",
+    "10": "L’accomplissement et la réussite mobilisent l’expérience acquise et l’envie de donner une forme aboutie à ce qui a été développé.",
+    "A": "Le désir ouvre une direction : commencer, découvrir et donner forme à une impulsion.",
+    "J": "Le potentiel s’exprime avec créativité et spontanéité ; il demande aussi à mûrir et à trouver une forme responsable.",
+    "Q": "La réceptivité, la sensibilité et le pouvoir intérieur sont au premier plan.",
+    "K": "La maîtrise s’incarne dans la manière d’assumer une fonction, une autorité ou une responsabilité."
+  },
+  "figure_faculties": {
+    "JH": "la sincérité du cœur, l’amitié et l’affection spontanée",
+    "QH": "la générosité affective, la sensibilité et l’expression des sentiments",
+    "KH": "la protection, le charisme et la maturité affective",
+    "JC": "l’inventivité, le talent intellectuel et un potentiel à former",
+    "QC": "la compréhension, l’intuition et la sensibilité intellectuelle",
+    "KC": "la compréhension, la transmission et l’intégrité intellectuelle",
+    "JD": "l’initiative dans les affaires et l’exploration de nouvelles valeurs",
+    "QD": "le sens des affaires, l’autorité et l’appréciation des belles choses",
+    "KD": "l’organisation, la responsabilité et le sens des affaires",
+    "JS": "l’engagement dans le travail et la recherche de connaissance spirituelle",
+    "QS": "la maîtrise de soi, le travail et une attention protectrice",
+    "KS": "la sagesse, la maîtrise et la responsabilité dans l’action"
+  },
+  "suit_themes": {
+    "hearts": {
+      "label": "le lien et l’expression affective",
+      "facets": "sentiments, relations, famille ou créativité artistique"
+    },
+    "clubs": {
+      "label": "la pensée et la communication",
+      "facets": "apprentissage, compréhension, idées ou échanges"
+    },
+    "diamonds": {
+      "label": "les valeurs et leur concrétisation",
+      "facets": "ressources, organisation matérielle, argent ou priorités"
+    },
+    "spades": {
+      "label": "l’engagement concret et la transformation",
+      "facets": "travail, discipline, sagesse ou rapport au corps"
+    }
+  },
+  "planet_modes": {
+    "moon": "Le vécu intérieur, les besoins et les appuis ou tensions accompagnent cette séquence.",
+    "sun": "L’expression part de l’identité, de la volonté et de la direction personnelle.",
+    "mercury": "La carte s’exprime par la pensée, la parole, la circulation d’informations et l’apprentissage ; la rapidité peut devenir précipitation.",
+    "venus": "La carte s’exprime par le lien, l’attraction, l’accord, le plaisir et la sensibilité. Son énergie prend forme dans ce qui rapproche, touche ou donne envie de partager.",
+    "mars": "La carte s’exprime par l’initiative, l’affirmation et l’engagement ; l’énergie peut soutenir l’action ou se tendre dans la confrontation.",
+    "jupiter": "La carte s’exprime par l’expansion, les possibilités de réussite et les fruits du travail. Son élan pousse à développer ses ressources et à donner plus d’ampleur à ses engagements.",
+    "saturn": "La carte s’exprime dans la responsabilité, les obligations, les conséquences et l’apprentissage. Elle engage un travail de maturation au contact des limites rencontrées.",
+    "uranus": "La carte s’exprime par l’originalité, l’intuition, les groupes et l’imprévu ; une voie nouvelle peut ouvrir des possibilités ou déstabiliser.",
+    "neptune": "La carte s’exprime par l’inspiration, le rêve, les idéaux ou l’appel du lointain ; distinguer ce qui inspire de ce qui est idéalisé.",
+    "pluto": "Le Défi met au travail une transformation profonde, à lire avec le Résultat de la séquence."
+  }
+}

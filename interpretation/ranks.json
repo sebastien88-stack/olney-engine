@@ -1,0 +1,117 @@
+{
+  "version": "0.1.0",
+  "ranks": {
+    "A": {
+      "value": 1,
+      "name": "As",
+      "keywords": ["désir", "commencement", "impulsion", "initiative", "indépendance"],
+      "constructive": ["création", "ambition", "leadership", "recherche de sa propre valeur"],
+      "tensions": ["impatience", "égocentrisme", "paresse", "autoritarisme"],
+      "source_pages": [19]
+    },
+    "2": {
+      "value": 2,
+      "name": "Deux",
+      "keywords": ["union", "coopération", "complémentarité", "opposition", "logique"],
+      "constructive": ["partenariat", "intelligence", "discernement"],
+      "tensions": ["peur de la solitude", "dépendance", "mensonge", "opposition"],
+      "source_pages": [19]
+    },
+    "3": {
+      "value": 3,
+      "name": "Trois",
+      "keywords": ["mental", "créativité", "sociabilité", "choix", "expression"],
+      "constructive": ["optimisme", "humour", "création"],
+      "tensions": ["inquiétude", "indécision", "dispersion entre deux directions"],
+      "source_pages": [20]
+    },
+    "4": {
+      "value": 4,
+      "name": "Quatre",
+      "keywords": ["fondations", "sécurité", "clarté", "discipline", "protection"],
+      "constructive": ["organisation", "construction", "stabilité", "vigilance"],
+      "tensions": ["intolérance", "ennui", "routine", "rigidité"],
+      "source_pages": [20]
+    },
+    "5": {
+      "value": 5,
+      "name": "Cinq",
+      "keywords": ["voyage", "changement", "découverte", "embranchement", "expérience"],
+      "constructive": ["exploration", "adaptation", "nouvelle direction"],
+      "tensions": ["insatisfaction", "rébellion", "conflit avec l’autorité", "changement pour le changement"],
+      "source_pages": [20]
+    },
+    "6": {
+      "value": 6,
+      "name": "Six",
+      "keywords": ["harmonie", "responsabilité", "justice", "équilibre", "retour à soi"],
+      "constructive": ["alliance des opposés", "guidance", "paix intérieure", "aide aux autres"],
+      "tensions": ["critique", "compétition", "contrainte", "difficulté à changer"],
+      "source_pages": [20, 21]
+    },
+    "7": {
+      "value": 7,
+      "name": "Sept",
+      "keywords": ["épreuve", "passage", "mystère", "perspective", "voie spirituelle"],
+      "constructive": ["croissance par les obstacles", "profondeur", "connaissance", "récompense"],
+      "tensions": ["obstacle matériel", "bouleversement", "trahison", "critique", "apitoiement"],
+      "source_pages": [21]
+    },
+    "8": {
+      "value": 8,
+      "name": "Huit",
+      "keywords": ["puissance", "abondance", "accomplissement", "maîtrise", "infini"],
+      "constructive": ["organisation", "concentration", "détermination", "maturité", "stabilité"],
+      "tensions": ["contrôle", "rapport de force", "lutte de pouvoir", "transformation imposée"],
+      "source_pages": [22]
+    },
+    "9": {
+      "value": 9,
+      "name": "Neuf",
+      "keywords": ["achèvement", "lâcher-prise", "compassion", "dissolution", "universalité"],
+      "constructive": ["ouverture aux autres", "service", "vision", "complétude"],
+      "tensions": ["deuil", "déception", "abandon", "perte de repères"],
+      "source_pages": [22]
+    },
+    "10": {
+      "value": 10,
+      "name": "Dix",
+      "keywords": ["cycle accompli", "réussite", "évolution", "couronne", "réalisation"],
+      "constructive": ["succès", "expérience intégrée", "accomplissement personnel", "élévation"],
+      "tensions": ["obsession de la réussite", "excès d’ambition", "épuisement"],
+      "source_pages": [23]
+    },
+    "J": {
+      "value": 11,
+      "name": "Valet",
+      "keywords": ["jeunesse", "potentiel", "créativité", "jeu", "neutralité"],
+      "constructive": ["souplesse", "inventivité", "mental à former"],
+      "tensions": ["immaturité", "irresponsabilité", "mensonge", "vol", "faible moralité"],
+      "source_pages": [23]
+    },
+    "Q": {
+      "value": 12,
+      "name": "Dame",
+      "keywords": ["réceptivité", "pouvoir intérieur", "sensibilité", "féminin", "mystère"],
+      "constructive": ["douceur", "capacité à comprendre", "connaissance initiatique", "soutien"],
+      "tensions": ["arrogance", "domination", "paresse"],
+      "source_pages": [23, 24]
+    },
+    "K": {
+      "value": 13,
+      "name": "Roi",
+      "keywords": ["autorité", "commandement", "maîtrise", "responsabilité", "loi"],
+      "constructive": ["leadership", "discernement", "protection", "service du monde"],
+      "tensions": ["obstination", "domination", "abus de pouvoir", "refus d’assumer son rôle"],
+      "source_pages": [24]
+    },
+    "JOKER": {
+      "value": 0,
+      "name": "Joker",
+      "keywords": ["potentiel", "inconnaissable", "indétermination", "liberté", "hors-cycle"],
+      "constructive": ["possibilités multiples", "capacité à incarner toute carte"],
+      "tensions": ["imprévisibilité", "absence de repère"],
+      "source_pages": [24]
+    }
+  }
+}

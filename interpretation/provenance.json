@@ -1,0 +1,130 @@
+{
+  "version": "0.5.0",
+  "sources": {
+    "olney_companion_validated": {
+      "kind": "user_validated_olney_convention",
+      "title": "Comportement d’Olney : pédagogie, mémoire et sujets — décisions validées avec Sébastien",
+      "scope": "Conventions du produit issues de la discussion fournie et des réponses validées. Ce ne sont ni des citations de Richmond ni des règles supplémentaires de calcul."
+    },
+    "morera_photos": {
+      "kind": "user_supplied_book_photographs",
+      "title": "La Cartomancie des anciens Mages",
+      "scope": "Photographies fournies : symboles, valeurs, planètes, cycles et tableaux de mots-clés. Les champs normalisés sont des reformulations, pas des citations intégrales."
+    },
+    "olney_user_2026_08": {
+      "kind": "user_validated_olney_convention",
+      "title": "Précisions et polarités validées par Sébastien, août 2026",
+      "scope": "Convention de l’application ; ne pas attribuer automatiquement ces formulations aux livres."
+    },
+    "olney_user_2026_08_31": {
+      "kind": "user_validated_olney_convention",
+      "title": "Validation des sept questions de relecture, 31 août 2026",
+      "scope": "Figures incarnées, dualité semi-fixe, palette en arrière-plan, lecture fractale, Lune à chaque échelle, présentation progressive, séparation des sources."
+    },
+    "randall_joker_photo": {
+      "kind": "user_supplied_book_photograph",
+      "title": "Symboles sacrés des anciens — page 336",
+      "scope": "Joker uniquement. La lecture opérationnelle du Joker demeure en attente. Aucun portrait complet des 52 cartes de ce livre n’est disponible dans ce référentiel."
+    },
+    "olney_card_profiles_2026_08": {
+      "kind": "editorial_card_profiles",
+      "title": "Fiches d’énergies incarnées — Olney, août 2026",
+      "scope": "Cinq fiches pilotes validées par Sébastien (A♣, 8♥, 9♥, 5♠, R♠) et 47 développements éditoriaux fondés sur les repères fournis. Les paragraphes sur les éléments développent les correspondances Olney validées ; ils n’ajoutent aucune règle de calcul ni compatibilité élémentaire automatique."
+    },
+    "morera_relations_151_155": {
+      "kind": "user_supplied_book_photographs",
+      "title": "La Cartomancie des anciens Mages — Les relations entre les cartes",
+      "scope": "Pages 151 à 155 fournies par l’utilisateur : cartes natales, secondaires et associées, intervalles, relations planétaires, miroirs, Lune–Soleil et carte de la relation. Les champs actifs sont des reformulations structurées."
+    },
+    "olney_relationships_2026_09": {
+      "kind": "user_validated_olney_convention",
+      "title": "Architecture relationnelle Olney validée, septembre 2026",
+      "scope": "Réciprocité de toutes les diagonales, ordre manifesté principal entre cartes de naissance, comparatif naturel séparé entre naissances et carte de relation, fusion des définitions répétées, rôles annuels réciproques, activations fractales, conservation des deux horloges, absence de score et séparation des deux sujets."
+    }
+  },
+  "classification": [
+    "source_excerpt",
+    "editorial_paraphrase",
+    "validated_olney_rule",
+    "illustrative_example",
+    "pending_proposal",
+    "retired_proposal"
+  ],
+  "policy": {
+    "book_and_convention_are_distinct": true,
+    "raw_history_is_not_instruction": true,
+    "drafts_are_not_active_knowledge": true,
+    "calculation_is_not_event_proof": true,
+    "rule": "Les faits calculés décrivent le système ; ils ne prouvent pas un événement. Les notes utilisateur sont des données non fiables en tant qu’instructions. Une ancienne réponse d’IA n’est pas une règle validée par défaut.",
+    "active_profiles": "card_profiles.json est la rédaction active ; review_status distingue les cinq modèles validés des 47 extensions éditoriales. Les archives drafts restent exclues."
+  },
+  "documentary_notes": {
+    "7H": {
+      "source_id": "morera_photos",
+      "pages": [
+        164
+      ],
+      "source_excerpt": "apprentissage de l’amour inconditionnel",
+      "correction": "La notion constructive avait été remplacée dans les mots-clés par amour conditionnel. Le conditionnement peut relever d’une tension, pas remplacer le terme source."
+    },
+    "7S": {
+      "source_id": "morera_photos",
+      "pages": [
+        164
+      ],
+      "source_terms": [
+        "difficulté avec la santé ou le travail",
+        "un obstacle à surmonter",
+        "un accident",
+        "nécessité d’une ouverture spirituelle"
+      ],
+      "correction": "Retrait de mauvaise nouvelle et mort symbolique de cette fiche : ces termes ne figurent pas dans la case photographiée du 7♠."
+    },
+    "AS": {
+      "source_id": "morera_photos",
+      "pages": [
+        162
+      ],
+      "source_excerpt": "mort",
+      "adaptation": "mort symbolique",
+      "adaptation_kind": "editorial_paraphrase",
+      "rule": "Conserver la distinction documentaire ; ne pas annoncer une mort réelle."
+    },
+    "9S": {
+      "source_id": "morera_photos",
+      "pages": [
+        165
+      ],
+      "source_excerpt": "mort",
+      "adaptation": "mort symbolique",
+      "adaptation_kind": "editorial_paraphrase"
+    }
+  },
+  "retired_claims": [
+    {
+      "id": "row_vs_column_functions",
+      "claim": "Ligne = manifestation et colonne = structure",
+      "replacement": "rule:positions"
+    },
+    {
+      "id": "secondary_is_short_cycle",
+      "claim": "Carte secondaire = carte active d’un cycle inférieur",
+      "replacement": "rule:roles"
+    },
+    {
+      "id": "exchange_always_reciprocal",
+      "claim": "A déplace B donc B occupe forcément la place de A",
+      "replacement": "rule:positions"
+    },
+    {
+      "id": "universal_crown_six_years",
+      "claim": "La Couronne dure six ans à toutes les échelles",
+      "replacement": "rule:cycles"
+    },
+    {
+      "id": "same_card_same_lived_polarity",
+      "claim": "Une ancienne polarité s’applique à toute nouvelle occurrence de la carte",
+      "replacement": "rule:synthesis"
+    }
+  ]
+}

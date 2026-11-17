@@ -1,0 +1,49 @@
+{
+  "version": "0.6.0",
+  "status": "validated",
+  "rule_id": "rule:pedagogy",
+  "source_refs": ["olney_companion_validated"],
+  "energy": "Une carte décrit une énergie au noyau précis, non une forme d’événement obligatoire. Personne, contexte, vécu, choix et autres cycles éclairent sa manifestation. Ne pas rendre toutes les cartes interchangeables pour faire correspondre après coup n’importe quel événement.",
+  "angles": {
+    "temporal": "Situer les dynamiques à la date étudiée.",
+    "behavioral": "Explorer les manières d’agir ou de réagir qui apparaissent dans les récits.",
+    "developmental": "Explorer ce que les expériences peuvent permettre d’apprendre, d’intégrer et de transformer.",
+    "existential": "Proposer un fil conducteur possible, sur demande ou comme approfondissement pertinent et libre. Ne pas attribuer une destination obligatoire ni une mission objective."
+  },
+  "angle_policy": "L’angle répond à une intention, pas à une échelle temporelle. Il n’impose ni progression en quatre étapes ni nouvelle vue. Une question pratique peut rester pratique. La lecture existentielle se propose si des éléments précis la rendent pertinente ; respecter les préférences explicites.",
+  "learning_frame": {
+    "resources": "Carte de naissance, secondaires pertinentes et palette permanente ; aucune nouvelle carte Don n’est calculée.",
+    "contribution": "Explorer ce que ces ressources permettent d’exprimer, transmettre ou construire avec les autres ou dans le monde, sans assigner un rôle.",
+    "challenge": "Énergie à rencontrer, transformer ou intégrer : tension, capacité à développer, déséquilibre ou situation aux formes diverses. Pas un problème voué à poursuivre la personne.",
+    "result": "Direction d’accomplissement possible, façonnée par le Défi et toute la séquence. Elle peut déjà se manifester ; ce n’est ni une récompense ni une destination obligatoire.",
+    "nonlinear": "Ressources, expériences, Défi et Résultat peuvent s’exprimer ensemble. Ne pas imposer un cursus à réussir, une faute à expier ou une succession psychologique rigide.",
+    "multiple_threads": "Plusieurs thèmes peuvent coexister et changer de place. La spirale désigne des variations possibles d’un thème, pas une répétition obligatoire ni une hausse automatique de maturité avec l’âge."
+  },
+  "memory": {
+    "separation": "Distinguer événement enregistré, vécu rapporté, action rapportée et hypothèse interprétative. Conserver sujet, auteur, perspective, dates, précision et liens.",
+    "hypotheses": "Une hypothèse peut être proposée, partiellement reconnue, confirmée par l’utilisateur, révisée, rejetée ou abandonnée. Même confirmée, elle conserve sa nature d’interprétation et sa provenance. Le modèle ne la convertit pas en événement ni en loi générale.",
+    "corrections": "Les corrections, contradictions et contre-exemples comptent autant que les rapprochements favorables. Ne pas réintroduire une hypothèse rejetée ou abandonnée sans demande explicite de réexamen.",
+    "polarity": "Événement douloureux et réponse difficile ne sont pas équivalents. La polarité exige un vécu personnel explicite rattaché à l’occurrence exacte ; aucun diagnostic de maturité, ni score d’intégration.",
+    "retrieval": "Charger les éléments pertinents plutôt que tout l’historique. Une sélection bornée ne justifie pas une affirmation exhaustive. Les dates de saisie et de révision ne sont pas les dates des expériences."
+  },
+  "patterns": {
+    "calculated": "Même carte sur des occurrences distinctes : fait du moteur. Deux événements dans une même occurrence ne sont pas deux retours.",
+    "observed": "Plusieurs récits ou événements portent des ressemblances documentées ; des thèmes explicitement étiquetés sont des descriptions, pas des preuves de causalité.",
+    "interpreted": "Le LLM peut proposer un thème reliant les données avec leurs références. Le même thème peut apparaître sous des cartes différentes ; la même carte peut accompagner des expériences différentes.",
+    "boundaries": "Ne pas annoncer que les situations passées vont se reproduire. Montrer aussi ce qui change et ce qui ne correspond pas, si ces données sont présentes."
+  },
+  "subjects": {
+    "person": "La lecture peut concerner soi, un proche ou une personne sans lien avec l’utilisateur. Distinguer récit direct, observation d’un tiers et document ; les cartes ne donnent pas accès aux intentions privées.",
+    "nonhuman": "Pour organisation, projet, ville, pays, animal ou événement, adapter le langage à la nature du sujet. Ne pas lui attribuer automatiquement la psychologie intime ou la mission spirituelle d’une personne.",
+    "origin": "Conserver ce que représente la date d’origine, son choix, sa provenance et sa précision. Une date approximative produit une lecture sous hypothèse, pas une chronologie certaine.",
+    "event_in_life": "L’événement est une date ou période observée dans le parcours de chaque participant ; les cycles sont ceux des participants.",
+    "event_as_origin": "L’événement peut devenir le point de départ d’un sujet autonome si ce choix est explicite. Ne pas confondre sa date d’origine avec une date analysée ultérieure.",
+    "shared_events": "Un événement commun peut avoir plusieurs vécus. Ne pas fusionner les souvenirs, les points de vue ou les identités, ni inventer une carte composite ou un score de compatibilité."
+  },
+  "conversation": {
+    "progression": "Adapter les explications à la familiarité et à la profondeur souhaitée. Ne pas répéter les bases déjà connues ; approfondir ne signifie pas allonger systématiquement.",
+    "agency": "Proposer au besoin une observation, une question ou une petite expérimentation reliée à l’énergie et à la demande. L’utilisateur choisit. Une proposition n’est pas une action accomplie.",
+    "style": "Les vérifications restent internes. Parler naturellement, sans mises en garde répétitives, grandes phrases existentielles génériques ni explication forcée de toutes les difficultés.",
+    "quality": "Une lecture doit montrer ce qui rend ces énergies et ce contexte particuliers, sans se contenter de reproduire les fiches ni inventer un vécu."
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "version": "0.5.1",
+  "status": "implemented",
+  "cycle_tab": {
+    "title_template": "Interprétation — {cycle_label}",
+    "sections": [
+      {
+        "id": "essential",
+        "label": "L’essentiel",
+        "source": [
+          "active_card.profile_ref",
+          "active_card.element_ref"
+        ]
+      },
+      {
+        "id": "moon",
+        "label": "Lune du cycle",
+        "source": [
+          "moon_card"
+        ]
+      },
+      {
+        "id": "polarities",
+        "label": "Deux manières de vivre la carte",
+        "source": [
+          "active_card.constructive",
+          "active_card.difficult",
+          "lived_polarity"
+        ]
+      },
+      {
+        "id": "manifestations",
+        "label": "Dans la vie",
+        "source": [
+          "active_card.profile_ref"
+        ]
+      },
+      {
+        "id": "cycle_energy",
+        "label": "Au fil des cycles",
+        "source": [
+          "active_card.profile_ref",
+          "period",
+          "scope"
+        ]
+      },
+      {
+        "id": "expression",
+        "label_template": "Carte {sequence_planet} du cycle en cours",
+        "source": [
+          "sequence_planet"
+        ]
+      },
+      {
+        "id": "territory",
+        "label": "Emplacement tableau",
+        "source": [
+          "position.owner_card",
+          "position.support_card",
+          "position.home"
+        ]
+      },
+      {
+        "id": "context",
+        "label": "Contexte de la case",
+        "source": [
+          "position.zone",
+          "position.context_planets",
+          "position.context_amplified"
+        ]
+      },
+      {
+        "id": "challenge_result",
+        "label": "Défi et Résultat",
+        "source": [
+          "challenge",
+          "result"
+        ]
+      }
+    ]
+  },
+  "global_tab": {
+    "title": "Interprétation globale",
+    "sections": [
+      {
+        "id": "identity",
+        "label": "Profil essentiel",
+        "source": [
+          "profile.birth_card",
+          "profile.secondary_cards"
+        ]
+      },
+      {
+        "id": "current_clock",
+        "label": "Horloge des cycles",
+        "source": [
+          "cycles",
+          "hour_card"
+        ]
+      },
+      {
+        "id": "thread",
+        "label": "Fil rouge actuel",
+        "source": [
+          "cycles.active_card",
+          "cycles.sequence_planet"
+        ]
+      },
+      {
+        "id": "elements",
+        "label": "Éléments en présence",
+        "source": [
+          "synthesis.elements"
+        ]
+      },
+      {
+        "id": "cascade",
+        "label": "Cascade des cycles",
+        "source": [
+          "cycles.active_card",
+          "cycles.sequence_planet",
+          "cycles.challenge",
+          "cycles.result"
+        ]
+      },
+      {
+        "id": "resonances",
+        "label": "Résonances remarquables",
+        "source": [
+          "cycles"
+        ]
+      },
+      {
+        "id": "life_path_challenge",
+        "label": "Défi du chemin de vie",
+        "source": [
+          "cycles.challenge"
+        ]
+      },
+      {
+        "id": "life_path_direction",
+        "label": "Direction du chemin de vie",
+        "source": [
+          "global_direction"
+        ]
+      }
+    ]
+  },
+  "rendering_rules": {
+    "hide_empty_sections": true,
+    "show_two_polarities_when_unknown": true,
+    "highlight_known_polarity_without_hiding_other": true,
+    "show_crown_before_planet_context": true,
+    "show_active_card_before_owner_card": true
+  },
+  "full_cycle_tab": {
+    "label": "Lecture du cycle",
+    "cycles": [
+      "life_path",
+      "seven_year",
+      "annual",
+      "week"
+    ],
+    "scroll_scope": "whole_cycle_view_including_seven_card_strip",
+    "status_reference": "real_today_not_analysis_date",
+    "no_current_step_outside_real_today": true,
+    "sections": [
+      "cycle_movement",
+      "selected_step",
+      "ordered_path",
+      "elements_and_features",
+      "moon_challenge_result",
+      "parent_at_analysis_date"
+    ],
+    "inspection_changes_date": false,
+    "explicit_exploration_button": false,
+    "saved_anchor_preserved": true
+  }
+}

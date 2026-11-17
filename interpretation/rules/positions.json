@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "status": "validated",
+  "grid_position": {
+    "planet_pair_ordered": false,
+    "rule": "La planète de ligne et la planète de colonne ont le même statut. Leur couple décrit la couleur du territoire occupé.",
+    "identical_planets": {
+      "amplification": true,
+      "rule": "Quand les deux planètes sont identiques, la fonction de cette planète est amplifiée. L’intensité symbolique ne mesure pas la probabilité d’un événement."
+    }
+  },
+  "exchange": {
+    "active_takes_owner_seat": "La carte active déplace la carte propriétaire et se trouve soumise aux règles secondaires de son territoire.",
+    "other_card_takes_active_origin": "La carte de soutien occupe la place d’origine de la carte active, lui prête sa force et constitue une aide ou une ressource secondaire.",
+    "directional": true,
+    "owner_priority": "secondary_background",
+    "support_priority": "secondary_resource",
+    "not_necessarily_reciprocal": true,
+    "support_polarity": "La force prêtée garde la nature et les deux expressions possibles de la carte ; soutien ne signifie pas bénéfice garanti."
+  },
+  "home_position": {
+    "importance": "major",
+    "rule": "Quand une carte retrouve sa propre position, elle revient dans son territoire naturel et peut exprimer plus directement sa nature.",
+    "birth_card_return": "Le retour des cartes mobiles ordinaires suit le cycle des 45 positions. Les fixes ne quittent pas leur place ; les semi-fixes suivent leur paire. Ne pas généraliser un retour à 45 ans à toutes les cartes et échelles.",
+    "state_vs_transition": "Être à sa place ne prouve pas qu’on vient d’y revenir. Un retour daté nécessite une comparaison temporelle. La comparaison à l’ordre naturel doit être nommée explicitement."
+  },
+  "crown": {
+    "zone": "outside_planetary_grid",
+    "dominance": "general",
+    "power": "strongest_line",
+    "position_planets": null,
+    "context_label": "couronne",
+    "sequence_planet_kept": true,
+    "rule": "Toute la ligne de la Couronne possède une importance dominante. Elle remplace le contexte planétaire ordinaire de la case, mais la planète de séquence continue de décrire comment la carte agit.",
+    "fractal_scope": "Le R♠ ou la Couronne peuvent être marquants sur une période courte. Leur importance locale ne supprime pas le contexte global. Chercher les liens calculés sans fabriquer une cause ni un événement."
+  },
+  "rule_id": "rule:positions",
+  "source_refs": [
+    "olney_user_2026_08",
+    "olney_user_2026_08_31"
+  ]
+}

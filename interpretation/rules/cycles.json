@@ -1,0 +1,90 @@
+{
+  "version": "0.6.0",
+  "status": "validated",
+  "hierarchy": [
+    {
+      "id": "natal",
+      "label": "Naissance / Soleil",
+      "parent": null,
+      "scope": "structure permanente",
+      "active_period_kind": "permanent"
+    },
+    {
+      "id": "life_path",
+      "label": "Chemin de vie",
+      "parent": "natal",
+      "scope": "carte de la tranche de 13 ans",
+      "active_period_kind": "thirteen_year"
+    },
+    {
+      "id": "seven_year",
+      "label": "Séquence de 7 ans",
+      "parent": "life_path",
+      "scope": "carte de l’année",
+      "active_period_kind": "year"
+    },
+    {
+      "id": "annual",
+      "label": "Séquence annuelle",
+      "parent": "seven_year",
+      "scope": "carte de la période de 52 jours",
+      "active_period_kind": "fifty_two_days"
+    },
+    {
+      "id": "week",
+      "label": "Séquence semaine",
+      "parent": "annual",
+      "scope": "carte du jour",
+      "active_period_kind": "day"
+    }
+  ],
+  "nesting_rule": "Chaque cycle inférieur est interprété à l’intérieur du cycle supérieur. Il l’active ou le précise sans jamais l’effacer.",
+  "weight_rule": "Plus le cycle est long, plus son interprétation est structurelle et thématique. Plus il est court, plus elle est concrète, circonstancielle et événementielle.",
+  "active_card_rule": "Dans chaque cycle, la carte correspondant à l’instant analysé incarne une expression actuelle de la personne et reçoit la lecture complète carte, polarité, séquence, territoire et contexte.",
+  "life_path_palette": {
+    "cards": 7,
+    "status": "permanent",
+    "rule": "Les sept cartes planétaires du chemin de vie appartiennent durablement à la personne. Ensemble, elles forment une palette de capacités et de modes d’expression disponibles tout au long de la vie.",
+    "activation": "Une carte est mise au premier plan dans chaque tranche de 13 ans, sans annuler la présence de fond des six autres cartes.",
+    "presentation": "Contexte de fond : citer les composantes pertinentes ou réactivées, sans réciter les sept cartes à chaque réponse."
+  },
+  "results": {
+    "local_result": "Chaque cycle possède un résultat propre, conditionné par le Défi et par la manière dont sa séquence a été vécue.",
+    "upward_direction": "Chaque résultat local contribue progressivement au résultat du cycle supérieur.",
+    "final_direction": "Tous les résultats s’inscrivent finalement dans la direction du Résultat du chemin de vie.",
+    "certainty": "conditional"
+  },
+  "cycle_45": {
+    "interpretive_importance": "contextual",
+    "table_45": "Le tableau 45 reprend presque l’ordre manifesté 0.1, avec les deux couples semi-fixes inversés.",
+    "table_90": "Le tableau 90 retrouve l’ordre manifesté du chemin de vie.",
+    "meaning": "Pour les cartes mobiles ordinaires, un nouveau tour de 45 positions marque un recommencement. Vérifier le retour dans les données ; les fixes et semi-fixes suivent leur mobilité propre."
+  },
+  "rule_id": "rule:cycles",
+  "source_refs": [
+    "olney_user_2026_08",
+    "olney_user_2026_08_31"
+  ],
+  "hour": {
+    "parent": "week",
+    "system": "hour_cards",
+    "rule": "La carte horaire apporte une expression immédiate, calculée indépendamment des 90 tableaux. Ne pas lui inventer de Lune, de case, de planète de séquence ou de Défi/Résultat."
+  },
+  "fractal_focus": {
+    "general": "Lire des cycles longs vers les courts.",
+    "focused": "Une demande précise peut mettre au premier plan la période courte étudiée, tout en conservant les grands cycles comme contexte.",
+    "powerful_short_activation": "Le R♠ ou la Couronne peuvent être marquants sur une période courte. Leur importance locale ne supprime pas le contexte global. Chercher les liens calculés sans fabriquer une cause ni un événement.",
+    "not_a_score": "Aucun poids chiffré ni multiplicateur prédictif n’est validé."
+  },
+  "full_cycle_reading": {
+    "scope": "Lire les sept cartes d’une même séquence dans leur ordre, de Mercure à Neptune, avec leurs dates, planète de séquence et emplacement.",
+    "distinction": "La lecture globale croise les cycles actifs à une date ; l’interprétation de carte décrit l’énergie active ; la lecture du cycle suit un parcours complet.",
+    "chronology": "Écoulée, en cours et à venir sont des statuts temporels. Ils ne déterminent jamais un vécu constructif ou difficile. Les deux expressions restent disponibles en l’absence de retour rattaché à cette occurrence.",
+    "present_status": "Dans Lecture du cycle, En cours signifie actif à la date réelle du jour, pas à la date explorée dans l’horloge. Un cycle entièrement passé ou futur n’a aucune étape en cours aujourd’hui. Le dossier distingue present des champs relatifs à target_date ; une étape consultée n’est pas nécessairement en cours.",
+    "links": "Décrire ce qu’une étape introduit, prolonge ou transforme par rapport aux voisines, à partir de leurs mouvements propres. Ces articulations sont éditoriales et ne prouvent ni événement ni cause.",
+    "endpoints": "La Lune, le Défi et le Résultat appartiennent à la même séquence. Neptune est la septième étape planétaire, pas la carte Résultat.",
+    "parent_context": "Le parent affiché est un repère à la date analysée. Ne pas étendre sa carte active à toutes les dates du parcours ; un grand cycle peut changer au milieu de la séquence étudiée.",
+    "patterns": "Les éléments et valeurs répétés concernent les sept étapes ; ils ne sont pas des convergences simultanées de l’horloge ni des scores d’influence.",
+    "inspection": "Sélectionner une carte de période depuis Résultat ou le parcours détaillé déplace la date analysée au début de cette période et synchronise toute l’horloge. Les fiches Lune, Soleil, Défi, Résultat et natales ne changent pas la date. Reset revient à la date et à l’heure réelles, sans ancrage sauvegardé. En cours aujourd’hui reste distinct de l’étape explorée."
+  }
+}

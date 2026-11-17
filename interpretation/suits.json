@@ -1,0 +1,237 @@
+{
+  "version": "0.4.0",
+  "suits": {
+    "hearts": {
+      "name": "Cœur",
+      "symbol": "♥",
+      "element": "Feu",
+      "density_rank": 1,
+      "density": "la moins dense",
+      "direction": "Est",
+      "season": "Printemps",
+      "life_stage": "Enfance",
+      "tarot_correspondence": "Coupe",
+      "keywords": [
+        "sentiments",
+        "émotions",
+        "relations",
+        "famille",
+        "art",
+        "sensualité",
+        "compassion"
+      ],
+      "constructive": [
+        "chaleur relationnelle",
+        "amitié",
+        "hospitalité",
+        "créativité artistique",
+        "attachement aux proches"
+      ],
+      "tensions": [
+        "indulgence",
+        "séduction",
+        "dépendance affective"
+      ],
+      "domains": [
+        "amour",
+        "relations",
+        "famille",
+        "émotions",
+        "art"
+      ],
+      "source_pages": [
+        18
+      ],
+      "element_reading": {
+        "keywords": [
+          "élan affectif",
+          "chaleur",
+          "rayonnement",
+          "mise en lien"
+        ],
+        "individual": "Le Cœur est relié au Feu : il donne de la chaleur, de l’élan et du rayonnement à la vie affective. Cette couleur aide à lire comment un sentiment s’éveille, se partage, s’intensifie ou s’achève à travers le mouvement propre de la carte.",
+        "cycle": "Le Feu des Cœurs met en relief ce qui anime les liens : désir, affection, plaisir de partager ou expression sensible.",
+        "bridge": "la chaleur du lien et l’élan affectif",
+        "kind": "editorial_development_from_olney_correspondences",
+        "source_refs": [
+          "olney_user_2026_08",
+          "olney_card_profiles_2026_08"
+        ]
+      }
+    },
+    "clubs": {
+      "name": "Trèfle",
+      "symbol": "♣",
+      "element": "Air",
+      "density_rank": 2,
+      "density": "peu dense",
+      "direction": "Sud",
+      "season": "Été",
+      "life_stage": "Adolescence",
+      "tarot_correspondence": "Bâton",
+      "keywords": [
+        "mental",
+        "pensée",
+        "communication",
+        "idées",
+        "projets",
+        "intuition",
+        "connaissance"
+      ],
+      "constructive": [
+        "curiosité",
+        "apprentissage",
+        "liberté intellectuelle",
+        "questionnement",
+        "connaissance universelle"
+      ],
+      "tensions": [
+        "critique",
+        "spéculation intellectuelle",
+        "dispersion mentale"
+      ],
+      "domains": [
+        "mental",
+        "communication",
+        "études",
+        "projets",
+        "connaissance"
+      ],
+      "source_pages": [
+        18
+      ],
+      "element_reading": {
+        "keywords": [
+          "circulation des idées",
+          "échange",
+          "compréhension",
+          "mobilité du regard"
+        ],
+        "individual": "Le Trèfle est relié à l’Air : il fait circuler les idées, les mots et les points de vue. Cette couleur éclaire la façon d’apprendre, de relier des informations et de donner une expression à la pensée, avec la direction particulière portée par la carte.",
+        "cycle": "L’Air des Trèfles met en relief la pensée en mouvement : comprendre, apprendre, formuler et échanger.",
+        "bridge": "la compréhension et la circulation des idées",
+        "kind": "editorial_development_from_olney_correspondences",
+        "source_refs": [
+          "olney_user_2026_08",
+          "olney_card_profiles_2026_08"
+        ]
+      }
+    },
+    "diamonds": {
+      "name": "Carreau",
+      "symbol": "♦",
+      "element": "Eau",
+      "density_rank": 3,
+      "density": "dense",
+      "direction": "Ouest",
+      "season": "Automne",
+      "life_stage": "Âge adulte",
+      "tarot_correspondence": "Denier",
+      "keywords": [
+        "valeurs",
+        "monde manifesté",
+        "argent",
+        "prospérité",
+        "abondance",
+        "matérialisation"
+      ],
+      "constructive": [
+        "générosité",
+        "création de prospérité",
+        "sens de la valeur",
+        "capacité à manifester",
+        "sérieux"
+      ],
+      "tensions": [
+        "matérialisme",
+        "confusion entre argent et pouvoir",
+        "vision marchande des relations"
+      ],
+      "domains": [
+        "argent",
+        "valeurs",
+        "activité matérielle",
+        "travail",
+        "manifestation"
+      ],
+      "source_pages": [
+        18
+      ],
+      "element_reading": {
+        "keywords": [
+          "circulation des ressources",
+          "valeur",
+          "investissement",
+          "concrétisation"
+        ],
+        "individual": "Le Carreau est relié à l’Eau : la lecture porte sur la circulation des ressources et sur ce qui prend de la valeur. Donner, recevoir, investir ou retenir des moyens expriment cette couleur ; la carte précise le mouvement vécu dans les priorités et leur concrétisation.",
+        "cycle": "L’Eau des Carreaux met en relief la circulation de ce qui a de la valeur : ressources, échanges, priorités et moyens de réaliser.",
+        "bridge": "la circulation des ressources et le sens de la valeur",
+        "kind": "editorial_development_from_olney_correspondences",
+        "source_refs": [
+          "olney_user_2026_08",
+          "olney_card_profiles_2026_08"
+        ]
+      }
+    },
+    "spades": {
+      "name": "Pique",
+      "symbol": "♠",
+      "element": "Terre",
+      "density_rank": 4,
+      "density": "la plus dense",
+      "direction": "Nord",
+      "season": "Hiver",
+      "life_stage": "Dernier âge de la vie",
+      "tarot_correspondence": "Épée",
+      "keywords": [
+        "travail",
+        "santé",
+        "sagesse",
+        "spiritualité",
+        "transformation",
+        "mort et renaissance"
+      ],
+      "constructive": [
+        "discipline",
+        "détermination",
+        "travail désintéressé",
+        "lucidité",
+        "lien spirituel"
+      ],
+      "tensions": [
+        "suractivité",
+        "enfermement dans le faire",
+        "imposition de sa volonté",
+        "épreuve"
+      ],
+      "domains": [
+        "travail",
+        "santé",
+        "spiritualité",
+        "épreuves",
+        "transformation"
+      ],
+      "source_pages": [
+        18
+      ],
+      "element_reading": {
+        "keywords": [
+          "incarnation",
+          "pratique",
+          "travail",
+          "corps",
+          "maturation"
+        ],
+        "individual": "Le Pique est relié à la Terre : l’énergie prend corps dans l’expérience, les pratiques et les engagements. Travail, rythme, rapport au corps et maturation intérieure donnent une prise concrète au mouvement de la carte.",
+        "cycle": "La Terre des Piques met en relief ce qui s’incarne dans les actes : travail, rythme de vie, engagement et transformation par l’expérience.",
+        "bridge": "l’engagement concret et la maturation par l’expérience",
+        "kind": "editorial_development_from_olney_correspondences",
+        "source_refs": [
+          "olney_user_2026_08",
+          "olney_card_profiles_2026_08"
+        ]
+      }
+    }
+  }
+}

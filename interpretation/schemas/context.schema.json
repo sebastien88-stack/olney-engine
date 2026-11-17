@@ -1,0 +1,1941 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "olney://interpretation/context/0.5.0",
+  "title": "Olney interpretation context",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "knowledge_version",
+    "engine_version",
+    "birth_date",
+    "target_date",
+    "joker",
+    "profile",
+    "cycles",
+    "global_direction",
+    "reading",
+    "history_policy",
+    "knowledge_bundle",
+    "synthesis",
+    "cycle_reading",
+    "subject",
+    "personal",
+    "learning_frame"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.5.0"
+    },
+    "knowledge_version": {
+      "type": "string"
+    },
+    "engine_version": {
+      "type": "string"
+    },
+    "birth_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "target_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "joker": {
+      "type": "boolean"
+    },
+    "profile": {
+      "type": "object",
+      "required": [
+        "birth_card",
+        "secondary_cards",
+        "profile_key",
+        "identity_scope"
+      ],
+      "properties": {
+        "birth_card": {
+          "$ref": "#/$defs/card"
+        },
+        "secondary_cards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/card"
+          }
+        },
+        "profile_key": {
+          "type": "string"
+        },
+        "identity_scope": {
+          "enum": [
+            "profile_id",
+            "subject_id",
+            "birth_date_only"
+          ]
+        },
+        "moon_card": {
+          "$ref": "#/$defs/card"
+        },
+        "life_path_moon": {
+          "$ref": "#/$defs/card"
+        },
+        "life_path_challenge": {
+          "$ref": "#/$defs/card"
+        },
+        "life_path_result": {
+          "$ref": "#/$defs/card"
+        },
+        "life_path_palette": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "sequence_planet",
+              "card",
+              "position",
+              "permanent"
+            ],
+            "properties": {
+              "sequence_planet": {
+                "type": "string"
+              },
+              "card": {
+                "$ref": "#/$defs/card"
+              },
+              "position": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 52
+              },
+              "permanent": {
+                "const": true
+              }
+            }
+          },
+          "minItems": 7,
+          "maxItems": 7
+        }
+      },
+      "additionalProperties": true
+    },
+    "cycles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/cycle"
+      }
+    },
+    "hour_card": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "card"
+          ],
+          "properties": {
+            "card": {
+              "$ref": "#/$defs/card"
+            },
+            "solar_time": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "solar_hour": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "global_direction": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "source_cycle",
+            "result"
+          ],
+          "properties": {
+            "source_cycle": {
+              "const": "life_path"
+            },
+            "result": {
+              "$ref": "#/$defs/card"
+            },
+            "rule": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "profile_history": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/historyItem"
+      }
+    },
+    "pending_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reading": {
+      "type": "object",
+      "required": [
+        "focus",
+        "focal_cycle_id",
+        "larger_cycles_remain_context",
+        "missing_data",
+        "mode",
+        "intent",
+        "subject_policy",
+        "origin_assumption"
+      ],
+      "properties": {
+        "focus": {
+          "enum": [
+            "general",
+            "natal",
+            "life_path",
+            "year",
+            "fifty_two_days",
+            "week",
+            "day",
+            "hour"
+          ]
+        },
+        "focal_cycle_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "larger_cycles_remain_context": {
+          "const": true
+        },
+        "missing_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mode": {
+          "enum": [
+            "current",
+            "cycle"
+          ]
+        },
+        "intent": {
+          "type": "object",
+          "required": [
+            "angle",
+            "question",
+            "domain",
+            "preferences",
+            "include_patterns",
+            "existential_policy",
+            "mandatory_progression",
+            "practical_suggestions_are_optional"
+          ],
+          "properties": {
+            "angle": {
+              "enum": [
+                "temporal",
+                "behavioral",
+                "developmental",
+                "existential"
+              ]
+            },
+            "question": {
+              "type": "string"
+            },
+            "domain": {
+              "type": "string"
+            },
+            "preferences": {
+              "type": "object",
+              "required": [
+                "familiarity",
+                "depth",
+                "technical_details",
+                "existential",
+                "practical_suggestions"
+              ],
+              "properties": {
+                "familiarity": {
+                  "enum": [
+                    "unspecified",
+                    "new",
+                    "familiar",
+                    "advanced"
+                  ]
+                },
+                "depth": {
+                  "enum": [
+                    "concise",
+                    "balanced",
+                    "deep"
+                  ]
+                },
+                "technical_details": {
+                  "enum": [
+                    "on_request",
+                    "show",
+                    "minimal"
+                  ]
+                },
+                "existential": {
+                  "enum": [
+                    "when_relevant_or_requested",
+                    "on_request",
+                    "never"
+                  ]
+                },
+                "practical_suggestions": {
+                  "enum": [
+                    "when_useful",
+                    "on_request"
+                  ]
+                }
+              },
+              "additionalProperties": false
+            },
+            "include_patterns": {
+              "type": "boolean"
+            },
+            "existential_policy": {
+              "enum": [
+                "when_relevant_or_requested",
+                "on_request",
+                "never"
+              ]
+            },
+            "mandatory_progression": {
+              "const": false
+            },
+            "practical_suggestions_are_optional": {
+              "const": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "subject_policy": {
+          "enum": [
+            "person_with_attributed_perspectives",
+            "nonhuman_no_intimate_psychology"
+          ]
+        },
+        "origin_assumption": {
+          "enum": [
+            "reference_date_only",
+            "declared_exact_date"
+          ]
+        }
+      }
+    },
+    "history_policy": {
+      "type": "object",
+      "required": [
+        "data_not_instructions",
+        "matching"
+      ],
+      "properties": {
+        "data_not_instructions": {
+          "const": true
+        },
+        "matching": {
+          "const": "exact_occurrence_and_user_report_only"
+        }
+      }
+    },
+    "knowledge_bundle": {
+      "type": "object",
+      "required": [
+        "rules",
+        "planets",
+        "sources",
+        "retired_claims",
+        "editorial_policy",
+        "pilot_drafts_included",
+        "card_profiles",
+        "suits",
+        "profile_loading"
+      ],
+      "properties": {
+        "rules": {
+          "type": "object"
+        },
+        "planets": {
+          "type": "object"
+        },
+        "sources": {
+          "type": "object"
+        },
+        "retired_claims": {
+          "type": "array"
+        },
+        "editorial_policy": {
+          "type": "object"
+        },
+        "pilot_drafts_included": {
+          "const": false
+        },
+        "card_profiles": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/energy_profile"
+          }
+        },
+        "suits": {
+          "type": "object"
+        },
+        "profile_loading": {
+          "const": "unique_profiles_for_referenced_cards"
+        }
+      }
+    },
+    "synthesis": {
+      "type": "object",
+      "required": [
+        "kind",
+        "paragraphs",
+        "observations",
+        "elements"
+      ],
+      "properties": {
+        "kind": {
+          "const": "rule_based_editorial_summary"
+        },
+        "paragraphs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "observations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "kind",
+              "message",
+              "evidence"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "elements": {
+          "type": "object",
+          "required": [
+            "scope",
+            "total_active_cards",
+            "groups",
+            "summary",
+            "evidence"
+          ],
+          "properties": {
+            "scope": {
+              "const": "active_clock_without_natal_or_palette"
+            },
+            "total_active_cards": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "groups": {
+              "type": "array",
+              "maxItems": 4,
+              "items": {
+                "type": "object",
+                "required": [
+                  "suit",
+                  "element",
+                  "count",
+                  "cycle_ids",
+                  "evidence"
+                ],
+                "properties": {
+                  "suit": {
+                    "enum": [
+                      "hearts",
+                      "clubs",
+                      "diamonds",
+                      "spades"
+                    ]
+                  },
+                  "element": {
+                    "enum": [
+                      "Feu",
+                      "Air",
+                      "Eau",
+                      "Terre"
+                    ]
+                  },
+                  "count": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 5
+                  },
+                  "cycle_ids": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "summary": {
+              "type": "string"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "cycle_reading": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/cycleReading"
+        }
+      ]
+    },
+    "subject": {
+      "type": "object",
+      "required": [
+        "key",
+        "type",
+        "name",
+        "relationship_to_user",
+        "origin"
+      ],
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "relationship_to_user": {
+          "enum": [
+            "self",
+            "known",
+            "public",
+            "other",
+            "unspecified"
+          ]
+        },
+        "origin": {
+          "type": "object",
+          "required": [
+            "date",
+            "label",
+            "precision",
+            "source",
+            "basis_confirmed"
+          ],
+          "properties": {
+            "date": {
+              "type": "string",
+              "format": "date"
+            },
+            "time": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "place": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "label": {
+              "type": "string"
+            },
+            "precision": {
+              "enum": [
+                "exact",
+                "approximate"
+              ]
+            },
+            "source": {
+              "type": "string"
+            },
+            "basis_confirmed": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "personal": {
+      "type": "object",
+      "required": [
+        "records",
+        "events",
+        "excluded_refs",
+        "longitudinal",
+        "hypotheses_are_not_facts",
+        "reader_key",
+        "retrieval",
+        "unresolved_links",
+        "profile_notes",
+        "profile_notes_are_undated_background"
+      ],
+      "properties": {
+        "records": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/memoryRecord"
+          }
+        },
+        "events": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "id",
+              "ref",
+              "date_start",
+              "event_state",
+              "date_precision",
+              "participants",
+              "profile_id"
+            ],
+            "properties": {
+              "date_start": {
+                "type": "string",
+                "format": "date"
+              },
+              "date_precision": {
+                "enum": [
+                  "exact",
+                  "approximate"
+                ]
+              },
+              "event_state": {
+                "enum": [
+                  "recorded",
+                  "occurred",
+                  "planned",
+                  "cancelled"
+                ]
+              },
+              "id": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "profile_id": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "ref": {
+                "type": "string"
+              },
+              "participants": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "profile_id",
+                    "role"
+                  ],
+                  "properties": {
+                    "profile_id": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "role": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "excluded_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reader_key": {
+          "type": "string"
+        },
+        "retrieval": {
+          "type": "object"
+        },
+        "hypotheses_are_not_facts": {
+          "const": true
+        },
+        "longitudinal": {
+          "type": "object",
+          "required": [
+            "event_states",
+            "calculated_repetitions",
+            "recorded_themes",
+            "hypothesis_refs",
+            "not_exhaustive",
+            "semantic_inference_performed"
+          ],
+          "properties": {
+            "event_states": {
+              "type": "array",
+              "maxItems": 12,
+              "items": {
+                "type": "object",
+                "required": [
+                  "event_ref",
+                  "target_date",
+                  "status",
+                  "cycles",
+                  "event_state",
+                  "at_event_start_only"
+                ],
+                "properties": {
+                  "event_ref": {
+                    "type": "string"
+                  },
+                  "target_date": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "status": {
+                    "enum": [
+                      "calculated",
+                      "not_calculated"
+                    ]
+                  },
+                  "cycles": {
+                    "type": "array"
+                  },
+                  "event_state": {
+                    "enum": [
+                      "recorded",
+                      "occurred",
+                      "planned",
+                      "cancelled"
+                    ]
+                  },
+                  "at_event_start_only": {
+                    "const": true
+                  }
+                }
+              }
+            },
+            "calculated_repetitions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "kind",
+                  "cycle_id",
+                  "card_id",
+                  "occurrence_ids",
+                  "event_refs",
+                  "does_not_establish_same_experience"
+                ],
+                "properties": {
+                  "kind": {
+                    "const": "same_card_distinct_periods"
+                  },
+                  "cycle_id": {
+                    "type": "string"
+                  },
+                  "card_id": {
+                    "type": "string"
+                  },
+                  "occurrence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 2
+                  },
+                  "event_refs": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 2
+                  },
+                  "does_not_establish_same_experience": {
+                    "const": true
+                  }
+                }
+              }
+            },
+            "recorded_themes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "theme",
+                  "evidence",
+                  "kind"
+                ],
+                "properties": {
+                  "theme": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 2
+                  },
+                  "kind": {
+                    "const": "explicit_record_labels"
+                  }
+                }
+              }
+            },
+            "hypothesis_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "not_exhaustive": {
+              "const": true
+            },
+            "semantic_inference_performed": {
+              "const": false
+            }
+          }
+        },
+        "unresolved_links": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "profile_notes": {
+          "type": "string"
+        },
+        "profile_notes_are_undated_background": {
+          "const": true
+        }
+      }
+    },
+    "learning_frame": {
+      "type": "object",
+      "required": [
+        "resources",
+        "challenge",
+        "direction",
+        "not_linear_or_compulsory",
+        "multiple_threads_allowed",
+        "no_maturity_score"
+      ],
+      "properties": {
+        "resources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "challenge": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "direction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "not_linear_or_compulsory": {
+          "const": true
+        },
+        "multiple_threads_allowed": {
+          "const": true
+        },
+        "no_maturity_score": {
+          "const": true
+        }
+      }
+    }
+  },
+  "$defs": {
+    "memoryRecord": {
+      "type": "object",
+      "required": [
+        "id",
+        "ref",
+        "subject_key",
+        "reader_key",
+        "kind",
+        "status",
+        "source_type",
+        "text",
+        "perspective",
+        "date_precision",
+        "revision",
+        "reporter",
+        "date_start",
+        "date_end",
+        "themes",
+        "evidence_ids",
+        "counterexample_ids",
+        "event_ids",
+        "created_at",
+        "updated_at"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "ref": {
+          "type": "string"
+        },
+        "subject_key": {
+          "type": "string"
+        },
+        "reader_key": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "observation",
+            "action",
+            "hypothesis"
+          ]
+        },
+        "status": {
+          "enum": [
+            "reported",
+            "retracted",
+            "proposed",
+            "partial",
+            "confirmed",
+            "revised",
+            "rejected",
+            "abandoned"
+          ]
+        },
+        "source_type": {
+          "enum": [
+            "user_reported",
+            "third_party_report",
+            "document",
+            "model_proposed"
+          ]
+        },
+        "perspective": {
+          "enum": [
+            "self",
+            "observer",
+            "document",
+            "unspecified"
+          ]
+        },
+        "text": {
+          "type": "string"
+        },
+        "date_precision": {
+          "enum": [
+            "exact",
+            "approximate",
+            "undated"
+          ]
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reporter": {
+          "type": "string"
+        },
+        "themes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": "string"
+        },
+        "date_start": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        "date_end": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "counterexample_ids": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "event_ids": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    },
+    "card": {
+      "type": "object",
+      "required": [
+        "id",
+        "label",
+        "source_refs",
+        "meaning_status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "rank": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "suit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "domains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "constructive": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "difficult": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "density_rank": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 4
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "source_id",
+              "kind",
+              "pages"
+            ],
+            "properties": {
+              "source_id": {
+                "type": "string"
+              },
+              "kind": {
+                "enum": [
+                  "editorial_paraphrase",
+                  "validated_olney_rule"
+                ]
+              },
+              "pages": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "meaning_status": {
+          "enum": [
+            "editorial_paraphrase",
+            "pending_user_decision"
+          ]
+        },
+        "dual_partner_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "energy_focus": {
+          "type": "string"
+        },
+        "profile_ref": {
+          "type": "string"
+        },
+        "element_ref": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "position": {
+      "type": "object",
+      "required": [
+        "position",
+        "zone",
+        "home",
+        "context_planets",
+        "context_amplified",
+        "home_state",
+        "return_transition",
+        "reference_series_id",
+        "reference_label"
+      ],
+      "properties": {
+        "position": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 52
+        },
+        "zone": {
+          "enum": [
+            "grille",
+            "couronne"
+          ]
+        },
+        "home": {
+          "type": "boolean"
+        },
+        "context_planets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2
+        },
+        "context_amplified": {
+          "type": "boolean"
+        },
+        "owner_card": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/card"
+            }
+          ]
+        },
+        "support_card": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/card"
+            }
+          ]
+        },
+        "home_state": {
+          "enum": [
+            "reference_only",
+            "fixed_home",
+            "at_reference_position",
+            "away"
+          ]
+        },
+        "return_transition": {
+          "type": "null"
+        },
+        "reference_series_id": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 90
+        },
+        "reference_label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "cycle": {
+      "type": "object",
+      "required": [
+        "id",
+        "parent",
+        "active_card",
+        "sequence_planet",
+        "position",
+        "challenge",
+        "result",
+        "occurrence_id",
+        "sequence_label",
+        "active_period_kind",
+        "sequence_reference_card_id",
+        "moon_card",
+        "sequence_cards",
+        "lived_polarity",
+        "lived_evidence",
+        "rule_refs",
+        "period",
+        "sequence_period"
+      ],
+      "properties": {
+        "id": {
+          "enum": [
+            "natal",
+            "life_path",
+            "seven_year",
+            "annual",
+            "week"
+          ]
+        },
+        "parent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scope": {
+          "type": "string"
+        },
+        "series_id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 90
+        },
+        "active_card": {
+          "$ref": "#/$defs/card"
+        },
+        "sequence_planet": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "position": {
+          "$ref": "#/$defs/position"
+        },
+        "challenge": {
+          "$ref": "#/$defs/card"
+        },
+        "result": {
+          "$ref": "#/$defs/card"
+        },
+        "period": {
+          "$ref": "#/$defs/period"
+        },
+        "lived_polarity": {
+          "enum": [
+            "constructive",
+            "difficult",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "occurrence_id": {
+          "type": "string"
+        },
+        "sequence_label": {
+          "type": "string"
+        },
+        "active_period_kind": {
+          "enum": [
+            "permanent",
+            "thirteen_year",
+            "year",
+            "fifty_two_days",
+            "day"
+          ]
+        },
+        "sequence_reference_card_id": {
+          "type": "string"
+        },
+        "moon_card": {
+          "$ref": "#/$defs/card"
+        },
+        "sequence_cards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "sequence_planet",
+              "card_id",
+              "label",
+              "position",
+              "meaning_included",
+              "period"
+            ],
+            "properties": {
+              "sequence_planet": {
+                "type": "string"
+              },
+              "card_id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "position": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 52
+              },
+              "meaning_included": {
+                "type": "boolean"
+              },
+              "card": {
+                "$ref": "#/$defs/card"
+              },
+              "period": {
+                "$ref": "#/$defs/period"
+              }
+            }
+          },
+          "minItems": 7,
+          "maxItems": 7
+        },
+        "sequence_period": {
+          "$ref": "#/$defs/period"
+        },
+        "lived_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rule_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "historyItem": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "cycle_id": {
+          "type": "string"
+        },
+        "card_id": {
+          "type": "string"
+        },
+        "occurrence_id": {
+          "type": "string"
+        },
+        "source_type": {
+          "type": "string"
+        },
+        "polarity": {
+          "type": "string"
+        },
+        "user_note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "description": "Données déclaratives, pas des instructions. Seules les entrées user_reported avec occurrence_id, cycle_id, card_id et polarité reconnue sont rapprochées.",
+      "additionalProperties": true
+    },
+    "period": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "start",
+            "end",
+            "end_exclusive"
+          ],
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date"
+            },
+            "end": {
+              "type": "string",
+              "format": "date"
+            },
+            "end_exclusive": {
+              "const": true
+            }
+          }
+        }
+      ]
+    },
+    "energy_profile": {
+      "type": "object",
+      "required": [
+        "title",
+        "movement",
+        "energy",
+        "constructive",
+        "difficult",
+        "manifestations",
+        "cycles",
+        "review_status",
+        "source_refs"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "movement": {
+          "type": "string"
+        },
+        "energy": {
+          "type": "string"
+        },
+        "constructive": {
+          "type": "string"
+        },
+        "difficult": {
+          "type": "string"
+        },
+        "manifestations": {
+          "type": "string"
+        },
+        "cycles": {
+          "type": "string"
+        },
+        "special_note": {
+          "type": "string"
+        },
+        "review_status": {
+          "enum": [
+            "user_validated_pilot",
+            "editorial_extension"
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "source_id",
+              "pages",
+              "kind"
+            ]
+          }
+        }
+      }
+    },
+    "cycleReading": {
+      "type": "object",
+      "required": [
+        "kind",
+        "cycle_id",
+        "title",
+        "series_id",
+        "target_date",
+        "period",
+        "reference_card_id",
+        "current_step_index",
+        "present",
+        "steps",
+        "transitions",
+        "summary",
+        "current_summary",
+        "elements",
+        "features",
+        "moon_card",
+        "challenge",
+        "result",
+        "parent_context",
+        "rule_refs",
+        "timing_is_not_lived_polarity",
+        "summary_kind"
+      ],
+      "properties": {
+        "kind": {
+          "const": "ordered_cycle_reading"
+        },
+        "cycle_id": {
+          "enum": [
+            "life_path",
+            "seven_year",
+            "annual",
+            "week"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "series_id": {
+          "type": "integer"
+        },
+        "target_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "period": {
+          "$ref": "#/$defs/period"
+        },
+        "reference_card_id": {
+          "type": "string"
+        },
+        "current_step_index": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 6
+        },
+        "present": {
+          "type": "object",
+          "required": [
+            "date",
+            "current_step_index",
+            "step_timings"
+          ],
+          "properties": {
+            "date": {
+              "type": "string",
+              "format": "date"
+            },
+            "current_step_index": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 6
+                }
+              ]
+            },
+            "step_timings": {
+              "type": "array",
+              "minItems": 7,
+              "maxItems": 7,
+              "items": {
+                "enum": [
+                  "past",
+                  "current",
+                  "upcoming"
+                ]
+              }
+            }
+          }
+        },
+        "steps": {
+          "type": "array",
+          "minItems": 7,
+          "maxItems": 7,
+          "items": {
+            "type": "object",
+            "required": [
+              "index",
+              "card",
+              "sequence_planet",
+              "period",
+              "timing",
+              "occurrence_id",
+              "position",
+              "lived_polarity",
+              "lived_evidence",
+              "summary",
+              "expression",
+              "badges",
+              "evidence",
+              "from_previous",
+              "into_next"
+            ],
+            "properties": {
+              "index": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 6
+              },
+              "card": {
+                "$ref": "#/$defs/card"
+              },
+              "sequence_planet": {
+                "enum": [
+                  "mercure",
+                  "vénus",
+                  "mars",
+                  "jupiter",
+                  "saturne",
+                  "uranus",
+                  "neptune"
+                ]
+              },
+              "period": {
+                "$ref": "#/$defs/period"
+              },
+              "timing": {
+                "enum": [
+                  "past",
+                  "current",
+                  "upcoming"
+                ]
+              },
+              "occurrence_id": {
+                "type": "string"
+              },
+              "position": {
+                "$ref": "#/$defs/position"
+              },
+              "lived_polarity": {
+                "enum": [
+                  "unknown",
+                  "constructive",
+                  "difficult",
+                  "mixed"
+                ]
+              },
+              "lived_evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "summary": {
+                "type": "string"
+              },
+              "expression": {
+                "type": "string"
+              },
+              "badges": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "from_previous": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "into_next": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "transitions": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "required": [
+              "from_index",
+              "to_index",
+              "text",
+              "evidence"
+            ],
+            "properties": {
+              "from_index": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 5
+              },
+              "to_index": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 6
+              },
+              "text": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "current_summary": {
+          "type": "string"
+        },
+        "elements": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": [
+              "suit",
+              "element",
+              "count",
+              "step_indices",
+              "meaning",
+              "evidence"
+            ],
+            "properties": {
+              "suit": {
+                "enum": [
+                  "hearts",
+                  "clubs",
+                  "diamonds",
+                  "spades"
+                ]
+              },
+              "element": {
+                "enum": [
+                  "Feu",
+                  "Air",
+                  "Eau",
+                  "Terre"
+                ]
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 7
+              },
+              "step_indices": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 6
+                }
+              },
+              "meaning": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "kind",
+              "message",
+              "evidence",
+              "step_indices"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "crown",
+                  "double_planet",
+                  "semi_fixed",
+                  "fixed",
+                  "king_spades",
+                  "home_position",
+                  "shared_rank"
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "step_indices": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 6
+                }
+              }
+            }
+          }
+        },
+        "moon_card": {
+          "$ref": "#/$defs/card"
+        },
+        "challenge": {
+          "$ref": "#/$defs/card"
+        },
+        "result": {
+          "$ref": "#/$defs/card"
+        },
+        "parent_context": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "required": [
+                "cycle_id",
+                "at_date",
+                "scope",
+                "card",
+                "text",
+                "evidence"
+              ],
+              "properties": {
+                "cycle_id": {
+                  "type": "string"
+                },
+                "at_date": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "scope": {
+                  "const": "at_analysis_date_only"
+                },
+                "card": {
+                  "$ref": "#/$defs/card"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "evidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "rule_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "timing_is_not_lived_polarity": {
+          "const": true
+        },
+        "summary_kind": {
+          "const": "editorial_connections_not_observed_events"
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
