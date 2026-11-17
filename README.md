@@ -1,10 +1,15 @@
 # Olney Engine — V1.8.6
 
+![Uploading Image ChatGPT 16 nov. 2026, 23_21_03.png…]()
+
 ## Aux origines d'Olney Engine
 
 À la fin du XIXe siècle, **Olney H. Richmond**, occultiste américain et représentant de l'Ordre des Mages, publie en 1893 *The Mystic Test Book*, un ouvrage consacré à **la cartomancie des anciens Mages**.
 
 Richmond affirme être l'héritier d'une tradition ésotérique millénaire, issue notamment des atlantes. Au cœur de son enseignement se trouve **la Religion des Étoiles**, une conception mystique de l'univers dans laquelle les cycles célestes, les nombres et les 52 cartes à jouer participent d'un même langage symbolique.
+
+![Uploading Image ChatGPT 16 nov. 2026, 22_44_49.png…]()
+
 
 Selon Richmond, le jeu de cartes constitue un véritable calendrier cosmique, permettant d'explorer les correspondances entre les mouvements des astres et les événements de l'existence.
 
