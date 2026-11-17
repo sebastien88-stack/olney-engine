@@ -3,9 +3,12 @@
 
 from PyInstaller.utils.hooks import collect_submodules
 import os
+import sys
 
 
 PROJECT_ROOT = os.path.abspath(os.path.join(SPECPATH, ".."))
+
+sys.path.insert(0, PROJECT_ROOT)
 
 datas = [
     (os.path.join(PROJECT_ROOT, "assets", "olney_windows_v3.ico"), "assets"),

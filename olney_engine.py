@@ -12,6 +12,7 @@ Important:
 """
 
 from __future__ import annotations
+from version import APP_VERSION
 
 from dataclasses import dataclass, asdict
 from datetime import date, datetime, timedelta
@@ -881,7 +882,7 @@ class OlneyEngine:
 
         if birth.card_number == 0:
             return {
-                "engine_version": "1.8.9",
+                "engine_version": APP_VERSION,
                 "birth_date": b.isoformat(),
                 "target_date": t.isoformat(),
                 "birth_card_override": birth_card_number is not None,
@@ -902,7 +903,7 @@ class OlneyEngine:
             }
 
         return {
-            "engine_version": "1.8.9",
+            "engine_version": APP_VERSION,
             "birth_date": b.isoformat(),
             "target_date": t.isoformat(),
             "birth_card_override": birth_card_number is not None,

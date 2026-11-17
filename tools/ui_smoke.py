@@ -11,6 +11,8 @@ from time import monotonic, sleep
 
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from version import APP_VERSION
+
 profile_test_directory = TemporaryDirectory()
 os.environ["OLNEY_PROFILE_DB"] = str(
     Path(profile_test_directory.name) / "profiles.db"
@@ -118,7 +120,7 @@ def inspect_and_close(root, *args, **kwargs):
         assert abs(
             (block_y + block_height / 2.0) - profile_part.winfo_reqheight() / 2.0
         ) <= 1.0
-    assert app.credit_label.cget("text") == "Olney Engine V1.8.9 — développé par Sébastien"
+    assert app.credit_label.cget("text") == f"Olney Engine V{APP_VERSION} — développé par Sébastien"
     assert app.theme_button.cget("width") == 3
     assert app.theme_button_var.get() == "☀"
     assert app.profile_button_var.get() == "👤 Aucun profil"

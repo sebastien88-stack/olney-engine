@@ -1,5 +1,8 @@
 #define MyAppName "Olney Engine"
-#define MyAppVersion "1.8.9"
+; Read the dependency-free source: its first line is APP_VERSION = "...".
+#define VersionSource FileOpen(AddBackslash(SourcePath) + "..\version.py")
+#define MyAppVersion StringChange(StringChange(FileRead(VersionSource), 'APP_VERSION = ', ''), '"', '')
+#expr FileClose(VersionSource)
 #define MyAppExeName "Olney Engine.exe"
 
 [Setup]
@@ -23,7 +26,7 @@ WizardSmallImageFile=..\assets\installer_star_small.bmp
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 UninstallDisplayIcon={app}\_internal\assets\olney_windows_v3.ico
-VersionInfoVersion=1.8.9.0
+VersionInfoVersion={#MyAppVersion}.0
 VersionInfoProductName={#MyAppName}
 VersionInfoProductVersion={#MyAppVersion}
 
