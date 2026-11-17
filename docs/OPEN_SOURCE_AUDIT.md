@@ -84,6 +84,13 @@ LICENSING.md / docs/GITHUB_SETUP.md. A code license cannot grant third-party rig
   structure are checked before PR submission; GitHub's first run will confirm
   runner behavior and status-check availability.
 
+GitHub subsequently confirmed the complete workflow succeeds on the integrated
+revision `1042da1`, for both push and pull_request events:
+https://github.com/sebastien88-stack/olney-engine/actions/runs/44090392879
+The first branch revision's workflow also passed. The later branding changes
+made by the owner on main were merged into the preparation branch and preserved
+in English and French; the two uploaded branding images remain resource exceptions.
+
 ## GitHub actions and remaining owner decisions
 
 The workflow uses a single Windows/Python 3.12 job with read-only contents
@@ -99,3 +106,10 @@ docs/GITHUB_SETUP.md only after reviewing the PR and its first CI run.
 The conduct policy deliberately leaves its confidential contact undesignated;
 the owner can choose one. The English README links to the preserved French
 illustrated version. Detailed historical notes keep their old-release context.
+
+## Review links
+
+- Draft PR: https://github.com/sebastien88-stack/olney-engine/pull/1
+- Small documentation task: https://github.com/sebastien88-stack/olney-engine/issues/2
+- Resource-rights checklist: https://github.com/sebastien88-stack/olney-engine/issues/3
+- Added labels: tests, ui, performance; existing standard labels are reused.
