@@ -10,7 +10,7 @@ Selon Richmond, le jeu de cartes constitue un véritable calendrier cosmique, pe
 
 **Olney Engine propose de redécouvrir ce système à l'ère numérique**, en réunissant les calculs de Richmond, les cycles temporels et l'analyse des événements dans une application interactive.
 
-### La cartomancie des anciens mages
+### Olney Engine
 
 Olney Engine est une application Windows consacrée au système des 52 cartes.
 Elle réunit les cartes de naissance, les cycles temporels, une frise interactive,
