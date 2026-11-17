@@ -40,7 +40,7 @@ def test_full_state_can_include_the_analyzed_hour_card():
         target_time="17:51",
         target_place="Longjumeau, FR",
     )
-    assert state["engine_version"] == "1.8.7"
+    assert state["engine_version"] == "1.8.8"
     assert state["hour_card"]["card"] == "D♥"
     assert state["hour_card"]["solar_time"] == "15:58"
 

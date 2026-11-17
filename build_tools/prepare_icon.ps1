@@ -31,7 +31,35 @@ try {
         } finally { $graphics.Dispose() }
         $buffer = New-Object System.IO.MemoryStream
         try {
-            $bitmap.Save($buffer, [System.Drawing.Imaging.ImageFormat]::Png)
+            # Classic 32-bit DIB plus an explicit AND mask: also supported by
+            # Windows consumers that do not honor PNG icon alpha correctly.
+            $dib = New-Object System.IO.BinaryWriter($buffer)
+            $maskStride = 4 * [int][Math]::Ceiling($size / 32.0)
+            $dib.Write([UInt32]40)
+            $dib.Write([Int32]$size); $dib.Write([Int32](2 * $size))
+            $dib.Write([UInt16]1); $dib.Write([UInt16]32)
+            $dib.Write([UInt32]0); $dib.Write([UInt32]($size * $size * 4))
+            $dib.Write([Int32]0); $dib.Write([Int32]0)
+            $dib.Write([UInt32]0); $dib.Write([UInt32]0)
+            for ($row = $size - 1; $row -ge 0; $row--) {
+                for ($column = 0; $column -lt $size; $column++) {
+                    $color = $bitmap.GetPixel($column, $row)
+                    $channel = if ($color.A -eq 0) { 0 } else { 255 }
+                    $dib.Write([Byte]$channel); $dib.Write([Byte]$channel)
+                    $dib.Write([Byte]$channel); $dib.Write([Byte]$color.A)
+                }
+            }
+            for ($row = $size - 1; $row -ge 0; $row--) {
+                $mask = New-Object byte[] $maskStride
+                for ($column = 0; $column -lt $size; $column++) {
+                    if ($bitmap.GetPixel($column, $row).A -eq 0) {
+                        $index = [int][Math]::Floor($column / 8)
+                        $mask[$index] = $mask[$index] -bor (128 -shr ($column % 8))
+                    }
+                }
+                $dib.Write($mask)
+            }
+            $dib.Flush()
             $images.Add($buffer.ToArray())
             if ($size -eq 256) {
                 $bitmap.Save((Join-Path $assetDir 'olney_icon.png'), [System.Drawing.Imaging.ImageFormat]::Png)
@@ -55,4 +83,5 @@ try {
     }
     foreach ($bytes in $images) { $writer.Write($bytes) }
 } finally { $writer.Dispose(); $stream.Dispose() }
+Copy-Item -LiteralPath (Join-Path $assetDir 'olney_icon.ico') -Destination (Join-Path $assetDir 'olney_windows_v2.ico') -Force
 Write-Output 'Transparent spade: original strokes preserved; 9 ICO sizes written.'

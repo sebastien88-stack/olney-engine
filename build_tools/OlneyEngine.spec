@@ -8,7 +8,7 @@ import os
 PROJECT_ROOT = os.path.abspath(os.path.join(SPECPATH, ".."))
 
 datas = [
-    (os.path.join(PROJECT_ROOT, "assets", "olney_icon.ico"), "assets"),
+    (os.path.join(PROJECT_ROOT, "assets", "olney_windows_v2.ico"), "assets"),
     (os.path.join(PROJECT_ROOT, "data.json"), "."),
     (os.path.join(PROJECT_ROOT, "places.json"), "."),
     (os.path.join(PROJECT_ROOT, "interpretation"), "interpretation"),
@@ -55,7 +55,7 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
     version=os.path.join(PROJECT_ROOT, "build_tools", "windows_version_info.txt"),
-    icon=os.path.join(PROJECT_ROOT, "assets", "olney_icon.ico"),
+    icon=os.path.join(PROJECT_ROOT, "assets", "olney_windows_v2.ico"),
 )
 
 coll = COLLECT(
