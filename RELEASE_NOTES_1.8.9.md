@@ -6,5 +6,6 @@
 - Roue dentée alignée en haut avec les autres boutons du menu.
 - Aucun onglet d’interprétation de l’heure ajouté.
 
-Les sources et l’installateur sont préparés localement ; aucune nouvelle
-Release publique n’est créée automatiquement.
+Les sources de développement sont publiées sur GitHub ; l’installateur est
+préparé localement. Aucune nouvelle Release binaire publique n’est créée : les
+vérifications de droits listées dans LICENSING.md restent ouvertes.

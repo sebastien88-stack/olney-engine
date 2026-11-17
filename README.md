@@ -1,6 +1,12 @@
-# Olney Engine — V1.8.6
+# Olney Engine
 
 [English version](README.en.md) · [Contribuer](CONTRIBUTING.md)
+
+**Sources de développement : 1.8.9 · Dernier installateur public : 1.8.6.**
+La 1.8.9 ajoute le logo détouré avec intérieur opaque, le logo dans l’en-tête
+et le menu ⚙ (connexion API Emmett et vérification des mises à jour).
+Son installateur reste local en attendant la clôture des points de droits
+documentés dans [LICENSING.md](LICENSING.md).
 
 <a id="sommaire"></a>
 ## Sommaire
@@ -271,8 +277,8 @@ incluse ni dans ce dépôt ni dans les fichiers distribués.
 
 ## Développement et documentation
 
-Les sources Python et l’application Windows publiée correspondent à la
-version **1.8.6**. Pour lancer les sources, utiliser Python avec Tkinter :
+Les sources Python sont en **1.8.9** ; l’installateur Windows public reste en
+**1.8.6**. Pour lancer les sources, utiliser Python avec Tkinter :
 
 ```bash
 python app.py
@@ -282,6 +288,7 @@ python app.py
 - [Architecture du backend et préparation des lectures](BACKEND_LECTURE.md)
 - [Corpus et règles d’interprétation](interpretation/README.md)
 - [Nouveautés de la version 1.8.6](RELEASE_NOTES_1.8.6.md)
+- [Préparation de la version 1.8.9](RELEASE_NOTES_1.8.9.md)
 - [Historique détaillé et documentation des versions précédentes](docs/HISTORY.md)
 - [Confidentialité et signalement de problèmes](SECURITY.md)
 
