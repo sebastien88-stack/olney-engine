@@ -2,12 +2,6 @@
 
 [Français](README.md) · [Contributing](CONTRIBUTING.md) · [License scope](LICENSING.md)
 
-**Development source: 1.8.9 · Latest public Windows installer: 1.8.6.**
-Version 1.8.9 adds the spade icon with an opaque body and transparent exterior,
-a header logo and a ⚙ menu for Emmett API settings and release checks.
-Its installer remains local pending the resource-rights checklist in
-[LICENSING.md](LICENSING.md).
-
 ## Contents
 
 - [The origins of Olney Engine](#the-origins-of-olney-engine)
@@ -58,10 +52,9 @@ interactive timelines, structured interpretations, profiles, events and relation
 
 <a id="installation"></a>
 
-**[Download Windows installer 1.8.6](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Setup_1.8.6.exe)** · [Portable ZIP](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Portable_1.8.6.zip) · [Releases](https://github.com/sebastien88-stack/olney-engine/releases)
+**[Download Windows installer 1.8.9](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.9/Olney_Engine_Setup_1.8.9.exe)** · [Portable ZIP](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.9/Olney_Engine_Portable_1.8.9.zip) · [Releases](https://github.com/sebastien88-stack/olney-engine/releases)
 
-The published 1.8.6 binaries predate this community/licensing preparation and
-retain their original licensing notices. No 1.8.9 binary is published yet.
+The source code and Windows installer are both version **1.8.9**.
 
 <a id="why"></a>
 ## Why Olney Engine?
@@ -344,4 +337,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
 Developed by Sébastien. [Backend documentation](BACKEND_LECTURE.md) ·
 [Version history](docs/HISTORY.md) · [Release notes](RELEASE_NOTES_1.8.6.md).
-[Development 1.8.9 notes](RELEASE_NOTES_1.8.9.md).
+[Version 1.8.9 notes](RELEASE_NOTES_1.8.9.md).

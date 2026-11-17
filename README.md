@@ -2,12 +2,6 @@
 
 [English version](README.en.md) · [Contribuer](CONTRIBUTING.md)
 
-**Sources de développement : 1.8.9 · Dernier installateur public : 1.8.6.**
-La 1.8.9 ajoute le logo détouré avec intérieur opaque, le logo dans l’en-tête
-et le menu ⚙ (connexion API Emmett et vérification des mises à jour).
-Son installateur reste local en attendant la clôture des points de droits
-documentés dans [LICENSING.md](LICENSING.md).
-
 <a id="sommaire"></a>
 ## Sommaire
 
@@ -51,9 +45,9 @@ les calculs et les règles du moteur pour accompagner la lecture.
 
 <a id="installation"></a>
 
-**[Télécharger Olney Engine 1.8.6 pour Windows (.exe)](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Setup_1.8.6.exe)**
+**[Télécharger Olney Engine 1.8.9 pour Windows (.exe)](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.9/Olney_Engine_Setup_1.8.9.exe)**
 
-[Version portable (.zip)](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Portable_1.8.6.zip) · [Toutes les versions](https://github.com/sebastien88-stack/olney-engine/releases)
+[Version portable (.zip)](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.9/Olney_Engine_Portable_1.8.9.zip) · [Toutes les versions](https://github.com/sebastien88-stack/olney-engine/releases)
 
 Python n’est pas nécessaire pour utiliser l’application installée. La version
 portable doit être entièrement extraite avant de lancer `Olney Engine.exe`.
@@ -277,8 +271,8 @@ incluse ni dans ce dépôt ni dans les fichiers distribués.
 
 ## Développement et documentation
 
-Les sources Python sont en **1.8.9** ; l’installateur Windows public reste en
-**1.8.6**. Pour lancer les sources, utiliser Python avec Tkinter :
+Les sources Python et l’installateur Windows sont en **1.8.9**.
+Pour lancer les sources, utiliser Python avec Tkinter :
 
 ```bash
 python app.py
@@ -288,7 +282,7 @@ python app.py
 - [Architecture du backend et préparation des lectures](BACKEND_LECTURE.md)
 - [Corpus et règles d’interprétation](interpretation/README.md)
 - [Nouveautés de la version 1.8.6](RELEASE_NOTES_1.8.6.md)
-- [Préparation de la version 1.8.9](RELEASE_NOTES_1.8.9.md)
+- [Nouveautés de la version 1.8.9](RELEASE_NOTES_1.8.9.md)
 - [Historique détaillé et documentation des versions précédentes](docs/HISTORY.md)
 - [Confidentialité et signalement de problèmes](SECURITY.md)
 
