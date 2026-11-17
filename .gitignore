@@ -36,3 +36,11 @@ Olney_Engine_Setup_*.exe
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Future private Atlas work and local personal exports
+atlas-private/
+private-data/
+*.sqlite3-*
+*.sqlite-*
+*.pem
+*.key

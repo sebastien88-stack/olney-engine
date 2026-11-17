@@ -108,7 +108,7 @@ def inspect(root, *args, **kwargs):
         print("UI responsive, animation and latest-request-wins: OK")
 
         open_view("Cycle annuel", "result")
-        assert app.year_results.canvas.cget("background").upper() == "#DCE8F2"
+        assert app.year_results.canvas.cget("background").upper() == app.LIGHT["selected"]
         app.toggle_dark_mode()
         set_entry(app.target_time_entry, "03:51")
         app.calculate()

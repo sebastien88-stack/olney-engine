@@ -1,0 +1,24 @@
+name: Feature request
+description: Discuss an improvement before starting substantial implementation.
+title: '[Feature] '
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What problem would this solve?
+      description: Describe who benefits and a concrete use case.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Explain the result you would like and any alternatives.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and references (optional)
+      description: Note calculation rules, data rights, compatibility or UI considerations.
