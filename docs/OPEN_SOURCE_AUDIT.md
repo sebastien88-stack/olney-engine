@@ -1,5 +1,35 @@
 # Open-source preparation audit — 2026-11-17
 
+## Status of this report
+
+This is the historical record of the initial open-source preparation, based on
+`1808f72`. Counts, branch descriptions and the 1.8.6 references in that record
+belong to that stage; they do not describe today's downloadable version.
+
+As of the documentation update on 2026-11-17:
+
+- The latest Windows release is 1.8.9, tagged at `5856193`.
+- Local sources and GitHub `main` matched at `cd885bf` before this documentation
+  update. Development changes after the tag are not in the 1.8.9 downloads.
+- `version.py` is now the sole application version source; the declared version
+  remains 1.8.9 pending a future release.
+- At `cd885bf`, compilation passed for 85 tracked Python files, all 172 pytest
+  tests passed, and interpretation validation passed.
+- CI now has two blocking Windows/Python 3.12 jobs: **Windows Python 3.12 checks**
+  and **Windows Tk UI journeys**. The latter covers startup, card navigation and
+  opening the chat workspace, with isolated databases and subprocess timeouts.
+  It was promoted only after a successful nonblocking Windows run.
+- Both jobs passed: https://github.com/sebastien88-stack/olney-engine/actions/runs/44166995752
+- French is the main README, with an English translation linked at the top.
+- Further extraction of `app.py` is deferred because remaining views depend on
+  application globals; no behavioral refactor was performed.
+
+This update does not repeat the original credential scan, change license
+findings, activate branch protections or publish a binary. Rights questions
+remain pending in LICENSING.md.
+
+## Initial preparation record
+
 Scope: existing Olney Engine repository, preparation branch based on `1808f72`.
 No engine refactor, no Atlas import, no new binary release and no history rewrite.
 

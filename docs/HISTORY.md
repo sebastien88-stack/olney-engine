@@ -1,8 +1,8 @@
 # Historique et documentation des versions d’Olney Engine
 
-**[Télécharger Olney Engine 1.8.6 pour Windows (.exe)](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Setup_1.8.6.exe)**
+**[Télécharger Olney Engine 1.8.9 pour Windows (.exe)](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.9/Olney_Engine_Setup_1.8.9.exe)**
 
-[Version portable (.zip)](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.6/Olney_Engine_Portable_1.8.6.zip) · [Toutes les versions](https://github.com/sebastien88-stack/olney-engine/releases)
+[Version portable (.zip)](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.9/Olney_Engine_Portable_1.8.9.zip) · [Toutes les versions](https://github.com/sebastien88-stack/olney-engine/releases)
 
 Olney Engine est une application Windows consacrée à l’exploration du système
 des 52 cartes : profils, cycles temporels, frise chronologique, événements,
@@ -11,13 +11,56 @@ relations et lectures structurées assistées par Emmett.
 ## Installer l’application
 
 Téléchargez l’installateur avec le lien ci-dessus ou depuis la section [Releases](https://github.com/sebastien88-stack/olney-engine/releases), puis
-lancez `Olney_Engine_Setup_1.8.6.exe`. Python n’est pas nécessaire pour utiliser
+lancez `Olney_Engine_Setup_1.8.9.exe`. Python n’est pas nécessaire pour utiliser
 la version installée.
 
 Les profils, événements, relations et conversations sont conservés uniquement
 dans la base locale de l’utilisateur. Ils ne sont ni inclus dans le dépôt ni
 envoyés automatiquement vers un service externe. La clé OpenAI reste en mémoire
 pendant la session et n’est pas enregistrée par Olney Engine.
+
+## Après la V1.8.9 — développement sur `main`
+
+Ces travaux ne sont pas encore intégrés aux téléchargements de la V1.8.9.
+La version déclarée reste 1.8.9 ; aucune nouvelle release n'a été créée.
+
+- Version centralisée dans `version.py`, utilisée par l'application, le moteur,
+  les tests et les métadonnées de construction Windows (`df41a88`).
+- Trois parcours UI sous pytest : démarrage, navigation des cartes et ouverture
+  du tchat, avec processus isolés, bases temporaires et timeout (`a95d4db`).
+- Job UI d'abord non bloquant, puis rendu bloquant après succès sur
+  `windows-latest` (`cd885bf`). Les deux jobs Windows ont réussi sur ce commit.
+- Validation de cette révision : 85 fichiers Python compilés, 172 tests réussis
+  et corpus d'interprétation validé. Un passage temporaire à 1.8.10 a vérifié la
+  dérivation de version avant retour à 1.8.9.
+- Extraction des vues restantes d'`app.py` différée : leurs dépendances globales
+  nécessitent une adaptation qui dépasse le déplacement mécanique autorisé.
+
+## V1.8.9 — logo et menu de configuration
+
+Publiée sur GitHub le 17 novembre 2026, avec installateur et archive portable.
+
+- Corps du pique noir opaque, ornements blancs et extérieur transparent.
+- Logo ajouté à gauche du titre ; roue dentée alignée avec les autres menus.
+- Menu ⚙ regroupant la connexion API d'Emmett et la vérification des mises à jour.
+- Point retiré après « Biblaridion » dans le sous-titre.
+
+La mise à jour ouvre le téléchargement de l'installateur officiel ; elle ne
+s'installe pas silencieusement. Voir les [notes de publication](../RELEASE_NOTES_1.8.9.md).
+
+## V1.8.8 — préparation locale
+
+Transparence Windows explicite et nouvelles références d'icône pour les
+raccourcis. Ajout du menu ⚙ et retrait du bouton Mise à jour séparé.
+Cette étape n'a pas eu de release GitHub dédiée.
+Voir les [notes locales](../RELEASE_NOTES_1.8.8.md).
+
+## V1.8.7 — préparation locale
+
+Première adaptation de l'icône sur fond transparent, retrait du point du
+sous-titre et vérification manuelle des releases stables GitHub.
+Cette étape n'a pas eu de release GitHub dédiée.
+Voir les [notes locales](../RELEASE_NOTES_1.8.7.md).
 
 ## V1.8.6 — connexion OpenRouter
 

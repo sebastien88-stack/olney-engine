@@ -218,9 +218,11 @@ identifiées dans [la provenance des interprétations](interpretation/provenance
 <a id="biblaridion"></a>
 ### Biblaridion et Apocalypse de Saint Jean
 
-Dans l’Apocalypse, saint Jean reçoit un livre qui tient la paume de sa main : le petit livre — [*biblaridion*, « petit rouleau »](https://biblehub.com/greek/974.htm) — dont les paroles ne doivent pas être écrites, on parle aussi de **Sept Tonnerres**, centraux dans le jeu de 52 cartes apparaissent en [Ap 10, 2–10](https://www.aelf.org/bible/Ap/10).
+Dans l’Apocalypse, saint Jean reçoit le petit livre — [*biblaridion*, « petit rouleau »](https://biblehub.com/greek/974.htm) — et entend les **Sept Tonnerres**, dont les paroles ne doivent pas être écrites, en [Ap 10, 2–10](https://www.aelf.org/bible/Ap/10).
 Le rouleau aux **Sept Sceaux** figure en [Ap 5, 1](https://www.aelf.org/bible/Ap/5),
 et le **Livre de Vie** notamment en [Ap 20, 12–15](https://www.aelf.org/bible/Ap/20).
+Le rapprochement de ces motifs avec les 52 cartes relève de la lecture
+ésotérique du système ; le texte biblique ne décrit pas cette méthode de cartomancie.
 
 <a id="atlas"></a>
 ## Atlas historique
@@ -268,20 +270,51 @@ incluse ni dans ce dépôt ni dans les fichiers distribués.
 
 ## Développement et documentation
 
-Les sources Python et l’installateur Windows sont en **1.8.9**.
-Pour lancer les sources, utiliser Python avec Tkinter :
+La dernière version Windows publiée est la **1.8.9**. La branche `main` contient
+aussi les améliorations de développement réalisées après cette publication ;
+elles ne sont pas encore intégrées aux téléchargements. La version déclarée
+reste 1.8.9 en attendant une prochaine publication.
+
+Pour lancer les sources, utiliser Python **3.12** avec Tcl/Tk :
 
 ```bash
 python app.py
 ```
 
+- [Contribuer au projet](CONTRIBUTING.md)
 - [Construction de l’application Windows](build_tools/README.md)
 - [Architecture du backend et préparation des lectures](BACKEND_LECTURE.md)
 - [Corpus et règles d’interprétation](interpretation/README.md)
-- [Nouveautés de la version 1.8.6](RELEASE_NOTES_1.8.6.md)
 - [Nouveautés de la version 1.8.9](RELEASE_NOTES_1.8.9.md)
 - [Historique détaillé et documentation des versions précédentes](docs/HISTORY.md)
 - [Confidentialité et signalement de problèmes](SECURITY.md)
+
+### Tests et version du projet
+
+Depuis la racine du dépôt, installer les outils de développement avec
+`python -m pip install -r requirements-dev.txt`, puis lancer :
+
+```bash
+python tools/check_python.py
+python -m pytest tests -q
+python tools/validate_interpretation.py
+python tools/audit_public_repository.py
+```
+
+Sous Windows avec Tcl/Tk, la suite pytest inclut trois parcours UI : démarrage,
+navigation des cartes et ouverture du tchat. Chaque parcours utilise un processus
+séparé, une base temporaire et une limite de 90 secondes, sans appel à un modèle IA.
+Pour les exécuter seuls : `python -m pytest tests -q -m ui` ; pour les exclure :
+`python -m pytest tests -q -m "not ui"`.
+
+La CI exécute deux jobs Windows/Python 3.12 : **Windows Python 3.12 checks**
+(vérifications générales et démarrage isolé) et **Windows Tk UI journeys**
+(parcours pytest UI). Les deux sont bloquants pour le résultat du workflow ;
+ils ne construisent ni ne publient de release.
+
+La version de l’application est définie uniquement dans `version.py`.
+L’interface, le moteur, les tests et les métadonnées Windows en dérivent.
+Les README, l’historique et les notes de publication sont actualisés séparément.
 
 ## Crédits et licence
 

@@ -1,4 +1,4 @@
-# Olney Engine
+# Olney Engine V1.8.9
 
 [Français](README.md) · [Contributing](CONTRIBUTING.md) · [License scope](LICENSING.md)
 
@@ -14,6 +14,7 @@
 - [Biblaridion and Revelation](#biblaridion)
 - [Historical Atlas](#atlas)
 - [Frequently asked questions](#faq)
+- [Local data](#local-data)
 - [Run from source](#run-from-source)
 - [Tests and checks](#tests-and-checks)
 - [How the engine fits together](#how-the-engine-fits-together)
@@ -54,7 +55,8 @@ interactive timelines, structured interpretations, profiles, events and relation
 
 **[Download Windows installer 1.8.9](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.9/Olney_Engine_Setup_1.8.9.exe)** · [Portable ZIP](https://github.com/sebastien88-stack/olney-engine/releases/download/v1.8.9/Olney_Engine_Portable_1.8.9.zip) · [Releases](https://github.com/sebastien88-stack/olney-engine/releases)
 
-The source code and Windows installer are both version **1.8.9**.
+Python is not required for the installed application. Extract the entire portable
+ZIP before launching `Olney Engine.exe`.
 
 <a id="why"></a>
 ## Why Olney Engine?
@@ -75,7 +77,8 @@ reviews changes through pull requests. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Enter birth details and an analysis date to inspect life-path, annual, 52-day,
 daily and hourly cards. Navigation keeps the clock and analysis date synchronized.
-Light parchment and dark themes are available.
+The Today button returns to the current date and time. Light parchment and dark
+themes are available through the sun/moon button.
 
 <p align="center">
   <img src="docs/screenshots/accueil-clair.png" alt="Light dashboard and natural-order table" width="960">
@@ -84,7 +87,8 @@ Light parchment and dark themes are available.
 ### Life path and sequence results
 
 Result views show cards, planetary roles and periods, alongside the Moon, Sun,
-Challenge and Result. Each of the seven main life-path cards spans thirteen years.
+Challenge and Result. Each of the seven main life-path cards, from Mercury to
+Neptune, spans thirteen years. Click a card to explore the corresponding step.
 
 <p align="center">
   <img src="docs/screenshots/chemin-de-vie.png" alt="Life-path cards and planetary roles" width="960">
@@ -135,16 +139,30 @@ card for a closer reading.
   <img src="docs/screenshots/lecture-globale.png" alt="Global interpretation" width="960">
 </p>
 
-### Menus, profiles, events and relationships
+## Menus, profiles, events and relationships
 
-Top menus offer recent dossiers, full lists and creation actions. Profiles include
-birth details, signs, ascendants, secondary cards, today's clock and life-path
-cards. Search, column sorting and favorites help browse them.
+Top menus provide access to profiles, events, relationships and Emmett. Recent
+lists help reopen dossiers; Back and Forward navigate between consultations.
 
-Events associate dates, categories, notes and participants with profiles; their
-grid displays cycle configurations at the event date. Relationship dossiers
-compare birth cards, secondary cards, permanent correspondences and synchronized
-clocks, and include a relationship card and its life path.
+### Profiles
+
+Save a first name, surname, subject type, birth date, time and place. The profile
+page shows signs, ascendants, birth and secondary cards, today's clock and
+life-path cards through Challenge and Result. Search, column sorting and favorites
+help browse profiles. Names remain visible during horizontal scrolling.
+
+### Events
+
+Create an event from the analysis date, assign it to a profile and associate
+registered participants or freely entered names. Categories, dates and notes help
+find important moments. The grid displays cycle configurations at each event's date.
+
+### Relationships
+
+A relationship dossier brings two profiles together: birth and secondary cards,
+the relationship card and its life path, card correspondences and clocks
+synchronized to a common date. The reading distinguishes underlying correspondences
+from temporal activations. The meeting date remains an event in the link's history.
 
 ### Emmett
 
@@ -224,7 +242,18 @@ No. Connect this optional AI interface through **Emmett → Connexion**.
 It uses context prepared by the engine; calculations remain accessible without
 an API key. The application does not persist the key.
 
+## Local data
+
+Profiles, events, relationships and conversations are stored in a local SQLite
+database, created automatically at first launch at
+`%LOCALAPPDATA%\Olney Engine\olney_profiles.db`. Personal databases are included
+in neither this repository nor the distributed downloads.
+
 ## Run from source
+
+The latest published Windows version is **1.8.9**. The `main` branch also contains
+development improvements made after that release, which are not yet included in
+the downloads. The declared version remains 1.8.9 until a subsequent publication.
 
 Python **3.12** is the tested baseline. Install Python with **Tcl/Tk** and Git.
 Windows is the supported desktop target. The runtime uses the Python standard
@@ -296,8 +325,20 @@ python tools/ui_startup_smoke.py
 ```
 
 Tests use synthetic inputs and temporary databases. API requests are mocked.
-CI runs tests, syntax compilation, corpus validation and isolated UI startup on
-Windows/Python 3.12; it does not publish a release or use private API keys.
+Pytest includes three real-Tk journeys: startup, card navigation and opening the
+chat workspace. Each runs in a separate process with a temporary database and a
+90-second timeout, without calling an AI model. Windows with Tcl/Tk is required
+for these journeys. Run only UI tests with `python -m pytest tests -q -m ui`, or
+exclude them with `python -m pytest tests -q -m "not ui"`.
+
+CI runs two Windows/Python 3.12 jobs: **Windows Python 3.12 checks** (general
+checks and isolated startup) and **Windows Tk UI journeys** (pytest UI journeys).
+Both jobs affect workflow success. CI neither builds nor publishes releases
+and uses no private API keys.
+
+The application version is defined only in `version.py`. Runtime code, tests and
+Windows build metadata derive from it. README files, history and release notes
+are maintained separately at publication time.
 
 ## How the engine fits together
 
@@ -323,18 +364,16 @@ The [Historical Atlas](#atlas) is a separate project under construction;
 its data and any future schema changes are outside the current application.
 
 ## License and project governance
+Developed by Sébastien. Olney Engine explores the Cartomancy of the Ancient Magi,
+with rules and readings documented in its interpretation corpus.
 
-Original project code is proposed under **GNU GPL v3.0 only**; see [LICENSE](LICENSE)
-and [LICENSING.md](LICENSING.md) for the exact scope. GPL-compatible commercial use
-is permitted subject to the license obligations. Third-party data retain their
-own licenses. Workbook-derived series, book-derived content and selected artwork
-have outstanding provenance checks; **this is not a claim that every bundled
-resource is cleared for open-source redistribution**.
+Original project code is offered under [GNU GPL v3.0](LICENSE). Third-party data
+and resources have separate terms; see [license scope and pending checks](LICENSING.md).
+Third-party components are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-See [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md),
-[SECURITY.md](SECURITY.md), [third-party notices](THIRD_PARTY_NOTICES.md),
-[audit report](docs/OPEN_SOURCE_AUDIT.md) and [maintainer setup](docs/GITHUB_SETUP.md).
-
-Developed by Sébastien. [Backend documentation](BACKEND_LECTURE.md) ·
-[Version history](docs/HISTORY.md) · [Release notes](RELEASE_NOTES_1.8.6.md).
-[Version 1.8.9 notes](RELEASE_NOTES_1.8.9.md).
+- [Contributing](CONTRIBUTING.md) · [Code of conduct](CODE_OF_CONDUCT.md)
+- [Windows build instructions](build_tools/README.md)
+- [Backend documentation](BACKEND_LECTURE.md) · [Interpretation corpus](interpretation/README.md)
+- [Version 1.8.9 notes](RELEASE_NOTES_1.8.9.md) · [Version history](docs/HISTORY.md)
+- [Security reports](SECURITY.md) · [Audit report](docs/OPEN_SOURCE_AUDIT.md)
+- [Maintainer setup](docs/GITHUB_SETUP.md)

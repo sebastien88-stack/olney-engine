@@ -33,6 +33,30 @@ Les données propres au moteur (`data.json`, `places.json`, `interpretation` et
 
 - `build_portable.bat` produit le dossier autonome `dist\Olney Engine`.
 - `build_installer.bat` reconstruit ce dossier puis génère
-  `release\Olney_Engine_Setup_1.8.9.exe` avec Inno Setup.
+  `release\Olney_Engine_Setup_<version>.exe` avec Inno Setup.
 
-La clé OpenAI n’est jamais intégrée à la distribution.
+## Source unique de version
+
+`version.py`, à la racine, contient `APP_VERSION` et en déduit `WINDOWS_VERSION`.
+Modifier uniquement `APP_VERSION` pour changer la version applicative :
+
+- l'interface, le moteur et les tests importent cette constante ;
+- `OlneyEngine.iss` lit la première ligne de `version.py` pour ses versions et
+  le nom de l'installateur : conserver la forme `APP_VERSION = "..."` en tête ;
+- `windows_version_info.txt` importe les valeurs de `version.py`, rendu accessible
+  par `OlneyEngine.spec`, pour les métadonnées de l'exécutable.
+
+Ne pas recopier une version dans ces fichiers de construction. Vérifier avec
+`python -m pytest tests/test_version.py -q`. Les README et notes de publication
+restent mis à jour manuellement au moment de publier.
+
+La dernière distribution publiée reste la 1.8.9. La branche `main` contient des
+travaux ultérieurs ; ne pas présenter un ancien installateur comme reconstruit
+à partir de ces travaux. Une future publication doit associer son tag, ses
+sources et ses binaires, sans remplacer silencieusement ceux d'une ancienne version.
+
+Avant construction, exécuter les vérifications documentées dans le README,
+y compris `python -m pytest tests -q -m ui` sous Windows avec Tcl/Tk.
+Les deux jobs CI valident le projet ; aucun ne produit de distribution.
+
+Les clés OpenAI et OpenRouter ne sont jamais intégrées à la distribution.

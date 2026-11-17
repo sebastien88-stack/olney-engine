@@ -11,7 +11,11 @@ rulesets, enable security settings or create a release.
    approvals on new commits and require approval from Code Owners.
 4. Require conversations to be resolved.
 5. Require status checks before merging and a branch up to date with main.
-   Select **Windows Python 3.12 checks** after it has completed on this PR.
+   Select both **Windows Python 3.12 checks** and **Windows Tk UI journeys**.
+   Both checks passed on `cd885bf` on 2026-11-17:
+   https://github.com/sebastien88-stack/olney-engine/actions/runs/44166995752
+   Both jobs already affect workflow success; selecting them in a ruleset is a
+   separate maintainer action. This documentation does not activate protection.
 6. Block force pushes and branch deletion. Keep bypass permissions minimal;
    if you need a sole-maintainer bypass for your own PRs, choose it deliberately.
 7. Review and save. Do not grant additional collaborators write/admin access

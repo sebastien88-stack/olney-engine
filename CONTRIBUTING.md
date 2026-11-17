@@ -50,8 +50,18 @@ python tools/validate_interpretation.py
 python tools/audit_public_repository.py
 ```
 
+Pytest includes real-Tk startup, card-navigation and chat-opening journeys. Run
+`python -m pytest tests -q -m ui` on Windows with Tcl/Tk to isolate them, or use
+`-m "not ui"` for the other tests. Each journey runs in a separate process with
+a temporary database and a 90-second timeout; it makes no AI request.
+CI runs both **Windows Python 3.12 checks** and **Windows Tk UI journeys**.
+
+Application versions derive from the root `version.py`; do not hardcode a copy
+in runtime code or Windows metadata. Documentation and release notes are updated
+separately when publishing.
+
 For UI changes, launch `python app.py`, inspect light/dark modes at normal and
-maximized sizes, and run `python tools/ui_startup_smoke.py` on Windows with Tk.
+maximized sizes, and also run `python tools/ui_startup_smoke.py` on Windows with Tk.
 Add meaningful regression tests for behavior changes. Docs-only changes need
 link/content checks, not new tests. Never use real API keys in CI.
 
