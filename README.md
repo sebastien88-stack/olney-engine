@@ -11,7 +11,7 @@
 - [Découvrir les vues de l’application](#découvrir-lapplication)
 - [Menus, profils, événements, relations et Emmett](#les-menus-et-les-dossiers-personnels)
 - [Sources et références historiques](#references)
-- [Biblaridion de l’Apocalypse](#biblaridion)
+- [Biblaridion et Apocalypse de Saint Jean](#biblaridion)
 - [Atlas historique](#atlas)
 - [Questions fréquentes](#faq)
 - [Données locales](#données-locales)
@@ -216,7 +216,7 @@ Les conventions propres à l’application et les sources de son corpus sont
 identifiées dans [la provenance des interprétations](interpretation/provenance.json).
 
 <a id="biblaridion"></a>
-### Biblaridion de l’Apocalypse
+### Biblaridion et Apocalypse de Saint Jean
 
 Dans l’Apocalypse, saint Jean reçoit un livre qui tient la paume de sa main : le petit livre — [*biblaridion*, « petit rouleau »](https://biblehub.com/greek/974.htm) — et les **Sept Tonnerres**, dont les paroles ne doivent pas être écrites,
 apparaissent en [Ap 10, 2–10](https://www.aelf.org/bible/Ap/10).
