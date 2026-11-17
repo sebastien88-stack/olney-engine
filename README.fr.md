@@ -2,7 +2,25 @@
 
 [English](README.md) · [Contribuer](CONTRIBUTING.md)
 
-### La cartomancie des anciens mages, à explorer dans le temps
+<p align="center">
+  <img src="docs/screenshots/OlneyEngineLOGO.png" alt="Logo Olney Engine" width="220">
+</p>
+
+## Aux origines d'Olney Engine
+
+À la fin du XIXe siècle, **Olney H. Richmond**, occultiste américain et représentant de l'Ordre des Mages, publie en 1893 *The Mystic Test Book*, un ouvrage consacré à **la cartomancie des anciens Mages**.
+
+Richmond affirme être l'héritier d'une tradition ésotérique millénaire, issue notamment des atlantes. Au cœur de son enseignement se trouve **la Religion des Étoiles**, une conception mystique de l'univers dans laquelle les cycles célestes, les nombres et les 52 cartes à jouer participent d'un même langage symbolique.
+
+<p align="center">
+  <img src="docs/screenshots/OrdreMageEtoile.png" alt="L'Étoile des Mages" width="500">
+</p>
+
+Selon Richmond, le jeu de cartes constitue un véritable calendrier cosmique, permettant d'explorer les correspondances entre les mouvements des astres et les événements de l'existence.
+
+**Olney Engine propose de redécouvrir ce système à l'ère numérique**, en réunissant les calculs de Richmond, les cycles temporels et l'analyse des événements dans une application interactive.
+
+### Olney Engine
 
 Olney Engine est une application Windows consacrée au système des 52 cartes.
 Elle réunit les cartes de naissance, les cycles temporels, une frise interactive,

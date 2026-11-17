@@ -2,6 +2,32 @@
 
 [Français](README.fr.md) · [Contributing](CONTRIBUTING.md) · [License scope](LICENSING.md)
 
+<p align="center">
+  <img src="docs/screenshots/OlneyEngineLOGO.png" alt="Logo Olney Engine" width="220">
+</p>
+
+## The origins of Olney Engine
+
+In 1893, **Olney H. Richmond**, an American occultist associated with the Order
+of the Magi, published *The Mystic Test Book*, devoted to the symbolic system
+known here as the Cartomancy of the Ancient Magi.
+
+Richmond presented his teaching as an ancient esoteric tradition, including
+claims of Atlantean origins. His **Religion of the Stars** connects celestial
+cycles, numbers and the 52 playing cards through a shared symbolic language.
+These origins describe Richmond's beliefs and the system's tradition.
+
+<p align="center">
+  <img src="docs/screenshots/OrdreMageEtoile.png" alt="The Star of the Magi" width="500">
+</p>
+
+For Richmond, the deck acts as a cosmic calendar for exploring correspondences
+between celestial movements and life events. **Olney Engine revisits this
+system in a digital application**, combining its calculations, temporal cycles
+and event analysis with interactive exploration.
+
+### The application
+
 A Windows desktop application exploring the **Cartomancy of the Ancient Magi**
 and Richmond's 52-card system. Olney combines deterministic card calculations,
 interactive timelines, structured interpretations, profiles, events and relationships.
